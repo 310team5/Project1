@@ -1,10 +1,82 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.canvas.Canvas?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.ColorPicker?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleButton?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.scene.Drawboard">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="882.0" prefWidth="1500.0" style="-fx-background-color: #bdbdbd;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.scene.Drawboard">
    <children>
-      <Button fx:id="button_dashboard" layoutX="274.0" layoutY="188.0" mnemonicParsing="false" onAction="#dashboard" text="dashboard" />
+      <VBox prefHeight="400.0" prefWidth="600.0">
+         <children>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <TextField fx:id="text_field_title" alignment="CENTER" prefHeight="46.0" prefWidth="505.0" style="-fx-background-color: #bdbdbd;" text="MY DRAWING (CLICK TO CHANGE TITLE)">
+                     <font>
+                        <Font size="22.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: white;">
+                     <children>
+                        <Canvas id="canvas" fx:id="canvas" height="750.0" width="1500.0">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Canvas>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <ColorPicker fx:id="colorpicker" layoutX="389.0" layoutY="843.0" prefHeight="25.0" prefWidth="99.0">
+         <value>
+            <Color red="1.0" />
+         </value>
+      </ColorPicker>
+      <ChoiceBox fx:id="brush_size" layoutX="26.0" layoutY="843.0" prefHeight="25.0" prefWidth="69.0">
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+      </ChoiceBox>
+      <Button fx:id="button_dashboard" layoutX="1394.0" layoutY="843.0" mnemonicParsing="false" onAction="#dashboard" prefHeight="25.0" prefWidth="82.0" text="dashboard" />
+        <ToggleButton fx:id="button_brush" layoutX="509.0" layoutY="843.0" selected="true" text="Brush" />
+        <ToggleButton fx:id="button_eraser" layoutX="555.0" layoutY="843.0" text="Eraser" />
+      <Button fx:id="button_save" layoutX="760.0" layoutY="844.0" mnemonicParsing="false" onAction="#save" text="Save Drawing" />
+      <Text layoutX="389.0" layoutY="827.0" strokeType="OUTSIDE" strokeWidth="0.0" text="brush colour" wrappingWidth="88.00000000000023">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Text layoutX="509.0" layoutY="826.0" strokeType="OUTSIDE" strokeWidth="0.0" text="tools" wrappingWidth="88.00000000000023">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Text layoutX="637.0" layoutY="826.0" strokeType="OUTSIDE" strokeWidth="0.0" text="tool size" wrappingWidth="88.00000000000023">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Text fx:id="text_save_status" fill="#569e2d" layoutX="848.0" layoutY="863.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="370.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Slider fx:id="slider_brush_size" blockIncrement="1.0" layoutX="632.0" layoutY="849.0" max="50.0" min="1.0" prefHeight="14.0" prefWidth="99.0" value="5.0" />
    </children>
 </AnchorPane>
