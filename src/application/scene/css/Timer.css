@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
+
+.root {
+    -fx-background-color: #CCCCCC;
+}
+
+.menu {
+    -fx-background-color: #332E43;
+    -fx-text-fill: #FFFFFF;
+    -fx-border-style: hidden;
+    -fx-background-radius: 0 40 40 0;
+}
+
+.button_menu {
+    -fx-text-fill: #FFFFFF;
+    -fx-background-color: transparent;
+    -fx-font-size: 32px;
+    -fx-font-family: 'Space Mono', monospace;
+    -fx-opacity: 0.6;
+}
+
+.button_menu:hover {
+    -fx-opacity: 0.8;
+}
+
+.button_menu:pressed {
+    -fx-opacity: 1;
+}
+
+.button_focus {
+    -fx-text-fill: #FFFFFF;
+    -fx-background-color: transparent;
+    -fx-font-size: 32px;
+    -fx-font-family: 'Space Mono', monospace;
+}
+
+.button_time {
+    -fx-background-color: #5A59B1;
+    -fx-text-fill: #FFFFFF;
+    -fx-font-size: 18px;
+    -fx-font-family: 'Space Mono', monospace;
+    -fx-border-style: hidden;
+    -fx-background-radius: 10px;
+    -fx-font-weight: bold;
+    -fx-effect: dropshadow( gaussian, rgba(0, 0, 0, 0.25), 10, 0.5, 5, 5);
+
+}
+
+.button_time:hover {
+    -fx-background-color: #494794;
+}
+
+.button_time:pressed {
+    -fx-background-color: #3F3E80;
+    -fx-effect: none;
+}
+
+.label_countdown {
+    -fx-font-size: 148px;
+}
+
+.button_start {
+    -fx-background-color: white;
+    -fx-text-fill: #5A59B1;
+    -fx-font-size: 32px;
+    -fx-font-family: 'Space Mono', monospace;
+    -fx-border-style: hidden;
+    -fx-background-radius: 10px;
+    -fx-font-weight: bold;
+    -fx-effect: dropshadow( gaussian, rgba(0, 0, 0, 0.25), 10, 0.5, 5, 5);
+
+}
+
+.button_start:pressed {
+    -fx-effect: none;
+}
+
+.label_title {
+    -fx-text-fill: #000000;
+    -fx-font-size: 100px;
+    -fx-font-family: 'Space Mono', monospace;
+}
