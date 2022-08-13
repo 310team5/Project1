@@ -6,16 +6,12 @@
 
 .menu {
     -fx-background-color: #332E43;
-    -fx-text-fill: #FFFFFF;
     -fx-border-style: hidden;
     -fx-background-radius: 0 40 40 0;
 }
 
 .button_menu {
-    -fx-text-fill: #FFFFFF;
     -fx-background-color: transparent;
-    -fx-font-size: 32px;
-    -fx-font-family: 'Space Mono', monospace;
     -fx-opacity: 0.6;
 }
 
