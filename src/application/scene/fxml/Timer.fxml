@@ -9,9 +9,9 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1024.0" prefWidth="1440.0" stylesheets="@../css/Timer.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.scene.Timer">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="810.0" prefWidth="1315.0" stylesheets="@../css/Timer.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.scene.Timer">
    <children>
-      <AnchorPane prefHeight="1024.0" prefWidth="150.0" styleClass="menu" stylesheets="@../css/Timer.css">
+      <AnchorPane prefHeight="810.0" prefWidth="150.0" styleClass="menu" stylesheets="@../css/Timer.css">
          <children>
             <ImageView fitHeight="100.0" fitWidth="100.0" layoutX="27.0" layoutY="34.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -111,9 +111,9 @@
                </graphic>
             </Button>
          </children></AnchorPane>
-      <AnchorPane layoutX="184.0" layoutY="218.0" prefHeight="779.0" prefWidth="1220.0" style="-fx-background-color: #3F3E80; -fx-background-radius: 10;">
+      <AnchorPane layoutX="184.0" layoutY="175.0" prefHeight="621.0" prefWidth="973.0" style="-fx-background-color: #3F3E80; -fx-background-radius: 10;">
          <children>
-            <AnchorPane layoutX="207.0" layoutY="145.0" prefHeight="490.0" prefWidth="807.0" style="-fx-background-color: #5A59B1; -fx-background-radius: 30;">
+            <AnchorPane layoutX="83.0" layoutY="66.0" prefHeight="490.0" prefWidth="807.0" style="-fx-background-color: #5A59B1; -fx-background-radius: 30;">
                <children>
                   <Button layoutX="138.0" layoutY="84.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="153.0" styleClass="button_time" stylesheets="@../css/Timer.css" text="Pomodoro">
                      <font>
@@ -145,7 +145,7 @@
          </children>
       </AnchorPane>
       <Text layoutX="184.0" layoutY="141.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="label_title" text="Pomodoro Timer" />
-      <ImageView fitHeight="120.0" fitWidth="120.0" layoutX="1284.0" layoutY="46.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="120.0" fitWidth="120.0" layoutX="1181.0" layoutY="40.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../assets/time_icon.png" />
          </image>
