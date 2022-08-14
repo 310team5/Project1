@@ -3,6 +3,8 @@
 <?import java.lang.String?>
 <?import javafx.geometry.Rectangle2D?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.control.ToggleGroup?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -18,7 +20,7 @@
                   <Image url="@../assets/logo_short.png" />
                </image>
             </ImageView>
-            <Button fx:id="button_dashboard" layoutX="34.0" layoutY="205.0" mnemonicParsing="false" onAction="#dashboard" stylesheets="@../css/Timer.css">
+            <Button fx:id="button_dashboard" layoutX="34.0" layoutY="174.0" mnemonicParsing="false" onAction="#dashboard" stylesheets="@../css/Timer.css">
                <styleClass>
                   <String fx:value="button_focus" />
                   <String fx:value="button_menu" />
@@ -38,7 +40,7 @@
                   </ImageView>
                </graphic>
             </Button>
-            <Button layoutX="34.0" layoutY="300.0" mnemonicParsing="false" stylesheets="@../css/Timer.css">
+            <Button layoutX="34.0" layoutY="254.0" mnemonicParsing="false" stylesheets="@../css/Timer.css">
                <styleClass>
                   <String fx:value="button_focus" />
                   <String fx:value="button_menu" />
@@ -58,7 +60,7 @@
                   </ImageView>
                </graphic>
             </Button>
-            <Button layoutX="34.0" layoutY="566.0" mnemonicParsing="false" style="-fx-opacity: 1;" styleClass="button_focus" stylesheets="@../css/Timer.css">
+            <Button layoutX="34.0" layoutY="479.0" mnemonicParsing="false" style="-fx-opacity: 1;" styleClass="button_focus" stylesheets="@../css/Timer.css">
                <graphic>
                   <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -70,7 +72,7 @@
                   </ImageView>
                </graphic>
             </Button>
-            <Button layoutX="34.0" layoutY="480.0" mnemonicParsing="false" stylesheets="@../css/Timer.css">
+            <Button layoutX="34.0" layoutY="398.0" mnemonicParsing="false" stylesheets="@../css/Timer.css">
                <styleClass>
                   <String fx:value="button_focus" />
                   <String fx:value="button_menu" />
@@ -90,7 +92,7 @@
                   </ImageView>
                </graphic>
             </Button>
-            <Button layoutX="34.0" layoutY="389.0" mnemonicParsing="false" stylesheets="@../css/Timer.css">
+            <Button layoutX="34.0" layoutY="327.0" mnemonicParsing="false" stylesheets="@../css/Timer.css">
                <styleClass>
                   <String fx:value="button_focus" />
                   <String fx:value="button_menu" />
@@ -116,31 +118,23 @@
          <children>
             <AnchorPane layoutX="152.0" layoutY="66.0" prefHeight="490.0" prefWidth="807.0" style="-fx-background-color: #5A59B1; -fx-background-radius: 30;">
                <children>
-                  <Button layoutX="138.0" layoutY="84.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="153.0" styleClass="button_time" stylesheets="@../css/Timer.css" text="Pomodoro">
-                     <font>
-                        <Font size="15.0" />
-                     </font>
-                  </Button>
-                  <Button layoutX="321.0" layoutY="84.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="153.0" styleClass="button_time" stylesheets="@../css/Timer.css" text="Short Break">
-                     <font>
-                        <Font size="15.0" />
-                     </font>
-                  </Button>
-                  <Button layoutX="502.0" layoutY="84.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="153.0" styleClass="button_time" stylesheets="@../css/Timer.css" text="Long Break">
-                     <font>
-                        <Font size="15.0" />
-                     </font>
-                  </Button>
-                  <Text fill="WHITE" layoutX="222.0" layoutY="294.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="label_countdown" text="00:00">
+                  <Text fill="WHITE" layoutX="228.0" layoutY="276.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="label_countdown" text="00:00">
                      <font>
                         <Font size="15.0" />
                      </font>
                   </Text>
-                  <Button fx:id="button_start" layoutX="268.0" layoutY="343.0" mnemonicParsing="false" prefHeight="84.0" prefWidth="256.0" styleClass="button_start" stylesheets="@../css/Timer.css" text="START">
+                  <Button fx:id="button_start" layoutX="274.0" layoutY="325.0" mnemonicParsing="false" prefHeight="84.0" prefWidth="256.0" styleClass="button_start" stylesheets="@../css/Timer.css" text="START">
                      <font>
                         <Font size="15.0" />
                      </font>
                   </Button>
+                  <ToggleButton layoutX="173.0" layoutY="91.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="153.0" styleClass="button_time" stylesheets="@../css/Timer.css" text="Pomodoro">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="timerButtons" />
+                     </toggleGroup>
+                  </ToggleButton>
+                  <ToggleButton layoutX="326.0" layoutY="91.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="153.0" styleClass="button_time" stylesheets="@../css/Timer.css" text="Short Break" toggleGroup="$timerButtons" />
+                  <ToggleButton layoutX="478.0" layoutY="91.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="153.0" styleClass="button_time" stylesheets="@../css/Timer.css" text="Long Break" toggleGroup="$timerButtons" />
                </children>
             </AnchorPane>
          </children>
