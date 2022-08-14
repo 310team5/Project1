@@ -26,7 +26,7 @@
                <graphic>
                   <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../assets/home_icon.png" />
+                        <Image url="@../assets/icon_dashboard_white.png" />
                      </image>
                      <viewport>
                         <Rectangle2D />
@@ -46,7 +46,7 @@
                <graphic>
                   <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../assets/notes_icon.png" />
+                        <Image url="@../assets/icon_notes_white.png" />
                      </image>
                      <viewport>
                         <Rectangle2D />
@@ -62,7 +62,7 @@
                <graphic>
                   <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../assets/time_icon.png" />
+                        <Image url="@../assets/icon_timer_white.png" />
                      </image>
                      <viewport>
                         <Rectangle2D />
@@ -78,7 +78,7 @@
                <graphic>
                   <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../assets/drawboard_icon.png" />
+                        <Image url="@../assets/icon_drawboard_white.png" />
                      </image>
                      <viewport>
                         <Rectangle2D />
@@ -98,7 +98,7 @@
                <graphic>
                   <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../assets/todo_icon.png" />
+                        <Image url="@../assets/icon_todo_white.png" />
                      </image>
                      <viewport>
                         <Rectangle2D />
@@ -148,7 +148,7 @@
       <Text layoutX="184.0" layoutY="141.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="label_title" text="Pomodoro Timer" />
       <ImageView fitHeight="120.0" fitWidth="120.0" layoutX="1168.0" layoutY="40.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../assets/time_icon.png" />
+            <Image url="@../assets/icon_timer_black.png" />
          </image>
       </ImageView>
    </children>
