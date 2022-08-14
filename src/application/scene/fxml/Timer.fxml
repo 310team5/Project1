@@ -112,9 +112,9 @@
             </Button>
          </children>
       </AnchorPane>
-      <AnchorPane layoutX="184.0" layoutY="175.0" prefHeight="621.0" prefWidth="973.0" style="-fx-background-color: #3F3E80; -fx-background-radius: 10;">
+      <AnchorPane layoutX="178.0" layoutY="175.0" prefHeight="621.0" prefWidth="1110.0" style="-fx-background-color: #3F3E80; -fx-background-radius: 10;">
          <children>
-            <AnchorPane layoutX="83.0" layoutY="66.0" prefHeight="490.0" prefWidth="807.0" style="-fx-background-color: #5A59B1; -fx-background-radius: 30;">
+            <AnchorPane layoutX="152.0" layoutY="66.0" prefHeight="490.0" prefWidth="807.0" style="-fx-background-color: #5A59B1; -fx-background-radius: 30;">
                <children>
                   <Button layoutX="138.0" layoutY="84.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="153.0" styleClass="button_time" stylesheets="@../css/Timer.css" text="Pomodoro">
                      <font>
@@ -136,7 +136,7 @@
                         <Font size="15.0" />
                      </font>
                   </Text>
-                  <Button layoutX="268.0" layoutY="343.0" mnemonicParsing="false" prefHeight="84.0" prefWidth="256.0" styleClass="button_start" stylesheets="@../css/Timer.css" text="START">
+                  <Button fx:id="button_start" layoutX="268.0" layoutY="343.0" mnemonicParsing="false" prefHeight="84.0" prefWidth="256.0" styleClass="button_start" stylesheets="@../css/Timer.css" text="START">
                      <font>
                         <Font size="15.0" />
                      </font>
@@ -146,7 +146,7 @@
          </children>
       </AnchorPane>
       <Text layoutX="184.0" layoutY="141.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="label_title" text="Pomodoro Timer" />
-      <ImageView fitHeight="120.0" fitWidth="120.0" layoutX="1181.0" layoutY="40.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="120.0" fitWidth="120.0" layoutX="1168.0" layoutY="40.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../assets/time_icon.png" />
          </image>
