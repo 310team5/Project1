@@ -123,7 +123,7 @@
                         <Font size="15.0" />
                      </font>
                   </Text>
-                  <Button fx:id="button_start" layoutX="274.0" layoutY="325.0" mnemonicParsing="false" prefHeight="84.0" prefWidth="256.0" styleClass="button_start" stylesheets="@../css/Timer.css" text="START">
+                  <Button fx:id="startButton" layoutX="274.0" layoutY="325.0" mnemonicParsing="false" prefHeight="84.0" prefWidth="256.0" styleClass="button_start" stylesheets="@../css/Timer.css" text="START">
                      <font>
                         <Font size="15.0" />
                      </font>
