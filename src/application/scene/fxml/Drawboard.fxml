@@ -1,82 +1,123 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.Cursor?>
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.canvas.Canvas?>
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.ChoiceBox?>
 <?import javafx.scene.control.ColorPicker?>
 <?import javafx.scene.control.Slider?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
-<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.Region?>
 <?import javafx.scene.paint.Color?>
 <?import javafx.scene.text.Font?>
-<?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="882.0" prefWidth="1500.0" style="-fx-background-color: #bdbdbd;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.scene.Drawboard">
+<AnchorPane prefHeight="810.0" prefWidth="1315.0" style="-fx-background-color: grey;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.scene.Drawboard">
    <children>
-      <VBox prefHeight="400.0" prefWidth="600.0">
-         <children>
-            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+      <BorderPane prefHeight="810.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <top>
+            <AnchorPane maxHeight="60.0" prefHeight="60.0" styleClass="navigation_bar" stylesheets="@../css/Drawboard.css" BorderPane.alignment="CENTER">
                <children>
-                  <TextField fx:id="text_field_title" alignment="CENTER" prefHeight="46.0" prefWidth="505.0" style="-fx-background-color: #bdbdbd;" text="MY DRAWING (CLICK TO CHANGE TITLE)">
-                     <font>
-                        <Font size="22.0" />
-                     </font>
-                  </TextField>
-               </children>
-            </HBox>
-            <HBox prefHeight="100.0" prefWidth="200.0">
-               <children>
-                  <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: white;">
+                  <HBox prefHeight="60.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="350.0">
                      <children>
-                        <Canvas id="canvas" fx:id="canvas" height="750.0" width="1500.0">
-                           <cursor>
-                              <Cursor fx:constant="HAND" />
-                           </cursor>
-                        </Canvas>
+                        <Button fx:id="buttonDashboard" graphicTextGap="20.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#dashboard" prefHeight="60.0" prefWidth="200.0" styleClass="button_tool" stylesheets="@../css/Drawboard.css" text="dashboard">
+                           <graphic>
+                              <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../assets/icon_dashboard_white.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Region minWidth="0.0" prefHeight="60.0" prefWidth="197.0" />
+                        <TextField fx:id="textFieldTitle" alignment="CENTER" prefHeight="40.0" prefWidth="500.0" styleClass="text_field_title" stylesheets="@../css/Drawboard.css" text="MY DRAWING (CLICK TO CHANGE TITLE)">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets top="10.0" />
+                           </HBox.margin>
+                        </TextField>
                      </children>
-                  </VBox>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="60.0" prefWidth="280.0" AnchorPane.rightAnchor="0.0">
+                     <children>
+                        <ToggleButton fx:id="buttonBrush" prefHeight="60.0" prefWidth="60.0" selected="true" styleClass="button_tool" stylesheets="@../css/Drawboard.css">
+                           <graphic>
+                              <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../assets/icon_drawboard_paintbrush.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <HBox.margin>
+                              <Insets right="10.0" />
+                           </HBox.margin>
+                        </ToggleButton>
+                        <ToggleButton fx:id="buttonEraser" prefHeight="60.0" prefWidth="60.0" styleClass="button_tool">
+                           <graphic>
+                              <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../assets/icon_drawboard_eraser.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <HBox.margin>
+                              <Insets right="10.0" />
+                           </HBox.margin>
+                        </ToggleButton>
+                        <Button fx:id="buttonSave" mnemonicParsing="false" onAction="#save" prefHeight="60.0" prefWidth="60.0" styleClass="button_tool">
+                           <graphic>
+                              <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../assets/icon_drawboard_diskette.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <HBox.margin>
+                              <Insets right="10.0" />
+                           </HBox.margin>
+                        </Button>
+                        <ColorPicker fx:id="colorPicker" cache="true" prefHeight="60.0" prefWidth="60.0" stylesheets="@../css/Drawboard.css">
+                           <value>
+                              <Color red="1.0" />
+                           </value>
+                           <styleClass>
+                              <String fx:value="button_tool" />
+                              <String fx:value="color_picker" />
+                           </styleClass>
+                           <HBox.margin>
+                              <Insets right="5.0" />
+                           </HBox.margin>
+                        </ColorPicker>
+                     </children>
+                  </HBox>
                </children>
-            </HBox>
+            </AnchorPane>
+         </top>
+         <center>
+            <Pane maxHeight="750.0" maxWidth="1315.0" prefHeight="750.0" prefWidth="1315.0" style="-fx-background-color: white;" BorderPane.alignment="TOP_CENTER">
+               <children>
+                  <Canvas fx:id="canvas" height="750.0" width="1315.0" />
+               </children>
+            </Pane>
+         </center>
+      </BorderPane>
+      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="263.0" prefWidth="54.0" style="-fx-background-color: #332E43; -fx-background-radius: 3px;" stylesheets="@../css/Drawboard.css" AnchorPane.bottomAnchor="250.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <Slider fx:id="sliderToolSize" layoutX="6.0" min="1.0" orientation="VERTICAL" prefHeight="220.0" styleClass="slider_tool" stylesheets="@../css/Drawboard.css" value="5.0" AnchorPane.bottomAnchor="43.0" AnchorPane.topAnchor="0.0" />
+            <ImageView fx:id="toolIndicater" fitHeight="35.0" fitWidth="35.0" layoutX="10.0" layoutY="220.0" pickOnBounds="true" preserveRatio="true" style="-fx-opacity: 0.6;">
+               <image>
+                  <Image url="@../assets/icon_tool.png" />
+               </image>
+            </ImageView>
          </children>
-      </VBox>
-      <ColorPicker fx:id="colorpicker" layoutX="389.0" layoutY="843.0" prefHeight="25.0" prefWidth="99.0">
-         <value>
-            <Color red="1.0" />
-         </value>
-      </ColorPicker>
-      <ChoiceBox fx:id="brush_size" layoutX="26.0" layoutY="843.0" prefHeight="25.0" prefWidth="69.0">
-         <cursor>
-            <Cursor fx:constant="OPEN_HAND" />
-         </cursor>
-      </ChoiceBox>
-      <Button fx:id="button_dashboard" layoutX="1394.0" layoutY="843.0" mnemonicParsing="false" onAction="#dashboard" prefHeight="25.0" prefWidth="82.0" text="dashboard" />
-        <ToggleButton fx:id="button_brush" layoutX="509.0" layoutY="843.0" selected="true" text="Brush" />
-        <ToggleButton fx:id="button_eraser" layoutX="555.0" layoutY="843.0" text="Eraser" />
-      <Button fx:id="button_save" layoutX="760.0" layoutY="844.0" mnemonicParsing="false" onAction="#save" text="Save Drawing" />
-      <Text layoutX="389.0" layoutY="827.0" strokeType="OUTSIDE" strokeWidth="0.0" text="brush colour" wrappingWidth="88.00000000000023">
-         <font>
-            <Font size="14.0" />
-         </font>
-      </Text>
-      <Text layoutX="509.0" layoutY="826.0" strokeType="OUTSIDE" strokeWidth="0.0" text="tools" wrappingWidth="88.00000000000023">
-         <font>
-            <Font size="14.0" />
-         </font>
-      </Text>
-      <Text layoutX="637.0" layoutY="826.0" strokeType="OUTSIDE" strokeWidth="0.0" text="tool size" wrappingWidth="88.00000000000023">
-         <font>
-            <Font size="14.0" />
-         </font>
-      </Text>
-      <Text fx:id="text_save_status" fill="#569e2d" layoutX="848.0" layoutY="863.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="370.0">
-         <font>
-            <Font size="14.0" />
-         </font>
-      </Text>
-      <Slider fx:id="slider_brush_size" blockIncrement="1.0" layoutX="632.0" layoutY="849.0" max="50.0" min="1.0" prefHeight="14.0" prefWidth="99.0" value="5.0" />
+      </AnchorPane>
    </children>
 </AnchorPane>

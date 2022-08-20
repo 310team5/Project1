@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
+
+.root {
+	-fx-background-color: #CCCCCC;
+}
+
+.navigation_bar {
+	-fx-background-color: #332E43;
+	-fx-text-fill: #FFFFFF;
+	-fx-border-style: hidden;
+}
+
+.slider_tool .track {
+	-fx-pref-height: 40px;
+	-fx-pref-width: 40px;
+	-fx-background-radius: 3;
+	-fx-background-color: #565263;
+}
+
+.slider_tool .thumb {
+	-fx-pref-height: 20px;
+	-fx-pref-width: 42px;
+	-fx-background-color: #ADABB4;
+	-fx-background-radius: 3;
+	-fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 10, 0.5, 0.0, 0.0);
+}
+
+.text_field_title {
+	-fx-background-color: #565263;
+	-fx-text-fill: #FFFFFF;
+	-fx-font-size: 20px;
+	-fx-font-family: 'Space Mono', monospace;
+	-fx-opacity: 0.6;
+}
+
+.text_field_title:hover {
+	-fx-opacity: 1.0;
+}
+
+.text_field_title:pressed {
+	-fx-background-color: #3F3E80;
+	-fx-opacity: 1.0;
+	-fx-effect: none;
+}
+
+.button_tool {
+	-fx-text-fill: #FFFFFF;
+	-fx-background-color: transparent;
+	-fx-font-size: 20px;
+	-fx-font-family: 'Space Mono', monospace;
+	-fx-opacity: 0.6;
+}
+
+.button_tool:hover {
+	-fx-opacity: 0.8;
+}
+
+.button_tool:pressed {
+	-fx-background-color: #5A59B1;
+	-fx-opacity: 1.0;
+}
+
+.button_tool:selected {
+  	-fx-background-color: #5A59B1;
+  	-fx-opacity: 1.0
+}
+
+.color_picker {
+ 	-fx-color-label-visible: false;
+  	-fx-color-rect-width: 35px;
+  	-fx-color-rect-height: 35px;
+  	-fx-font-size: 0px;
+}
+
+.color_picker > .arrow-button {
+    -fx-font-size: 0.1px;
+}
