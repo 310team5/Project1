@@ -43,6 +43,7 @@
                         <Text fill="WHITE" layoutX="1017.0" layoutY="53.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Finished" />
                         <Button fx:id="button_moveDOING" layoutX="380.0" layoutY="277.0" mnemonicParsing="false" onAction="#moveToDOING" text="Button" />
                         <Button fx:id="button_moveDONE" layoutX="782.0" layoutY="281.0" mnemonicParsing="false" onAction="#moveToDONE" text="Button" />
+                        <Button fx:id="button_clearDONE" layoutX="1133.0" layoutY="37.0" mnemonicParsing="false" onAction="#clearDONE" text="Button" />
                      </children>
                   </AnchorPane>
                   <AnchorPane layoutX="50.0" layoutY="14.0" minHeight="-Infinity" prefHeight="94.0" prefWidth="1210.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="14.0">
