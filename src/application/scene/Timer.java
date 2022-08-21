@@ -16,9 +16,9 @@ public class Timer{
 	  @FXML private ToggleGroup timerButtons;
 	  @FXML private Text countdownText;
 	  @FXML private Button startButton;
-	  private static final String POMODORO_TIME = "00:05";
-	  private static final String SHORT_BREAK_TIME = "00:05";
-	  private static final String LONG_BREAK_TIME = "00:05";
+	  private static final String POMODORO_TIME = "25:00";
+	  private static final String SHORT_BREAK_TIME = "05:00";
+	  private static final String LONG_BREAK_TIME = "15:00";
 	  private static final String DISABLE_BUTTON_STYLE = "-fx-opacity: 1.0;";
 	  private Time time = new Time();
 	  private int numOfPomodoro = 0;
