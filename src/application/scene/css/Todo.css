@@ -1,0 +1,31 @@
+.root {
+    -fx-background-color: #CCCCCC;
+}
+
+.navigation_bar {
+    -fx-background-color: #332E43;
+    -fx-text-fill: #FFFFFF;
+    -fx-border-style: hidden;
+}
+
+.button_tool {
+    -fx-text-fill: #FFFFFF;
+    -fx-background-color: transparent;
+    -fx-font-size: 20px;
+    -fx-font-family: 'Space Mono', monospace;
+    -fx-opacity: 0.6;
+}
+
+.button_tool:hover {
+    -fx-opacity: 0.8;
+}
+
+.button_tool:pressed {
+    -fx-background-color: #5A59B1;
+    -fx-opacity: 1.0;
+}
+
+.button_tool:selected {
+    -fx-background-color: #5A59B1;
+    -fx-opacity: 1.0
+}
