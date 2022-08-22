@@ -30,7 +30,7 @@ public class Drawboard {
 	@FXML private TextField textFieldTitle;
 	@FXML private Text textToolSize;
 	@FXML private Slider sliderToolSize;
-	@FXML private ImageView toolIndicator;
+	@FXML private Text toolIndicator;
 	GraphicsContext brushTool;
 	
 	public void initialize() {
@@ -54,6 +54,11 @@ public class Drawboard {
 				brushTool.fillRoundRect(x, y, size, size, size, size);			
 			}			
 		});
+		
+		toolIndicator.setText(Integer.toString((int)sliderToolSize.getValue()) + " px");
+		sliderToolSize.valueProperty().addListener(ov -> {
+	            	toolIndicator.setText(Integer.toString((int)sliderToolSize.getValue()) + " px");
+	        });
 	}
 	
 	/** Click handler for the save drawing button. */
@@ -71,7 +76,7 @@ public class Drawboard {
 			 saveMessage = ("Your drawing was saved as \"" + drawingTitle + ".png" + "\"");
 		} catch (Exception e) {
 			System.out.println("Failed to save image: " + e);
-			saveMessage = "There was an error saving your drawing. Please try again";
+			saveMessage = "There was an error saving your drawing. Please try again \n Tip: try not using special characters in your drawing title.";
 		}
 		
 		DrawboardModal.openSaveModal(saveMessage);
@@ -84,3 +89,4 @@ public class Drawboard {
 		SceneManager.switchToDashboardScene();
 	}
 }
+

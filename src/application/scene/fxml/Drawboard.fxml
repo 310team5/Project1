@@ -17,6 +17,7 @@
 <?import javafx.scene.layout.Region?>
 <?import javafx.scene.paint.Color?>
 <?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
 <AnchorPane prefHeight="810.0" prefWidth="1315.0" style="-fx-background-color: grey;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.scene.Drawboard">
    <children>
@@ -36,7 +37,7 @@
                            </graphic>
                         </Button>
                         <Region minWidth="0.0" prefHeight="60.0" prefWidth="197.0" />
-                        <TextField fx:id="textFieldTitle" alignment="CENTER" prefHeight="40.0" prefWidth="500.0" styleClass="text_field_title" stylesheets="@../css/Drawboard.css" text="MY DRAWING (CLICK TO CHANGE TITLE)">
+                        <TextField fx:id="textFieldTitle" alignment="CENTER" prefHeight="40.0" prefWidth="500.0" promptText="MY DRAWING (CLICK TO CHANGE TITLE)" styleClass="text_field_title" stylesheets="@../css/Drawboard.css">
                            <font>
                               <Font size="18.0" />
                            </font>
@@ -112,11 +113,11 @@
       <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="263.0" prefWidth="54.0" style="-fx-background-color: #332E43; -fx-background-radius: 3px;" stylesheets="@../css/Drawboard.css" AnchorPane.bottomAnchor="250.0" AnchorPane.rightAnchor="0.0">
          <children>
             <Slider fx:id="sliderToolSize" layoutX="6.0" min="1.0" orientation="VERTICAL" prefHeight="220.0" styleClass="slider_tool" stylesheets="@../css/Drawboard.css" value="5.0" AnchorPane.bottomAnchor="43.0" AnchorPane.topAnchor="0.0" />
-            <ImageView fx:id="toolIndicater" fitHeight="35.0" fitWidth="35.0" layoutX="10.0" layoutY="220.0" pickOnBounds="true" preserveRatio="true" style="-fx-opacity: 0.6;">
-               <image>
-                  <Image url="@../assets/icon_tool.png" />
-               </image>
-            </ImageView>
+            <Text fx:id="toolIndicator" boundsType="LOGICAL_VERTICAL_CENTER" fill="#9a9a9a" layoutY="233.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" textOrigin="CENTER" wrappingWidth="54.0">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
          </children>
       </AnchorPane>
    </children>
