@@ -16,6 +16,7 @@ public class Timer{
 	  @FXML private ToggleGroup timerButtons;
 	  @FXML private Text countdownText;
 	  @FXML private Button startButton;
+
 	  private static final String POMODORO_TIME = "25:00";
 	  private static final String SHORT_BREAK_TIME = "05:00";
 	  private static final String LONG_BREAK_TIME = "15:00";
@@ -23,12 +24,17 @@ public class Timer{
 	  private Time time = new Time();
 	  private int numOfPomodoro = 0;
 	  private static final int MAX_NUM_OF_POMODORO = 4;
+
 	  private Timeline timeline = new Timeline(new KeyFrame(Duration.seconds(1), e -> {
+
+		  // When one of the break timers finish, switch timer to prepare for a pomodoro
 		  if (time.getMinutes()==0 && time.getSeconds()==0 && (shortBreakButton.isSelected() || longBreakButton.isSelected())){
 			  timerButtons.selectToggle(pomodoroButton);
 			  preparePomodoro();
 			  stopTimer();
 
+		  /* When the pomodoro timer finishes, switch timer to prepare for a break.
+		   * Timer switches to a short break after one pomodoro and a long break after four pomodoro */
 		  } else if (time.getMinutes()==0 && time.getSeconds()==0 && pomodoroButton.isSelected()){
 			  numOfPomodoro++;
 
@@ -36,6 +42,7 @@ public class Timer{
 				  timerButtons.selectToggle(shortBreakButton);
 				  prepareShortBreak();
 				  stopTimer();
+
 			  } else if (numOfPomodoro == MAX_NUM_OF_POMODORO) {
 				  numOfPomodoro = 0;
 
@@ -45,6 +52,7 @@ public class Timer{
 			  }
 
 		  } else {
+
 			  time.secondCountDown();
 			  countdownText.setText(time.getCurrentTime());
 		  }
@@ -52,6 +60,7 @@ public class Timer{
 
 	  @FXML
 	  public void initialize(){
+		  // The default timer setting is pomodoro
 		  pomodoroButton.fire();
 		  countdownText.setText(POMODORO_TIME);
 		  time.setCurrentTime(POMODORO_TIME);
@@ -64,6 +73,7 @@ public class Timer{
 	    SceneManager.switchToDashboardScene();
 	  }
 
+	  /** Click handler for the timer toggle buttons */
 	  @FXML
 	  public void selectTimerButton(ActionEvent event){
 		   if (pomodoroButton.isSelected()){
@@ -81,6 +91,11 @@ public class Timer{
 		   }
 	  }
 
+	/**
+	 *  The three prepare methods disable the chosen timer toggle button so that it cannot be
+	 *  unselected. The button style is changed to address the change in opacity when a button
+	 *  is disabled.
+	 */
 	  private void preparePomodoro(){
 		  pomodoroButton.setDisable(true);
 		  pomodoroButton.setStyle(DISABLE_BUTTON_STYLE);
@@ -114,6 +129,7 @@ public class Timer{
 		  time.setCurrentTime(LONG_BREAK_TIME);
 	  }
 
+	/** Click handler for the Start/Stop button. */
 	  @FXML
 	  public void controlTimer(ActionEvent event){
 		  String timerStatus = startButton.getText();
