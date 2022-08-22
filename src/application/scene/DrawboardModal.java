@@ -9,8 +9,11 @@ import javafx.stage.Modality;
 import javafx.stage.Stage;
 
 public class DrawboardModal {
-    
-    	/** Opens the save drawing modal in drawboard scene to the user. */
+    	/**
+	 * Show a pop-up message to the user. Indicates whether their drawing save was successful
+	 *
+	 * @param message The JavaFX the message the modal displays after drawing save
+	 */
 	public static  void openSaveModal(String message) {
 		Stage saveModal = new Stage();
 		
