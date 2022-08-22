@@ -12,51 +12,80 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="810.0" prefWidth="1315.0" style="-fx-background-color: grey;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.scene.Todo">
-   <children>
-      <BorderPane prefHeight="810.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
-         <top>
-            <HBox prefHeight="60.0" styleClass="navigation_bar" stylesheets="@../css/Todo.css" BorderPane.alignment="CENTER">
-               <children>
-                  <Button fx:id="buttonDashboard" graphicTextGap="20.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#dashboard" prefHeight="60.0" prefWidth="200.0" styleClass="button_tool" stylesheets="@../css/Todo.css" text="dashboard">
-                     <graphic>
-                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../assets/icon_dashboard_white.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                  </Button>
-               </children>
-            </HBox>
-         </top>
-         <center>
-            <AnchorPane maxHeight="-Infinity" maxWidth="1315.0" prefHeight="810.0" prefWidth="1315.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER">
-               <children>
-                  <AnchorPane layoutX="50.0" layoutY="137.0" prefHeight="493.0" prefWidth="1215.0" style="-fx-background-color: #332E43;" AnchorPane.bottomAnchor="88.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="137.0">
-                     <children>
-                        <ListView fx:id="listView_TODO" layoutX="58.0" layoutY="66.0" prefHeight="438.0" prefWidth="317.0" AnchorPane.bottomAnchor="25.0" AnchorPane.leftAnchor="55.0" AnchorPane.rightAnchor="845.0" AnchorPane.topAnchor="100.0" />
-                        <ListView fx:id="listView_DOING" layoutX="736.0" layoutY="100.0" prefHeight="438.0" prefWidth="317.0" AnchorPane.bottomAnchor="25.0" AnchorPane.leftAnchor="450.0" AnchorPane.rightAnchor="450.0" AnchorPane.topAnchor="100.0" />
-                        <ListView fx:id="listView_DONE" layoutX="858.0" layoutY="48.0" prefHeight="438.0" prefWidth="317.0" AnchorPane.bottomAnchor="25.0" AnchorPane.leftAnchor="845.0" AnchorPane.rightAnchor="55.0" AnchorPane.topAnchor="100.0" />
-                        <Text fill="WHITE" layoutX="192.0" layoutY="53.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TODO" />
-                        <Text fill="WHITE" layoutX="595.0" layoutY="39.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Doing" wrappingWidth="97.98307228088379" />
-                        <Text fill="WHITE" layoutX="1017.0" layoutY="53.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Finished" />
-                        <Button fx:id="button_moveDOING" layoutX="380.0" layoutY="277.0" mnemonicParsing="false" onAction="#moveToDOING" text="Button" />
-                        <Button fx:id="button_moveDONE" layoutX="782.0" layoutY="281.0" mnemonicParsing="false" onAction="#moveToDONE" text="Button" />
-                        <Button fx:id="button_clearDONE" layoutX="1133.0" layoutY="37.0" mnemonicParsing="false" onAction="#clearDONE" text="Button" />
-                     </children>
-                  </AnchorPane>
-                  <AnchorPane layoutX="50.0" layoutY="14.0" minHeight="-Infinity" prefHeight="94.0" prefWidth="1210.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="14.0">
-                     <children>
-                        <TextField fx:id="textField_eventName" layoutX="47.0" layoutY="28.0" prefHeight="38.0" prefWidth="592.0" />
-                        <DatePicker fx:id="datePicker" layoutX="672.0" layoutY="28.0" prefHeight="38.0" prefWidth="238.0" />
-                        <ChoiceBox fx:id="choiceBox_status" layoutX="933.0" layoutY="28.0" prefHeight="38.0" prefWidth="116.0" />
-                        <Button fx:id="button_addEvent" layoutX="1070.0" layoutY="28.0" mnemonicParsing="false" onAction="#addEvent" prefHeight="38.0" prefWidth="105.0" text="Add" />
-                     </children>
-                  </AnchorPane>
-               </children>
-            </AnchorPane>
-         </center>
-      </BorderPane>
-   </children>
+<AnchorPane prefHeight="810.0" prefWidth="1315.0" style="-fx-background-color: grey;" stylesheets="@../css/Todo.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.scene.Todo">
+    <children>
+        <BorderPane prefHeight="810.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+            <top>
+                <HBox prefHeight="60.0" styleClass="navigation_bar" BorderPane.alignment="CENTER">
+                    <children>
+                        <Button fx:id="buttonDashboard" graphicTextGap="20.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#dashboard" prefHeight="60.0" prefWidth="200.0" styleClass="button_tool" text="dashboard">
+                            <graphic>
+                                <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../assets/icon_dashboard_white.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                        </Button>
+                    </children>
+                </HBox>
+            </top>
+            <center>
+                <AnchorPane maxHeight="-Infinity" maxWidth="1315.0" prefHeight="810.0" prefWidth="1315.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER">
+                    <children>
+                        <AnchorPane layoutX="50.0" layoutY="137.0" prefHeight="493.0" prefWidth="1215.0" style="-fx-background-color: #332E43;" AnchorPane.bottomAnchor="40.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="137.0">
+                            <children>
+                                <ListView fx:id="listView_TODO" layoutX="58.0" layoutY="66.0" prefHeight="438.0" prefWidth="317.0" style="" styleClass="listView_TODO" AnchorPane.bottomAnchor="25.0" AnchorPane.leftAnchor="55.0" AnchorPane.rightAnchor="845.0" AnchorPane.topAnchor="100.0" />
+                                <ListView fx:id="listView_DOING" layoutX="736.0" layoutY="100.0" prefHeight="438.0" prefWidth="317.0" styleClass="listView_DOING" AnchorPane.bottomAnchor="25.0" AnchorPane.leftAnchor="450.0" AnchorPane.rightAnchor="450.0" AnchorPane.topAnchor="100.0" />
+                                <ListView fx:id="listView_DONE" layoutX="858.0" layoutY="48.0" prefHeight="438.0" prefWidth="317.0" styleClass="listView_DONE" AnchorPane.bottomAnchor="25.0" AnchorPane.leftAnchor="845.0" AnchorPane.rightAnchor="55.0" AnchorPane.topAnchor="100.0" />
+                                <Text fill="WHITE" layoutX="164.0" layoutY="90.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text_listTitle" text="TODO" wrappingWidth="96.75628662109375" />
+                                <Text fill="WHITE" layoutX="550.0" layoutY="90.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text_listTitle" text="DOING" wrappingWidth="114.78287696838379" />
+                                <Text fill="WHITE" layoutX="956.0" layoutY="90.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text_listTitle" text="DONE" wrappingWidth="92.1468505859375" />
+                                <Button fx:id="button_moveDOING" layoutX="380.0" layoutY="269.0" mnemonicParsing="false" onAction="#moveToDOING" style="-fx-background-color: #6ec6ff;" AnchorPane.bottomAnchor="230.0" AnchorPane.leftAnchor="380.0" AnchorPane.rightAnchor="775.0" AnchorPane.topAnchor="290.0">
+                                    <graphic>
+                                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                            <image>
+                                                <Image url="@../assets/icon_Todo_moveEvents.png" />
+                                            </image>
+                                        </ImageView>
+                                    </graphic>
+                                </Button>
+                                <Button fx:id="button_moveDONE" layoutX="775.0" layoutY="263.0" mnemonicParsing="false" onAction="#moveToDONE" prefHeight="57.0" prefWidth="69.0" style="-fx-background-color: #6ec6ff;" AnchorPane.bottomAnchor="230.0" AnchorPane.leftAnchor="775.0" AnchorPane.rightAnchor="380.0" AnchorPane.topAnchor="290.0">
+                                    <graphic>
+                                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                            <image>
+                                                <Image url="@../assets/icon_Todo_moveEvents.png" />
+                                            </image>
+                                        </ImageView>
+                                    </graphic>
+                                </Button>
+                                <Button fx:id="button_clearDONE" layoutX="1113.0" layoutY="61.0" mnemonicParsing="false" onAction="#clearDONE" style="-fx-background-color: #ffa4a2;">
+                                    <graphic>
+                                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                            <image>
+                                                <Image url="@../assets/icon_Todo_removeDONE.png" />
+                                            </image>
+                                        </ImageView>
+                                    </graphic>
+                                </Button>
+                            </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="50.0" layoutY="14.0" minHeight="-Infinity" prefHeight="94.0" prefWidth="1210.0" style="-fx-background-color: #5d576e;" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="14.0">
+                            <children>
+                                <TextField fx:id="textField_eventName" layoutX="47.0" layoutY="28.0" prefHeight="38.0" prefWidth="592.0" style="-fx-background-color: #e0e0e0;" styleClass="textField_eventName" />
+                                <DatePicker fx:id="datePicker" layoutX="672.0" layoutY="28.0" prefHeight="38.0" prefWidth="238.0" />
+                                <ChoiceBox fx:id="choiceBox_status" layoutX="933.0" layoutY="28.0" prefHeight="38.0" prefWidth="116.0" />
+                                <Button fx:id="button_addEvent" layoutX="1073.0" layoutY="26.0" mnemonicParsing="false" onAction="#addEvent" prefHeight="41.0" prefWidth="118.0" styleClass="button_addEvent" text="   Add" textFill="WHITE" />
+                                <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="1083.0" layoutY="32.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../assets/icon_Todo_addEvent.png" />
+                                    </image>
+                                </ImageView>
+                            </children>
+                        </AnchorPane>
+                    </children>
+                </AnchorPane>
+            </center>
+        </BorderPane>
+    </children>
 </AnchorPane>

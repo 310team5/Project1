@@ -29,3 +29,82 @@
     -fx-background-color: #5A59B1;
     -fx-opacity: 1.0
 }
+
+.textField_eventName {
+    -fx-prompt-text-fill: black;
+    -fx-border-radius: 4px;
+    -fx-font-size: 20px;
+    -fx-font-family: 'Space Mono', monospace;
+    -fx-opacity: 0.6;
+}
+
+
+.button_addEvent {
+    -fx-background-color: #332E43;
+    -fx-font-size: 20px;
+    -fx-font-family: 'Space Mono', monospace;
+    -fx-opacity: 0.6;
+}
+
+
+.text_listTitle {
+    -fx-font-size: 30px;
+    -fx-font-family: 'Space Mono', monospace;
+}
+
+.listView_TODO {
+    -fx-background-color: #ede7f6;
+
+}
+
+
+.listView_DOING {
+    -fx-background-color: #fff176;
+}
+
+.listView_DONE {
+    -fx-background-color: #81c784;
+}
+
+.list-cell {
+    -fx-font-size: 18px;
+}
+
+.listView_TODO .list-cell:odd {
+    -fx-background-color: #ffffff;
+}
+
+.listView_TODO .list-cell:even {
+    -fx-background-color: #ede7f6;
+}
+
+.listView_DOING .list-cell:odd {
+    -fx-background-color: #ffffa8;
+}
+
+.listView_DOING .list-cell:even {
+    -fx-background-color: #fff176;
+}
+
+.listView_DONE .list-cell:odd {
+    -fx-background-color: #b2fab4;
+}
+
+.listView_DONE .list-cell:even {
+    -fx-background-color: #81c784;
+}
+
+.listView_TODO .list-cell:filled:selected:focused, .list-cell:filled:selected {
+    -fx-background-color: linear-gradient(#333 0%, #777 25%, #aaa 75%, #eee 100%);
+    -fx-text-fill: white;
+}
+
+.listView_DOING .list-cell:filled:selected:focused, .list-cell:filled:selected {
+    -fx-background-color: linear-gradient(#333 0%, #777 25%, #aaa 75%, #eee 100%);
+    -fx-text-fill: white;
+}
+
+.listView_DONE .list-cell:filled:selected:focused, .list-cell:filled:selected {
+    -fx-background-color: linear-gradient(#333 0%, #777 25%, #aaa 75%, #eee 100%);
+    -fx-text-fill: white;
+}

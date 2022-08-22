@@ -33,6 +33,9 @@ public class Todo {
 
 
     public void initialize() {
+
+        textField_eventName.setPromptText("TODO Events");
+
         datePicker.setValue(LocalDate.now());
 
         //Add TODO DOING DONE status to the choiceBox dropdown
@@ -49,7 +52,7 @@ public class Todo {
     @FXML
     private void addEvent() {
         String status = choiceBox_status.getValue();
-        String eventMessage = "At " + datePicker.getValue() + " " + textField_eventName.getText();
+        String eventMessage = datePicker.getValue() + " " + textField_eventName.getText();
 
         if (textField_eventName.getText().isEmpty()) {
             noContentAlert();
