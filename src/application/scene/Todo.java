@@ -38,7 +38,6 @@ public class Todo {
 
         datePicker.setValue(LocalDate.now());
 
-        //Add TODO DOING DONE status to the choiceBox dropdown
         choiceBox_status.getItems().addAll("TODO", "DOING", "DONE");
         choiceBox_status.setValue("TODO");
 
@@ -77,25 +76,36 @@ public class Todo {
     @FXML
     private void moveToDOING() {
         String currentItem = listView_TODO.getSelectionModel().getSelectedItem();
-        if (!currentItem.isEmpty()) {
-            listView_DOING.getItems().add(currentItem);
-            listView_TODO.getItems().remove(currentItem);
 
-            rewriteHistory(listView_TODO, "TODO");
-            rewriteHistory(listView_DOING, "DOING");
+        try {
+            if (!currentItem.isEmpty()) {
+                listView_DOING.getItems().add(currentItem);
+                listView_TODO.getItems().remove(currentItem);
+
+                rewriteHistory(listView_TODO, "TODO");
+                rewriteHistory(listView_DOING, "DOING");
+            }
+        } catch (Exception e) {
+
         }
+
     }
 
     @FXML
     private void moveToDONE() {
         String currentItem = listView_DOING.getSelectionModel().getSelectedItem();
-        if (!currentItem.isEmpty()) {
-            listView_DONE.getItems().add(currentItem);
-            listView_DOING.getItems().remove(currentItem);
 
-            rewriteHistory(listView_DOING, "DOING");
-            rewriteHistory(listView_DONE, "DONE");
+        try {
+            if (!currentItem.isEmpty()) {
+                listView_DONE.getItems().add(currentItem);
+                listView_DOING.getItems().remove(currentItem);
+
+                rewriteHistory(listView_DOING, "DOING");
+                rewriteHistory(listView_DONE, "DONE");
+            }
+        } catch (Exception e) {
         }
+
     }
 
     @FXML
@@ -109,7 +119,7 @@ public class Todo {
 
         try {
             File file = new File("./src/application/scene/ToDoLists/DONE.txt");
-            FileWriter clearWriter = new FileWriter(file); //the true will append the new data
+            FileWriter clearWriter = new FileWriter(file);
             clearWriter.write("");
             clearWriter.close();
         } catch (IOException e) {
@@ -175,12 +185,35 @@ public class Todo {
         alert_noContentWarning.show();
     }
 
-
     /**
      * Click handler for the dashboard button.
      */
     @FXML
     private void dashboard() {
         SceneManager.switchToDashboardScene();
+    }
+
+    /**
+     * Click handler for the notes button.
+     */
+    @FXML
+    private void notes() {
+        SceneManager.switchToNotesScene();
+    }
+
+    /**
+     * Click handler for the timer button.
+     */
+    @FXML
+    private void timer() {
+        SceneManager.switchToTimerScene();
+    }
+
+    /**
+     * Click handler for the drawboard button.
+     */
+    @FXML
+    private void drawboard() {
+        SceneManager.switchToDrawboardScene();
     }
 }

@@ -1,5 +1,5 @@
 .root {
-    -fx-background-color: #CCCCCC;
+    -fx-background-color: white;
 }
 
 .navigation_bar {
@@ -7,6 +7,14 @@
     -fx-text-fill: #FFFFFF;
     -fx-border-style: hidden;
 }
+
+.button_focus {
+    -fx-text-fill: #FFFFFF;
+    -fx-background-color: transparent;
+    -fx-font-size: 32px;
+    -fx-font-family: 'Space Mono', monospace;
+}
+
 
 .button_tool {
     -fx-text-fill: #FFFFFF;
@@ -43,7 +51,6 @@
     -fx-background-color: #332E43;
     -fx-font-size: 20px;
     -fx-font-family: 'Space Mono', monospace;
-    -fx-opacity: 0.6;
 }
 
 
@@ -54,16 +61,19 @@
 
 .listView_TODO {
     -fx-background-color: #ede7f6;
-
+    -fx-background-radius: 10 10 10 10;
 }
 
 
 .listView_DOING {
-    -fx-background-color: #fff176;
+    -fx-background-color: #6f79a8;
+    -fx-background-radius: 10 10 10 10;
 }
 
 .listView_DONE {
-    -fx-background-color: #81c784;
+    -fx-text-fill: white;
+    -fx-background-color: #003d33;
+    -fx-background-radius: 10 10 10 10;
 }
 
 .list-cell {
@@ -79,19 +89,21 @@
 }
 
 .listView_DOING .list-cell:odd {
-    -fx-background-color: #ffffa8;
+    -fx-background-color: #9fa8da;
 }
 
 .listView_DOING .list-cell:even {
-    -fx-background-color: #fff176;
+    -fx-background-color: #6f79a8;
 }
 
 .listView_DONE .list-cell:odd {
-    -fx-background-color: #b2fab4;
+    -fx-text-fill: white;
+    -fx-background-color: #00695c;
 }
 
 .listView_DONE .list-cell:even {
-    -fx-background-color: #81c784;
+    -fx-text-fill: white;
+    -fx-background-color: #003d33;
 }
 
 .listView_TODO .list-cell:filled:selected:focused, .list-cell:filled:selected {
