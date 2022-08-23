@@ -2,6 +2,7 @@
 
 <?import java.lang.String?>
 <?import javafx.geometry.Insets?>
+<?import javafx.geometry.Rectangle2D?>
 <?import javafx.scene.canvas.Canvas?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ColorPicker?>
@@ -25,18 +26,9 @@
          <top>
             <AnchorPane maxHeight="60.0" prefHeight="60.0" styleClass="navigation_bar" stylesheets="@../css/Drawboard.css" BorderPane.alignment="CENTER">
                <children>
-                  <HBox prefHeight="60.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="350.0">
+                  <HBox alignment="TOP_CENTER" prefHeight="60.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="325.0">
                      <children>
-                        <Button fx:id="buttonDashboard" graphicTextGap="20.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#dashboard" prefHeight="60.0" prefWidth="200.0" styleClass="button_tool" stylesheets="@../css/Drawboard.css" text="dashboard">
-                           <graphic>
-                              <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@../assets/icon_dashboard_white.png" />
-                                 </image>
-                              </ImageView>
-                           </graphic>
-                        </Button>
-                        <Region minWidth="0.0" prefHeight="60.0" prefWidth="197.0" />
+                        <Region minWidth="0.0" prefHeight="60.0" prefWidth="401.0" />
                         <TextField fx:id="textFieldTitle" alignment="CENTER" prefHeight="40.0" prefWidth="500.0" promptText="MY DRAWING (CLICK TO CHANGE TITLE)" styleClass="text_field_title" stylesheets="@../css/Drawboard.css">
                            <font>
                               <Font size="18.0" />
@@ -100,6 +92,9 @@
                      </children>
                   </HBox>
                </children>
+               <BorderPane.margin>
+                  <Insets />
+               </BorderPane.margin>
             </AnchorPane>
          </top>
          <center>
@@ -107,6 +102,9 @@
                <children>
                   <Canvas fx:id="canvas" height="750.0" width="1315.0" />
                </children>
+               <BorderPane.margin>
+                  <Insets left="150.0" />
+               </BorderPane.margin>
             </Pane>
          </center>
       </BorderPane>
@@ -118,6 +116,111 @@
                   <Font size="18.0" />
                </font>
             </Text>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="10.0" prefHeight="810.0" prefWidth="150.0" styleClass="menu" stylesheets="@../css/Drawboard.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ImageView fitHeight="100.0" fitWidth="100.0" layoutX="27.0" layoutY="34.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/logo_short.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="buttonDashboard" layoutX="34.0" layoutY="174.0" mnemonicParsing="false" onAction="#dashboard" stylesheets="@../css/Drawboard.css">
+               <styleClass>
+                  <String fx:value="button_focus" />
+                  <String fx:value="button_menu" />
+               </styleClass>
+               <graphic>
+                  <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/icon_dashboard_white.png" />
+                     </image>
+                     <viewport>
+                        <Rectangle2D />
+                     </viewport>
+                     <styleClass>
+                        <String fx:value="button_menu" />
+                        <String fx:value="button_focus" />
+                     </styleClass>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="buttonNotes" layoutX="34.0" layoutY="254.0" mnemonicParsing="false" onAction="#notes" stylesheets="@../css/Drawboard.css">
+               <styleClass>
+                  <String fx:value="button_focus" />
+                  <String fx:value="button_menu" />
+               </styleClass>
+               <graphic>
+                  <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/icon_notes_white.png" />
+                     </image>
+                     <viewport>
+                        <Rectangle2D />
+                     </viewport>
+                     <styleClass>
+                        <String fx:value="button_menu" />
+                        <String fx:value="button_focus" />
+                     </styleClass>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="buttonTImer" layoutX="34.0" layoutY="479.0" mnemonicParsing="false" onAction="#timer" stylesheets="@../css/Drawboard.css">
+               <graphic>
+                  <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/icon_timer_white.png" />
+                     </image>
+                     <viewport>
+                        <Rectangle2D />
+                     </viewport>
+                     <styleClass>
+                        <String fx:value="button_menu" />
+                        <String fx:value="button_focus" />
+                     </styleClass>
+                  </ImageView>
+               </graphic>
+               <styleClass>
+                  <String fx:value="button_focus" />
+                  <String fx:value="button_menu" />
+               </styleClass>
+            </Button>
+            <Button layoutX="34.0" layoutY="398.0" mnemonicParsing="false" style="-fx-opacity: 1;" stylesheets="@../css/Drawboard.css">
+               <graphic>
+                  <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/icon_drawboard_white.png" />
+                     </image>
+                     <viewport>
+                        <Rectangle2D />
+                     </viewport>
+                  </ImageView>
+               </graphic>
+               <styleClass>
+                  <String fx:value="button_focus" />
+                  <String fx:value="button_menu" />
+               </styleClass>
+            </Button>
+            <Button fx:id="buttonTodo" layoutX="34.0" layoutY="327.0" mnemonicParsing="false" onAction="#todo" stylesheets="@../css/Drawboard.css">
+               <styleClass>
+                  <String fx:value="button_focus" />
+                  <String fx:value="button_menu" />
+               </styleClass>
+               <graphic>
+                  <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/icon_todo_white.png" />
+                     </image>
+                     <viewport>
+                        <Rectangle2D />
+                     </viewport>
+                     <styleClass>
+                        <String fx:value="button_menu" />
+                        <String fx:value="button_focus" />
+                     </styleClass>
+                  </ImageView>
+               </graphic>
+            </Button>
          </children>
       </AnchorPane>
    </children>

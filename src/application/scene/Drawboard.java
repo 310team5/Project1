@@ -24,6 +24,9 @@ public class Drawboard {
 	@FXML private ColorPicker colorPicker;
 	@FXML private Canvas canvas;
 	@FXML private Button buttonDashboard;
+	@FXML private Button buttonNotes;
+	@FXML private Button buttonTodo;
+	@FXML private Button buttonTimer;
 	@FXML private ToggleButton buttonBrush;
 	@FXML private ToggleButton buttonEraser;
 	@FXML private Button buttonSave;
@@ -88,5 +91,24 @@ public class Drawboard {
 	private void dashboard() {
 		SceneManager.switchToDashboardScene();
 	}
+	
+	/** Click handler for the notes button. */
+	@FXML
+	private void notes() {
+		SceneManager.switchToNotesScene();
+	}
+	
+	/** Click handler for the todo button. */
+	@FXML
+	private void todo() {
+		SceneManager.switchToTodoScene();
+	}
+	
+	/** Click handler for the timer button. */
+	@FXML
+	private void timer() {
+		SceneManager.switchToTimerScene();
+	}
+	
 }
 

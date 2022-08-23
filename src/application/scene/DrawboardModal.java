@@ -14,7 +14,7 @@ public class DrawboardModal {
 	 *
 	 * @param message The JavaFX the message the modal displays after drawing save
 	 */
-	public static  void openSaveModal(String message) {
+	public static void openSaveModal(String message) {
 		Stage saveModal = new Stage();
 		
 		saveModal.initModality(Modality.APPLICATION_MODAL);

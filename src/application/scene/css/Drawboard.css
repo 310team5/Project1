@@ -4,8 +4,14 @@
 	-fx-background-color: #CCCCCC;
 }
 
+.menu {
+    -fx-background-color: #332E43;
+    -fx-border-style: hidden;
+    -fx-background-radius: 0 40 40 0;
+}
+
 .navigation_bar {
-	-fx-background-color: #332E43;
+	-fx-background-color: #5A59B1;
 	-fx-text-fill: #FFFFFF;
 	-fx-border-style: hidden;
 }
@@ -26,11 +32,11 @@
 }
 
 .text_field_title {
-	-fx-background-color: #565263;
+	-fx-background-color: #3F3E80;
 	-fx-text-fill: #FFFFFF;
 	-fx-font-size: 20px;
 	-fx-font-family: 'Space Mono', monospace;
-	-fx-opacity: 0.6;
+	-fx-opacity: 0.8;
 }
 
 .text_field_title:hover {
@@ -56,12 +62,12 @@
 }
 
 .button_tool:pressed {
-	-fx-background-color: #5A59B1;
+	-fx-background-color: #3F3E80;
 	-fx-opacity: 1.0;
 }
 
 .button_tool:selected {
-  	-fx-background-color: #5A59B1;
+  	-fx-background-color: #3F3E80;
   	-fx-opacity: 1.0
 }
 
@@ -74,4 +80,24 @@
 
 .color_picker > .arrow-button {
     -fx-font-size: 0.1px;
+}
+
+.button_menu {
+    -fx-background-color: transparent;
+    -fx-opacity: 0.6;
+}
+
+.button_menu:hover {
+    -fx-opacity: 0.8;
+}
+
+.button_menu:pressed {
+    -fx-opacity: 1;
+}
+
+.button_focus {
+    -fx-text-fill: #FFFFFF;
+    -fx-background-color: transparent;
+    -fx-font-size: 32px;
+    -fx-font-family: 'Space Mono', monospace;
 }
