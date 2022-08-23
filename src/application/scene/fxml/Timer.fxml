@@ -40,7 +40,7 @@
                   </ImageView>
                </graphic>
             </Button>
-            <Button layoutX="34.0" layoutY="254.0" mnemonicParsing="false" stylesheets="@../css/Timer.css">
+            <Button layoutX="34.0" layoutY="254.0" mnemonicParsing="false" onAction="#notes" stylesheets="@../css/Timer.css">
                <styleClass>
                   <String fx:value="button_focus" />
                   <String fx:value="button_menu" />
@@ -72,7 +72,7 @@
                   </ImageView>
                </graphic>
             </Button>
-            <Button layoutX="34.0" layoutY="398.0" mnemonicParsing="false" stylesheets="@../css/Timer.css">
+            <Button layoutX="34.0" layoutY="398.0" mnemonicParsing="false" onAction="#drawboard" stylesheets="@../css/Timer.css">
                <styleClass>
                   <String fx:value="button_focus" />
                   <String fx:value="button_menu" />
@@ -92,7 +92,7 @@
                   </ImageView>
                </graphic>
             </Button>
-            <Button layoutX="34.0" layoutY="327.0" mnemonicParsing="false" stylesheets="@../css/Timer.css">
+            <Button layoutX="34.0" layoutY="327.0" mnemonicParsing="false" onAction="#todo" stylesheets="@../css/Timer.css">
                <styleClass>
                   <String fx:value="button_focus" />
                   <String fx:value="button_menu" />
