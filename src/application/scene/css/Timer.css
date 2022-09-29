@@ -1,26 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
-
+@import "./MainResources.css";
 .root {
     -fx-background-color: #CCCCCC;
-}
-
-.menu {
-    -fx-background-color: #332E43;
-    -fx-border-style: hidden;
-    -fx-background-radius: 0 40 40 0;
-}
-
-.button_menu {
-    -fx-background-color: transparent;
-    -fx-opacity: 0.6;
-}
-
-.button_menu:hover {
-    -fx-opacity: 0.8;
-}
-
-.button_menu:pressed {
-    -fx-opacity: 1;
 }
 
 .button_focus {
