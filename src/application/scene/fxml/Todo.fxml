@@ -8,6 +8,7 @@
 <?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.ListView?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Tooltip?>
 <?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.effect.InnerShadow?>
 <?import javafx.scene.image.Image?>
@@ -26,15 +27,15 @@
                             <children>
                                 <ListView fx:id="listView_TODO" layoutX="14.0" layoutY="100.0" maxWidth="300.0" prefHeight="438.0" prefWidth="300.0" styleClass="listView_TODO" AnchorPane.bottomAnchor="25.0" AnchorPane.leftAnchor="25.0" AnchorPane.topAnchor="100.0">
                            <effect>
-                              <InnerShadow />
+                              <InnerShadow height="30.0" radius="14.5" width="30.0" />
                            </effect></ListView>
                                 <ListView fx:id="listView_DOING" layoutX="412.0" layoutY="102.0" maxWidth="300.0" prefHeight="438.0" prefWidth="300.0" styleClass="listView_DOING" AnchorPane.bottomAnchor="25.0" AnchorPane.topAnchor="102.0">
                            <effect>
-                              <InnerShadow />
+                              <InnerShadow height="30.0" radius="14.5" width="30.0" />
                            </effect></ListView>
                                 <ListView fx:id="listView_DONE" layoutX="713.0" layoutY="105.0" maxWidth="300.0" prefHeight="508.0" prefWidth="300.0" styleClass="listView_DONE" AnchorPane.bottomAnchor="25.0" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="105.0">
                            <effect>
-                              <InnerShadow />
+                              <InnerShadow height="30.0" radius="14.5" width="30.0" />
                            </effect></ListView>
                                 <Text fill="WHITE" layoutX="127.0" layoutY="89.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text_listTitle" text="TODO" textAlignment="CENTER" wrappingWidth="96.75628662109375" />
                                 <Text fill="WHITE" layoutX="505.0" layoutY="90.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text_listTitle" text="DOING" textAlignment="CENTER" wrappingWidth="114.78287696838379" />
@@ -50,6 +51,12 @@
                            <cursor>
                               <Cursor fx:constant="HAND" />
                            </cursor>
+                           <tooltip>
+                              <Tooltip styleClass="tooltip" text="Move task to DOING" />
+                           </tooltip>
+                           <effect>
+                              <DropShadow height="35.0" radius="17.0" spread="0.1" width="35.0" />
+                           </effect>
                                 </Button>
                                 <Button fx:id="button_moveDONE" layoutX="726.0" layoutY="316.0" maxHeight="60.0" maxWidth="60.0" minWidth="43.0" mnemonicParsing="false" onAction="#moveToDONE" prefHeight="59.0" prefWidth="60.0" style="-fx-background-color: #6ec6ff; -fx-background-radius: 10 10 10 10;" AnchorPane.bottomAnchor="258.0" AnchorPane.topAnchor="316.0">
                                     <graphic>
@@ -62,6 +69,12 @@
                            <cursor>
                               <Cursor fx:constant="HAND" />
                            </cursor>
+                           <tooltip>
+                              <Tooltip styleClass="tooltip" text="Move task to DONE" />
+                           </tooltip>
+                           <effect>
+                              <DropShadow height="35.0" radius="17.0" spread="0.1" width="35.0" />
+                           </effect>
                                 </Button>
                                 <Button fx:id="button_clearDONE" layoutX="1057.0" layoutY="60.0" mnemonicParsing="false" onAction="#clearDONE" style="-fx-background-color: #ffa4a2; -fx-background-radius: 10 10 10 10;">
                                     <graphic>
@@ -77,6 +90,12 @@
                            <cursor>
                               <Cursor fx:constant="HAND" />
                            </cursor>
+                           <tooltip>
+                              <Tooltip styleClass="tooltip" text="Delete tasks in DONE" />
+                           </tooltip>
+                           <effect>
+                              <DropShadow height="30.0" radius="14.5" spread="0.2" width="30.0" />
+                           </effect>
                                 </Button>
                             </children>
                      <effect>
@@ -88,7 +107,10 @@
                                 <TextField fx:id="textField_eventName" layoutX="47.0" layoutY="28.0" prefHeight="38.0" prefWidth="530.0" style="-fx-background-color: #e0e0e0; -fx-background-radius: 5 5 5 5;" styleClass="textField_eventName">
                            <cursor>
                               <Cursor fx:constant="TEXT" />
-                           </cursor></TextField>
+                           </cursor>
+                           <tooltip>
+                              <Tooltip styleClass="tooltip" text="Task name" />
+                           </tooltip></TextField>
                                 <DatePicker fx:id="datePicker" layoutX="633.0" layoutY="28.0" prefHeight="38.0" prefWidth="150.0" style="-fx-background-radius: 5 5 5 5;">
                            <cursor>
                               <Cursor fx:constant="HAND" />
@@ -111,6 +133,9 @@
                            <effect>
                               <InnerShadow />
                            </effect>
+                           <tooltip>
+                              <Tooltip styleClass="tooltip" text="Add Task" />
+                           </tooltip>
                                 </Button>
                             </children>
                         </AnchorPane>
@@ -150,6 +175,9 @@
                      <cursor>
                         <Cursor fx:constant="HAND" />
                      </cursor>
+                     <tooltip>
+                        <Tooltip styleClass="tooltip" text="Dashboard" />
+                     </tooltip>
                         </Button>
                         <Button layoutX="34.0" layoutY="254.0" mnemonicParsing="false" onAction="#notes" stylesheets="@../css/Timer.css">
                             <styleClass>
@@ -173,6 +201,9 @@
                      <cursor>
                         <Cursor fx:constant="HAND" />
                      </cursor>
+                     <tooltip>
+                        <Tooltip styleClass="tooltip" text="Notes" />
+                     </tooltip>
                         </Button>
                         <Button layoutX="34.0" layoutY="327.0" mnemonicParsing="false" style="-fx-opacity: 1;" styleClass="button_focus" stylesheets="@../css/Timer.css">
                             <graphic>
@@ -185,6 +216,9 @@
                                     </viewport>
                                 </ImageView>
                             </graphic>
+                     <tooltip>
+                        <Tooltip styleClass="tooltip" text="TODO" />
+                     </tooltip>
                         </Button>
                         <Button layoutX="34.0" layoutY="398.0" mnemonicParsing="false" onAction="#drawboard" stylesheets="@../css/Timer.css">
                             <styleClass>
@@ -211,6 +245,9 @@
                      <cursor>
                         <Cursor fx:constant="HAND" />
                      </cursor>
+                     <tooltip>
+                        <Tooltip styleClass="tooltip" text="Drawboard" />
+                     </tooltip>
                         </Button>
                         <Button layoutX="34.0" layoutY="479.0" mnemonicParsing="false" onAction="#timer" stylesheets="@../css/Timer.css">
                             <styleClass>
@@ -237,6 +274,9 @@
                      <cursor>
                         <Cursor fx:constant="HAND" />
                      </cursor>
+                     <tooltip>
+                        <Tooltip styleClass="tooltip" text="Timer" />
+                     </tooltip>
                         </Button>
                     </children>
                 </AnchorPane>
