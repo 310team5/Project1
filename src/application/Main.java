@@ -13,6 +13,7 @@ public class Main extends Application {
 	  @Override
 	  public void start(Stage stage) {
 	    // Set window options.
+		stage.setResizable(false);
 	    stage.setTitle("My Study"); //just a filler name
 	    stage.setMaximized(true);
 
