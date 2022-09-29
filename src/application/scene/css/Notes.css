@@ -1,0 +1,50 @@
+.root {
+    -fx-background-color: white;
+}
+
+.navigation_bar {
+    -fx-background-color: #332E43;
+    -fx-text-fill: #FFFFFF;
+    -fx-border-style: hidden;
+}
+
+.button_focus {
+    -fx-text-fill: #FFFFFF;
+    -fx-background-color: transparent;
+    -fx-font-size: 32px;
+    -fx-font-family: 'Space Mono', monospace;
+}
+
+
+.button_tool {
+    -fx-text-fill: #FFFFFF;
+    -fx-background-color: transparent;
+    -fx-font-size: 20px;
+    -fx-font-family: 'Space Mono', monospace;
+    -fx-opacity: 0.6;
+}
+
+.button_tool:hover {
+    -fx-opacity: 0.8;
+}
+
+.textField_eventName {
+    -fx-prompt-text-fill: black;
+    -fx-border-radius: 4px;
+    -fx-font-size: 20px;
+    -fx-font-family: 'Space Mono', monospace;
+    -fx-opacity: 0.6;
+}
+
+
+.button_addEvent {
+    -fx-background-color: #332E43;
+    -fx-font-size: 20px;
+    -fx-font-family: 'Space Mono', monospace;
+}
+
+
+.text_listTitle {
+    -fx-font-size: 30px;
+    -fx-font-family: 'Space Mono', monospace;
+}
