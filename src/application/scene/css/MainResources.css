@@ -28,6 +28,4 @@ nonwhite fx-background-color				#CCCCCC (Use White for scenes with user input)
     -fx-opacity: 0.8;
 }
 
-.button_menu:pressed {
-    -fx-opacity: 1;
-}
+
