@@ -1,0 +1,33 @@
+/********************* Colour reference chart****************
+********* Element *************************** Colour ***********
+
+navigation bar background color      		#5A59B1
+navigation bar  text fill                   #FFFFFF
+menu background color    					#332E43                       
+nonwhite fx-background-color				#CCCCCC (Use White for scenes with user input)
+*/
+
+.navigation_bar {
+	-fx-background-color: #5A59B1;
+	-fx-text-fill: #FFFFFF;
+	-fx-border-style: hidden;
+}
+
+.menu {
+    -fx-background-color: #332E43;
+    -fx-border-style: hidden;
+    -fx-background-radius: 0 40 40 0;
+}
+
+.button_menu {
+    -fx-background-color: transparent;
+    -fx-opacity: 0.6;
+}
+
+.button_menu:hover {
+    -fx-opacity: 0.8;
+}
+
+.button_menu:pressed {
+    -fx-opacity: 1;
+}

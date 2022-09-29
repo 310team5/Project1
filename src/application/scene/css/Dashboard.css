@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
-
+@import "./MainResources.css";
 .root {
 	-fx-background-color: #CCCCCC;
 }
@@ -19,13 +19,7 @@
 	-fx-opacity: 0.6;
 }
 
-.button_menu:hover {
-	-fx-opacity: 0.8;
-}
 
-.button_menu:pressed {
-	-fx-opacity: 1;
-}
 
 .button_focus {
 	-fx-text-fill: #FFFFFF;  
