@@ -32,7 +32,10 @@ public class Todo {
     private ChoiceBox<String> choiceBox_status;
     @FXML
     private Button button_todo;
-
+    
+    private static final String NOT_STARTED_TEXT = "TODO";
+    private static final String IN_PROGRESS_TEXT = "DOING";
+    private static final String COMPLETED_TEXT = "DONE";
 
     public void initialize() {
 
@@ -40,12 +43,12 @@ public class Todo {
 
         datePicker.setValue(LocalDate.now());
 
-        choiceBox_status.getItems().addAll("TODO", "DOING", "DONE");
-        choiceBox_status.setValue("TODO");
+        choiceBox_status.getItems().addAll(NOT_STARTED_TEXT , IN_PROGRESS_TEXT, COMPLETED_TEXT);
+        choiceBox_status.setValue(NOT_STARTED_TEXT );
 
-        getHistory(listView_TODO, "TODO");
-        getHistory(listView_DOING, "DOING");
-        getHistory(listView_DONE, "DONE");
+        getHistory(listView_TODO, NOT_STARTED_TEXT );
+        getHistory(listView_DOING, IN_PROGRESS_TEXT);
+        getHistory(listView_DONE, COMPLETED_TEXT);
 
 
     }
@@ -59,14 +62,14 @@ public class Todo {
             noContentAlert();
         } else {
             switch (status) {
-                case "TODO":
-                    addToList(listView_TODO, "TODO", eventMessage);
+                case NOT_STARTED_TEXT :
+                    addToList(listView_TODO, NOT_STARTED_TEXT , eventMessage);
                     break;
-                case "DOING":
-                    addToList(listView_DOING, "TODO", eventMessage);
+                case IN_PROGRESS_TEXT:
+                    addToList(listView_DOING, NOT_STARTED_TEXT , eventMessage);
                     break;
-                case "DONE":
-                    addToList(listView_DONE, "TODO", eventMessage);
+                case COMPLETED_TEXT:
+                    addToList(listView_DONE, NOT_STARTED_TEXT , eventMessage);
                     break;
                 default:
                     break;
@@ -84,8 +87,8 @@ public class Todo {
                 listView_DOING.getItems().add(currentItem);
                 listView_TODO.getItems().remove(currentItem);
 
-                rewriteHistory(listView_TODO, "TODO");
-                rewriteHistory(listView_DOING, "DOING");
+                rewriteHistory(listView_TODO, NOT_STARTED_TEXT );
+                rewriteHistory(listView_DOING, IN_PROGRESS_TEXT);
             }
         } catch (Exception e) {
 
@@ -102,8 +105,8 @@ public class Todo {
                 listView_DONE.getItems().add(currentItem);
                 listView_DOING.getItems().remove(currentItem);
 
-                rewriteHistory(listView_DOING, "DOING");
-                rewriteHistory(listView_DONE, "DONE");
+                rewriteHistory(listView_DOING, IN_PROGRESS_TEXT);
+                rewriteHistory(listView_DONE, COMPLETED_TEXT);
             }
         } catch (Exception e) {
         }
