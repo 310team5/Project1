@@ -30,6 +30,8 @@ public class Todo {
     private ListView<String> listView_DONE;
     @FXML
     private ChoiceBox<String> choiceBox_status;
+    @FXML
+    private Button button_todo;
 
 
     public void initialize() {
@@ -207,6 +209,11 @@ public class Todo {
     @FXML
     private void timer() {
         SceneManager.switchToTimerScene();
+    }
+    
+    @FXML
+    private void todo() {
+    	SceneManager.switchToTodoScene();
     }
 
     /**

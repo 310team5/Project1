@@ -1,0 +1,122 @@
+.root {
+    -fx-background-color: white;
+}
+
+.navigation_bar {
+    -fx-background-color: #332E43;
+    -fx-text-fill: #FFFFFF;
+    -fx-border-style: hidden;
+}
+
+.button_focus {
+    -fx-text-fill: #FFFFFF;
+    -fx-background-color: transparent;
+    -fx-font-size: 32px;
+    -fx-font-family: 'Space Mono', monospace;
+}
+
+
+.button_tool {
+    -fx-text-fill: #FFFFFF;
+    -fx-background-color: transparent;
+    -fx-font-size: 20px;
+    -fx-font-family: 'Space Mono', monospace;
+    -fx-opacity: 0.6;
+}
+
+.button_tool:hover {
+    -fx-opacity: 0.8;
+}
+
+.button_tool:pressed {
+    -fx-background-color: #5A59B1;
+    -fx-opacity: 1.0;
+}
+
+.button_tool:selected {
+    -fx-background-color: #5A59B1;
+    -fx-opacity: 1.0
+}
+
+.textField_eventName {
+    -fx-prompt-text-fill: black;
+    -fx-border-radius: 4px;
+    -fx-font-size: 20px;
+    -fx-font-family: 'Space Mono', monospace;
+    -fx-opacity: 0.6;
+}
+
+
+.button_addEvent {
+    -fx-background-color: #332E43;
+    -fx-font-size: 20px;
+    -fx-font-family: 'Space Mono', monospace;
+}
+
+
+.text_listTitle {
+    -fx-font-size: 30px;
+    -fx-font-family: 'Space Mono', monospace;
+}
+
+.listView_TODO {
+    -fx-background-color: #ede7f6;
+    -fx-background-radius: 10 10 10 10;
+}
+
+
+.listView_DOING {
+    -fx-background-color: #6f79a8;
+    -fx-background-radius: 10 10 10 10;
+}
+
+.listView_DONE {
+    -fx-text-fill: white;
+    -fx-background-color: #003d33;
+    -fx-background-radius: 10 10 10 10;
+}
+
+.list-cell {
+    -fx-font-size: 18px;
+}
+
+.listView_TODO .list-cell:odd {
+    -fx-background-color: #ffffff;
+}
+
+.listView_TODO .list-cell:even {
+    -fx-background-color: #ede7f6;
+}
+
+.listView_DOING .list-cell:odd {
+    -fx-background-color: #9fa8da;
+}
+
+.listView_DOING .list-cell:even {
+    -fx-background-color: #6f79a8;
+}
+
+.listView_DONE .list-cell:odd {
+    -fx-text-fill: white;
+    -fx-background-color: #00695c;
+}
+
+.listView_DONE .list-cell:even {
+    -fx-text-fill: white;
+    -fx-background-color: #003d33;
+}
+
+.listView_TODO .list-cell:filled:selected:focused, .list-cell:filled:selected {
+    -fx-background-color: linear-gradient(#333 0%, #777 25%, #aaa 75%, #eee 100%);
+    -fx-text-fill: white;
+}
+
+.listView_DOING .list-cell:filled:selected:focused, .list-cell:filled:selected {
+    -fx-background-color: linear-gradient(#333 0%, #777 25%, #aaa 75%, #eee 100%);
+    -fx-text-fill: white;
+}
+
+.listView_DONE .list-cell:filled:selected:focused, .list-cell:filled:selected {
+    -fx-background-color: linear-gradient(#333 0%, #777 25%, #aaa 75%, #eee 100%);
+    -fx-text-fill: white;
+}
