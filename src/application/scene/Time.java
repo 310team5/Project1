@@ -1,9 +1,12 @@
 package application.scene;
 
 public class Time {
-
+	private static final int MINIMUM_SECONDS_COUNT = 0;
+	private static final int MAXIMUM_SECONDS_COUNT = 59;
+	
     private int minutes;
     private int seconds;
+    
 
     public Time(){}
 
@@ -37,9 +40,9 @@ public class Time {
 
     public void secondCountDown(){
         seconds--;
-        if (seconds < 0){
+        if (seconds < MINIMUM_SECONDS_COUNT){
             minutes--;
-            seconds = 59;
+            seconds = MAXIMUM_SECONDS_COUNT;
         }
     }
 
