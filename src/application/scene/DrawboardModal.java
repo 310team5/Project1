@@ -14,13 +14,17 @@ public class DrawboardModal {
 	 *
 	 * @param message The JavaFX the message the modal displays after drawing save
 	 */
+	private static final int MINIMUM_WIDTH = 400;
+	private static final int MINIMUM_HEIGHT = 150;
+	private static final int VBOX_CHILDREN_SPACING = 10;
+	
 	public static void openSaveModal(String message) {
 		Stage saveModal = new Stage();
 		
 		saveModal.initModality(Modality.APPLICATION_MODAL);
 		saveModal.setTitle("save drawing");
-		saveModal.setMinWidth(400);
-		saveModal.setMinHeight(150);
+		saveModal.setMinWidth(MINIMUM_WIDTH);
+		saveModal.setMinHeight(MINIMUM_HEIGHT);
 		
 		Text saveMessage = new Text();
 		saveMessage.setText(message);
@@ -28,7 +32,7 @@ public class DrawboardModal {
 		Button closeButton = new Button("Got it");
 		closeButton.setOnAction(e -> saveModal.close());
 		
-		VBox modalLayout = new VBox(10);
+		VBox modalLayout = new VBox(VBOX_CHILDREN_SPACING);
 		modalLayout.getChildren().addAll(saveMessage, closeButton);
 		modalLayout.setAlignment(Pos.CENTER);
 		
