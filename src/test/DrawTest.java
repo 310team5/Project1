@@ -6,6 +6,7 @@ import application.scene.Drawboard;
 
 import org.junit.Test;
 import javafx.fxml.FXML;
+import javafx.scene.control.TextField;
 
 /*This tests whether a drawing is saved to a file
  * Needs a mock image and the save method in Drawboard.java to be public

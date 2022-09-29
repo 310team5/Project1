@@ -30,7 +30,7 @@ public class TaskTest {
 		//application.scene.Todo.addEvent();
 		//Get output from text file
 		String eventMessage = "";
-		assertEqual(eventMessage, datePicker.getValue() + " " + textField_eventName);
+		assertEquals(eventMessage, datePicker.getValue() + " " + textField_eventName);
 	}
 
 }
