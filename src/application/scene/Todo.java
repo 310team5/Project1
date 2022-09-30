@@ -30,11 +30,12 @@ public class Todo {
     private ListView<String> listView_DONE;
     @FXML
     private ChoiceBox<String> choiceBox_status;
+    @FXML
+    private Button button_todo;
     
     private static final String NOT_STARTED_TEXT = "TODO";
     private static final String IN_PROGRESS_TEXT = "DOING";
     private static final String COMPLETED_TEXT = "DONE";
-
 
     public void initialize() {
 
@@ -211,6 +212,11 @@ public class Todo {
     @FXML
     private void timer() {
         SceneManager.switchToTimerScene();
+    }
+    
+    @FXML
+    private void todo() {
+    	SceneManager.switchToTodoScene();
     }
 
     /**
