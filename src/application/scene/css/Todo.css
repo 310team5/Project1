@@ -1,8 +1,20 @@
 @import "./MainResources.css";
 .root {
-    -fx-background-color: white;
+    -fx-background-color: #CCCCCC;
 }
 
+.tooltip {
+	-fx-font-size: 16px;
+	-fx-font-family: 'Space Mono', monospace;
+	-fx-background-color: #FFD858;	
+	-fx-text-fill: #000000;
+}
+
+.navigation_bar {
+    -fx-background-color: #332E43;
+    -fx-text-fill: #CCCCCC;
+    -fx-border-style: hidden;
+}
 
 .button_focus {
     -fx-text-fill: #FFFFFF;

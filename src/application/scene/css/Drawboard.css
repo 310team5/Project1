@@ -4,7 +4,18 @@
 	-fx-background-color: #CCCCCC;
 }
 
+.tooltip {
+	-fx-font-size: 16px;
+	-fx-font-family: 'Space Mono', monospace;
+	-fx-background-color: #FFD858;	
+	-fx-text-fill: #000000;
+}
 
+.menu {
+    -fx-background-color: #332E43;
+    -fx-border-style: hidden;
+    -fx-background-radius: 0 40 40 0;
+}
 
 .slider_tool .track {
 	-fx-pref-height: 40px;
