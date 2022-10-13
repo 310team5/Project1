@@ -1,6 +1,7 @@
 package application.scene;
 
 import java.io.File;
+import java.util.Optional;
 
 import javax.imageio.ImageIO;
 
@@ -9,11 +10,15 @@ import javafx.fxml.FXML;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.control.Button;
+import javafx.scene.control.ButtonBar.ButtonData;
+import javafx.scene.control.ButtonType;
 import javafx.scene.control.ColorPicker;
 import javafx.scene.control.Slider;
 import javafx.scene.control.TextField;
 import javafx.scene.control.ToggleButton;
 import javafx.scene.control.ToggleGroup;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Alert.AlertType;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.paint.Color;
@@ -64,7 +69,6 @@ public class Drawboard {
 	        });
 	}
 	
-	/** Click handler for the save drawing button. */
 	@FXML
 	private void save() {
 		String saveMessage;
@@ -81,9 +85,34 @@ public class Drawboard {
 			System.out.println("Failed to save image: " + e);
 			saveMessage = "There was an error saving your drawing. Please try again \n Tip: try not using special characters in your drawing title.";
 		}
-		
+
 		DrawboardModal.openSaveModal(saveMessage);
 
+	}
+	
+
+	/** Click handler for the save drawing button. */
+	@FXML
+	private void saveConfirm() {
+		
+		Alert alert = new Alert(AlertType.CONFIRMATION);
+		
+		// Customising dialog
+		alert.setTitle("Save Drawing");
+		alert.setHeaderText("Confirmation to save drawing");
+		alert.setContentText("This drawing will be saved to a folder \n Would you like to Continue? \n");
+
+		// Changing the text of the alert buttons
+		ButtonType yesBtn = new ButtonType("Save to file", ButtonData.OK_DONE);
+		ButtonType noBtn = new ButtonType("Don't save", ButtonData.CANCEL_CLOSE);
+		
+		alert.getButtonTypes().setAll(noBtn, yesBtn);
+		
+		Optional<ButtonType> result = alert.showAndWait();
+		
+		if (result.isPresent() && result.get() == yesBtn) {
+			save();
+		}
 	}
 	
 	/** Click handler for the dashboard button. */
