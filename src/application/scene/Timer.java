@@ -16,6 +16,7 @@ public class Timer{
 	@FXML private ToggleGroup timerButtons;
 	@FXML private Text countdownText;
 	@FXML private Button startButton;
+	@FXML private Button popOut;
 
 	private static final String POMODORO_TIME = "25:00";
 	private static final String SHORT_BREAK_TIME = "05:00";
@@ -25,7 +26,6 @@ public class Timer{
 	private Time time = new Time();
 	private int numOfPomodoro = 0;
 	private static final int MAX_NUM_OF_POMODORO = 4;
-	private boolean popOut=false;
 	private Timeline timeline = new Timeline(new KeyFrame(Duration.seconds(1), e -> {
 
 		// When one of the break timers finish, switch timer to prepare for a pomodoro
@@ -94,8 +94,9 @@ public class Timer{
 	
 	/** Click handler for the popOut button. */
 	@FXML
-	private void PopOut() {
+	private void popOut() {
 		SceneManager.popOutTimer();
+		
 	}
 
 	/** Click handler for the timer toggle buttons */
