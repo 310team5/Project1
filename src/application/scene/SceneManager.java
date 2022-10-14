@@ -69,8 +69,8 @@ public class SceneManager {
 	      Scene scene = new Scene(root);
 	      Stage stage = new Stage();
 	      stage.setScene(scene);
-	      stage.setHeight(200);
-	      stage.setWidth(400);
+//	      stage.setHeight(330);
+//	      stage.setWidth(400);
 //	      stage.setHeight(1000);
 //	      stage.setWidth(1000);
 	      stage.setAlwaysOnTop(true);
