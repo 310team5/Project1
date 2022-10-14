@@ -2,11 +2,13 @@ package application.scene;
 
 import java.io.IOException;
 import javafx.fxml.FXMLLoader;
+import javafx.geometry.Rectangle2D;
 import javafx.scene.Group;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
+import javafx.stage.Screen;
 import javafx.stage.Stage;
 
 public class SceneManager {
@@ -52,7 +54,7 @@ public class SceneManager {
 	  public static void switchToTimerScene() {
 		  changeScene("Timer");
 	  }
-	  /** Show the timer scene to the user. */
+	  /** Pop out a timer scene to the user. */
 	  public static void popOutTimer() {
 		  changeScene("Dashboard");
 		  popOut("TimerPopOut");
@@ -73,19 +75,15 @@ public class SceneManager {
 	      Scene scene = new Scene(root);
 	      Stage stage = new Stage();
 	      stage.setScene(scene);
-//	      stage.setHeight(330);
-//	      stage.setWidth(400);
-//	      stage.setHeight(1000);
-//	      stage.setWidth(1000);
 	      stage.setAlwaysOnTop(true);
 	      stage.setResizable(false);
 		  stage.setTitle("Pomodoro"); 
-		 
+		  
+		  Rectangle2D primaryScreenBounds = Screen.getPrimary().getVisualBounds();
+		  stage.setX(primaryScreenBounds.getMinX() + primaryScreenBounds.getWidth() - 410);
+		  stage.setY(primaryScreenBounds.getMinY() + primaryScreenBounds.getHeight() - 330);
 	      stage.show();
-	      //Scene scene = stage.getScene();
-	      //scene.setRoot(root);
 
-	      // Apply CSS.
 	      scene.getStylesheets().clear();
 	      scene.getStylesheets().add(css);
 
@@ -107,9 +105,9 @@ public class SceneManager {
 	      // Load resources.
 	      FXMLLoader loader = new FXMLLoader(SceneManager.class.getResource("fxml/" + name + ".fxml"));
 	      Parent root = loader.load();
-	     System.out.println("s"+name);
+	    
 	      String css = SceneManager.class.getResource("css/" + name + ".css").toExternalForm();
-	      System.out.println("s");
+	      
 	      // Show new scene.
 	      Scene scene = stage.getScene();
 	      scene.setRoot(root);

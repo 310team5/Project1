@@ -205,7 +205,7 @@
                      <tooltip>
                         <Tooltip styleClass="tooltip" text="15 mins" />
                      </tooltip></ToggleButton>
-                  <Button fx:id="button_dashboard1" layoutX="680.0" layoutY="335.0" mnemonicParsing="false" onAction="#popOut" stylesheets="@../css/Timer.css">
+                  <Button fx:id="popOut" layoutX="689.0" layoutY="391.0" mnemonicParsing="false" onAction="#popOut" stylesheets="@../css/Timer.css">
                      <styleClass>
                         <String fx:value="button_focus" />
                         <String fx:value="button_menu" />
@@ -214,7 +214,7 @@
                         <Cursor fx:constant="HAND" />
                      </cursor>
                      <tooltip>
-                        <Tooltip styleClass="tooltip" text="Dashboard" />
+                        <Tooltip styleClass="tooltip" text="Pop Out timer" />
                      </tooltip>
                      <graphic>
                         <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
