@@ -52,6 +52,11 @@ public class SceneManager {
 	  public static void switchToTimerScene() {
 		  changeScene("Timer");
 	  }
+	  
+	  /** Show the tip scene to the user. */
+	  public static void switchToTipsScene() {
+		  changeScene("Tips");
+	  }
 
 
 

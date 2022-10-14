@@ -13,6 +13,8 @@ public class Dashboard {
 	  @FXML private Button buttonMainTodo;
 	  @FXML private Button buttonMainDrawboard;
 	  @FXML private Button buttonMainTimer;
+	  @FXML private Button buttonTips;
+	  
 	  /** Click handler for the notes button. */
 	  @FXML
 	  private void notes() {
@@ -36,4 +38,11 @@ public class Dashboard {
 	  private void timer() {
 	    SceneManager.switchToTimerScene();
 	  }
+	  
+	  /** Click handler for the tips button. */
+	  @FXML
+	  private void tips() {
+	    SceneManager.switchToTipsScene();
+	  }
+	  
 }
