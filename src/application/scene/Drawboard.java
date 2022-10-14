@@ -27,6 +27,7 @@ public class Drawboard {
 	@FXML private Button buttonNotes;
 	@FXML private Button buttonTodo;
 	@FXML private Button buttonTimer;
+	@FXML private Button buttonCalendar;
 	@FXML private ToggleButton buttonBrush;
 	@FXML private ToggleButton buttonEraser;
 	@FXML private Button buttonSave;
@@ -108,6 +109,11 @@ public class Drawboard {
 	@FXML
 	private void timer() {
 		SceneManager.switchToTimerScene();
+	}
+	
+	@FXML
+	private void calendar() {
+		SceneManager.switchToCalendarScene();
 	}
 	
 }

@@ -4,18 +4,13 @@
 <?import javafx.geometry.Rectangle2D?>
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.ToggleButton?>
-<?import javafx.scene.control.ToggleGroup?>
 <?import javafx.scene.control.Tooltip?>
-<?import javafx.scene.effect.DropShadow?>
-<?import javafx.scene.effect.InnerShadow?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.text.Font?>
-<?import javafx.scene.text.Text?>
+<?import javafx.scene.layout.VBox?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="810.0" prefWidth="1315.0" stylesheets="@../css/Timer.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.scene.Timer">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="810.0" prefWidth="1315.0" stylesheets="@../css/Timer.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.scene.CalendarSection">
    <children>
       <AnchorPane prefHeight="810.0" prefWidth="150.0" styleClass="menu" stylesheets="@../css/Timer.css">
          <children>
@@ -189,60 +184,6 @@
             </Button>
          </children>
       </AnchorPane>
-      <AnchorPane layoutX="178.0" layoutY="23.0" prefHeight="773.0" prefWidth="1110.0" style="-fx-background-color: #3F3E80; -fx-background-radius: 10;">
-         <children>
-            <AnchorPane layoutX="152.0" layoutY="142.0" prefHeight="490.0" prefWidth="807.0" style="-fx-background-color: #5A59B1; -fx-background-radius: 30;">
-               <children>
-                  <Text fx:id="countdownText" fill="WHITE" layoutX="228.0" layoutY="276.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="label_countdown" text="00:00">
-                     <font>
-                        <Font size="15.0" />
-                     </font>
-                  </Text>
-                  <Button fx:id="startButton" alignment="CENTER" layoutX="274.0" layoutY="325.0" mnemonicParsing="false" onAction="#controlTimer" prefHeight="84.0" prefWidth="256.0" styleClass="button_start" stylesheets="@../css/Timer.css" text="START">
-                     <font>
-                        <Font size="15.0" />
-                     </font>
-                     <cursor>
-                        <Cursor fx:constant="HAND" />
-                     </cursor>
-                     <tooltip>
-                        <Tooltip styleClass="tooltip" text="Start the timer!" />
-                     </tooltip>
-                  </Button>
-                  <ToggleButton fx:id="pomodoroButton" layoutX="173.0" layoutY="91.0" mnemonicParsing="false" onAction="#selectTimerButton" prefHeight="50.0" prefWidth="153.0" styleClass="button_time" stylesheets="@../css/Timer.css" text="Pomodoro">
-                     <toggleGroup>
-                        <ToggleGroup fx:id="timerButtons" />
-                     </toggleGroup>
-                     <cursor>
-                        <Cursor fx:constant="HAND" />
-                     </cursor>
-                     <tooltip>
-                        <Tooltip styleClass="tooltip" text="25 mins" />
-                     </tooltip>
-                  </ToggleButton>
-                  <ToggleButton fx:id="shortBreakButton" layoutX="326.0" layoutY="91.0" mnemonicParsing="false" onAction="#selectTimerButton" prefHeight="50.0" prefWidth="153.0" styleClass="button_time" stylesheets="@../css/Timer.css" text="Short Break" toggleGroup="$timerButtons">
-                     <cursor>
-                        <Cursor fx:constant="HAND" />
-                     </cursor>
-                     <tooltip>
-                        <Tooltip styleClass="tooltip" text="5 mins" />
-                     </tooltip></ToggleButton>
-                  <ToggleButton fx:id="longBreakButton" layoutX="478.0" layoutY="91.0" mnemonicParsing="false" onAction="#selectTimerButton" prefHeight="50.0" prefWidth="153.0" styleClass="button_time" stylesheets="@../css/Timer.css" text="Long Break" toggleGroup="$timerButtons">
-                     <cursor>
-                        <Cursor fx:constant="HAND" />
-                     </cursor>
-                     <tooltip>
-                        <Tooltip styleClass="tooltip" text="15 mins" />
-                     </tooltip></ToggleButton>
-               </children>
-               <effect>
-                  <InnerShadow />
-               </effect>
-            </AnchorPane>
-         </children>
-         <effect>
-            <DropShadow />
-         </effect>
-      </AnchorPane>
+      <VBox fx:id="calendarBox" layoutX="158.0" layoutY="10.0" prefHeight="798.0" prefWidth="1156.0" />
    </children>
 </AnchorPane>

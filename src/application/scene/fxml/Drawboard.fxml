@@ -22,7 +22,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="810.0" prefWidth="1315.0" style="-fx-background-color: grey;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.scene.Drawboard">
+<AnchorPane prefHeight="810.0" prefWidth="1315.0" style="-fx-background-color: grey;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.scene.Drawboard">
    <children>
       <BorderPane prefHeight="810.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
          <top>
@@ -85,7 +85,7 @@
                               <Cursor fx:constant="HAND" />
                            </cursor>
                            <tooltip>
-                              <Tooltip text="Eraser" styleClass="tooltip"/>
+                              <Tooltip styleClass="tooltip" text="Eraser" />
                            </tooltip>
                         </ToggleButton>
                         <Button fx:id="buttonSave" mnemonicParsing="false" onAction="#save" prefHeight="60.0" prefWidth="60.0" styleClass="button_tool">
@@ -103,7 +103,7 @@
                               <Cursor fx:constant="HAND" />
                            </cursor>
                            <tooltip>
-                              <Tooltip text="Save Image" styleClass="tooltip"/>
+                              <Tooltip styleClass="tooltip" text="Save Image" />
                            </tooltip>
                         </Button>
                         <ColorPicker fx:id="colorPicker" cache="true" prefHeight="60.0" prefWidth="60.0" stylesheets="@../css/Drawboard.css">
@@ -121,7 +121,7 @@
                               <Cursor fx:constant="HAND" />
                            </cursor>
                            <tooltip>
-                              <Tooltip text="Pick Color" styleClass="tooltip"/>
+                              <Tooltip styleClass="tooltip" text="Pick Color" />
                            </tooltip>
                         </ColorPicker>
                      </children>
@@ -147,7 +147,7 @@
          <children>
             <Slider fx:id="sliderToolSize" layoutX="6.0" min="1.0" orientation="VERTICAL" prefHeight="220.0" styleClass="slider_tool" stylesheets="@../css/Drawboard.css" value="5.0" AnchorPane.bottomAnchor="43.0" AnchorPane.topAnchor="0.0">
                <tooltip>
-                  <Tooltip text="Change the size" styleClass="tooltip"/>
+                  <Tooltip styleClass="tooltip" text="Change the size" />
                </tooltip></Slider>
             <Text fx:id="toolIndicator" boundsType="LOGICAL_VERTICAL_CENTER" fill="#9a9a9a" layoutY="233.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" textOrigin="CENTER" wrappingWidth="54.0">
                <font>
@@ -189,7 +189,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
                <tooltip>
-                  <Tooltip text="Dashboard" styleClass="tooltip"/>
+                  <Tooltip styleClass="tooltip" text="Dashboard" />
                </tooltip>
             </Button>
             <Button fx:id="buttonNotes" layoutX="34.0" layoutY="254.0" mnemonicParsing="false" onAction="#notes" stylesheets="@../css/Drawboard.css">
@@ -218,7 +218,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
                <tooltip>
-                  <Tooltip text="Notes" styleClass="tooltip"/>
+                  <Tooltip styleClass="tooltip" text="Notes" />
                </tooltip>
             </Button>
             <Button fx:id="buttonTImer" layoutX="34.0" layoutY="479.0" mnemonicParsing="false" onAction="#timer" stylesheets="@../css/Drawboard.css">
@@ -247,7 +247,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
                <tooltip>
-                  <Tooltip text="Timer" styleClass="tooltip"/>
+                  <Tooltip styleClass="tooltip" text="Timer" />
                </tooltip>
             </Button>
             <Button layoutX="34.0" layoutY="398.0" mnemonicParsing="false" style="-fx-opacity: 1;" stylesheets="@../css/Drawboard.css">
@@ -266,7 +266,7 @@
                   <String fx:value="button_menu" />
                </styleClass>
                <tooltip>
-                  <Tooltip text="Drawboard" styleClass="tooltip"/>
+                  <Tooltip styleClass="tooltip" text="Drawboard" />
                </tooltip>
             </Button>
             <Button fx:id="buttonTodo" layoutX="34.0" layoutY="327.0" mnemonicParsing="false" onAction="#todo" stylesheets="@../css/Drawboard.css">
@@ -295,7 +295,36 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
                <tooltip>
-                  <Tooltip text="TODO" styleClass="tooltip"/>
+                  <Tooltip styleClass="tooltip" text="TODO" />
+               </tooltip>
+            </Button>
+            <Button fx:id="buttonCalendar" layoutX="34.0" layoutY="561.0" mnemonicParsing="false" onAction="#calendar" stylesheets="@../css/Drawboard.css">
+               <graphic>
+                  <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/icon_calendar_white.png" />
+                     </image>
+                     <viewport>
+                        <Rectangle2D />
+                     </viewport>
+                     <styleClass>
+                        <String fx:value="button_menu" />
+                        <String fx:value="button_focus" />
+                     </styleClass>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+               </graphic>
+               <styleClass>
+                  <String fx:value="button_focus" />
+                  <String fx:value="button_menu" />
+               </styleClass>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <tooltip>
+                  <Tooltip styleClass="tooltip" text="Timer" />
                </tooltip>
             </Button>
          </children>

@@ -52,6 +52,12 @@ public class SceneManager {
 	  public static void switchToTimerScene() {
 		  changeScene("Timer");
 	  }
+	  
+	  /** Show the calendar scene to the user. */
+	  public static void switchToCalendarScene() {
+		  changeScene("Calendar");
+	  }
+
 
 
 
