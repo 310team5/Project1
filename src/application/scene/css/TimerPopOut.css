@@ -26,9 +26,7 @@
     -fx-opacity: 0.8;
 }
 
-.button_menu:pressed {
-    -fx-opacity: 1;
-}
+
 
 .button_focus {
     -fx-text-fill: #FFFFFF;
@@ -50,10 +48,6 @@
     -fx-background-color: #494794;
 }
 
-.button_time:selected {
-    -fx-background-color: #3F3E80;
-    -fx-effect: none;
-}
 
 .label_countdown {
     -fx-font-size: 100px;
@@ -70,9 +64,7 @@
     -fx-effect: dropshadow( gaussian, rgba(0, 0, 0, 0.25), 10, 0.5, 5, 5);
 }
 
-.button_start:pressed {
-    -fx-effect: none;
-}
+
 
 .label_title {
     -fx-text-fill: #000000;
