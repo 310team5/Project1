@@ -50,10 +50,44 @@ public class SceneManager {
 	  
 	  /** Show the timer scene to the user. */
 	  public static void switchToTimerScene() {
-		  changeScene("Timer");
+		  popOut("TimerPopOut");
 	  }
 
+	  /**
+	   * Changes the currently displayed scene to the user.
+	   *
+	   * @param name The name of the FXML and CSS files without the file extension.
+	   * @return The FXMLLoader to allow access to the controller instance.
+	   */
+	  private static FXMLLoader popOut(String name) {
+	    try {
+	      // Load resources.
+	      FXMLLoader loader = new FXMLLoader(SceneManager.class.getResource("fxml/" + name + ".fxml"));
+	      Parent root = loader.load();
+	      String css = SceneManager.class.getResource("css/" + name + ".css").toExternalForm();
+	      // Show new scene.
+	      Scene scene = new Scene(root);
+	      Stage stage = new Stage();
+	      stage.setScene(scene);
+	      stage.setHeight(200);
+	      stage.setWidth(400);
+	      stage.setResizable(false);
+		  stage.setTitle("Pomodoro"); 
+		 
+	      stage.show();
+	      //Scene scene = stage.getScene();
+	      //scene.setRoot(root);
 
+	      // Apply CSS.
+	      scene.getStylesheets().clear();
+	      scene.getStylesheets().add(css);
+
+	      return loader;
+	    } catch (IOException e) {
+	      alert("Could not load FXML or CSS resources.");
+	      return null;
+	    }
+	  }
 
 	  /**
 	   * Changes the currently displayed scene to the user.
