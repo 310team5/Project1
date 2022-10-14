@@ -205,17 +205,24 @@
                      <tooltip>
                         <Tooltip styleClass="tooltip" text="15 mins" />
                      </tooltip></ToggleButton>
-                  <ToggleButton fx:id="pomodoroButton1" layoutX="20.0" layoutY="342.0" mnemonicParsing="false" onAction="#selectTimerButton" prefHeight="50.0" prefWidth="153.0" styleClass="button_time" stylesheets="@../css/Timer.css" text="Popout">
-                     <toggleGroup>
-                        <ToggleGroup fx:id="timerButtons1" />
-                     </toggleGroup>
+                  <Button fx:id="popOutButton" layoutX="76.0" layoutY="293.0" mnemonicParsing="false" onAction="#popOut" onMouseClicked="#popOut" styleClass="button_focus" stylesheets="@../css/Timer.css">
                      <cursor>
                         <Cursor fx:constant="HAND" />
                      </cursor>
                      <tooltip>
-                        <Tooltip styleClass="tooltip" text="25 mins" />
+                        <Tooltip styleClass="tooltip" text="Pop out" />
                      </tooltip>
-                  </ToggleButton>
+                     <graphic>
+                        <ImageView fx:id="popout" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" styleClass="button_focus">
+                           <image>
+                              <Image url="@../assets/icon_popout_black.png" />
+                           </image>
+                           <viewport>
+                              <Rectangle2D />
+                           </viewport>
+                        </ImageView>
+                     </graphic>
+                  </Button>
                </children>
                <effect>
                   <InnerShadow />

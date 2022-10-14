@@ -56,6 +56,7 @@ public class SceneManager {
 	  /** Show the timer scene to the user. */
 	  public static void popOutTimer() {
 		  popOut("TimerPopOut");
+		  changeScene("Dashboard");
 	  }
 	  /**
 	   * Changes the currently displayed scene to the user.
@@ -107,7 +108,9 @@ public class SceneManager {
 	      // Load resources.
 	      FXMLLoader loader = new FXMLLoader(SceneManager.class.getResource("fxml/" + name + ".fxml"));
 	      Parent root = loader.load();
+	     System.out.println("s"+name);
 	      String css = SceneManager.class.getResource("css/" + name + ".css").toExternalForm();
+	      System.out.println("s");
 	      // Show new scene.
 	      Scene scene = stage.getScene();
 	      scene.setRoot(root);

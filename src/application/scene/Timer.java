@@ -95,7 +95,7 @@ public class Timer{
 	/** Click handler for the popOut button. */
 	@FXML
 	private void PopOut() {
-		SceneManager.switchToTodoScene();
+		SceneManager.popOutTimer();
 	}
 
 	/** Click handler for the timer toggle buttons */
