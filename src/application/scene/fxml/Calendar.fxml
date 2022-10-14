@@ -79,7 +79,7 @@
             </Button>
             <Button layoutX="34.0" layoutY="479.0" mnemonicParsing="false" style="-fx-opacity: 1;" styleClass="button_focus" stylesheets="@../css/Timer.css">
                <graphic>
-                  <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" styleClass="button_menu">
                      <image>
                         <Image url="@../assets/icon_timer_white.png" />
                      </image>
@@ -155,17 +155,13 @@
             </Button>
             <Button fx:id="buttonCalendar" layoutX="34.0" layoutY="557.0" mnemonicParsing="false" onAction="#calendar" stylesheets="@../css/Drawboard.css">
                <graphic>
-                  <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" styleClass="button_focus">
                      <image>
                         <Image url="@../assets/icon_calendar_white.png" />
                      </image>
                      <viewport>
                         <Rectangle2D />
                      </viewport>
-                     <styleClass>
-                        <String fx:value="button_menu" />
-                        <String fx:value="button_focus" />
-                     </styleClass>
                      <cursor>
                         <Cursor fx:constant="HAND" />
                      </cursor>
@@ -184,6 +180,6 @@
             </Button>
          </children>
       </AnchorPane>
-      <VBox fx:id="calendarBox" layoutX="158.0" layoutY="10.0" prefHeight="798.0" prefWidth="1156.0" />
+      <VBox fx:id="calendarBox" layoutX="150.0" layoutY="14.0" prefHeight="798.0" prefWidth="1156.0" />
    </children>
 </AnchorPane>
