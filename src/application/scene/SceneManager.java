@@ -50,9 +50,13 @@ public class SceneManager {
 	  
 	  /** Show the timer scene to the user. */
 	  public static void switchToTimerScene() {
+		  changeScene("Timer");
+		  //popOut("TimerPopOut");
+	  }
+	  /** Show the timer scene to the user. */
+	  public static void popOutTimer() {
 		  popOut("TimerPopOut");
 	  }
-
 	  /**
 	   * Changes the currently displayed scene to the user.
 	   *

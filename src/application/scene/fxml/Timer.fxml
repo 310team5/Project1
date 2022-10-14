@@ -15,7 +15,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="810.0" prefWidth="1315.0" stylesheets="@../css/Timer.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.scene.Timer">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="810.0" prefWidth="1315.0" stylesheets="@../css/Timer.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.scene.Timer">
    <children>
       <AnchorPane prefHeight="810.0" prefWidth="150.0" styleClass="menu" stylesheets="@../css/Timer.css">
          <children>
@@ -205,6 +205,17 @@
                      <tooltip>
                         <Tooltip styleClass="tooltip" text="15 mins" />
                      </tooltip></ToggleButton>
+                  <ToggleButton fx:id="pomodoroButton1" layoutX="20.0" layoutY="342.0" mnemonicParsing="false" onAction="#selectTimerButton" prefHeight="50.0" prefWidth="153.0" styleClass="button_time" stylesheets="@../css/Timer.css" text="Popout">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="timerButtons1" />
+                     </toggleGroup>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <tooltip>
+                        <Tooltip styleClass="tooltip" text="25 mins" />
+                     </tooltip>
+                  </ToggleButton>
                </children>
                <effect>
                   <InnerShadow />
