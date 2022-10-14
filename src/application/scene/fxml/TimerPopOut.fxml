@@ -11,7 +11,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="219.0" prefWidth="297.0" stylesheets="@../css/Timer.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.scene.Timer">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="300.0" stylesheets="@../css/TimerPopOut.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.scene.Timer">
    <children>
       <AnchorPane layoutX="178.0" layoutY="23.0" prefHeight="773.0" prefWidth="1110.0" style="-fx-background-color: #3F3E80; -fx-background-radius: 10;">
          <children>
@@ -22,9 +22,9 @@
                         <Font size="15.0" />
                      </font>
                   </Text>
-                  <Button fx:id="startButton" alignment="CENTER" layoutX="274.0" layoutY="325.0" mnemonicParsing="false" onAction="#controlTimer" prefHeight="84.0" prefWidth="256.0" styleClass="button_start" stylesheets="@../css/Timer.css" text="START">
+                  <Button fx:id="startButton" alignment="CENTER" layoutX="274.0" layoutY="325.0" mnemonicParsing="false" onAction="#controlTimer" prefHeight="84.0" prefWidth="256.0" styleClass="button_start" stylesheets="@../css/TimerPopOut.css" text="START">
                      <font>
-                        <Font size="15.0" />
+                        <Font size="1.0" />
                      </font>
                      <cursor>
                         <Cursor fx:constant="HAND" />
@@ -33,40 +33,47 @@
                         <Tooltip styleClass="tooltip" text="Start the timer!" />
                      </tooltip>
                   </Button>
-                  <ToggleButton fx:id="pomodoroButton" layoutX="173.0" layoutY="91.0" mnemonicParsing="false" onAction="#selectTimerButton" prefHeight="50.0" prefWidth="153.0" styleClass="button_time" stylesheets="@../css/Timer.css" text="Pomodoro">
-                     <toggleGroup>
-                        <ToggleGroup fx:id="timerButtons" />
-                     </toggleGroup>
-                     <cursor>
-                        <Cursor fx:constant="HAND" />
-                     </cursor>
-                     <tooltip>
-                        <Tooltip styleClass="tooltip" text="25 mins" />
-                     </tooltip>
-                  </ToggleButton>
-                  <ToggleButton fx:id="shortBreakButton" layoutX="326.0" layoutY="91.0" mnemonicParsing="false" onAction="#selectTimerButton" prefHeight="50.0" prefWidth="153.0" styleClass="button_time" stylesheets="@../css/Timer.css" text="Short Break" toggleGroup="$timerButtons">
-                     <cursor>
-                        <Cursor fx:constant="HAND" />
-                     </cursor>
-                     <tooltip>
-                        <Tooltip styleClass="tooltip" text="5 mins" />
-                     </tooltip></ToggleButton>
-                  <ToggleButton fx:id="longBreakButton" layoutX="478.0" layoutY="91.0" mnemonicParsing="false" onAction="#selectTimerButton" prefHeight="50.0" prefWidth="153.0" styleClass="button_time" stylesheets="@../css/Timer.css" text="Long Break" toggleGroup="$timerButtons">
+                  <ToggleButton fx:id="longBreakButton" layoutX="478.0" layoutY="91.0" mnemonicParsing="false" onAction="#selectTimerButton" prefHeight="50.0" prefWidth="153.0" styleClass="button_time" stylesheets="@../css/TimerPopOut.css" text="Long Break">
                      <cursor>
                         <Cursor fx:constant="HAND" />
                      </cursor>
                      <tooltip>
                         <Tooltip styleClass="tooltip" text="15 mins" />
-                     </tooltip></ToggleButton>
+                     </tooltip>
+                     <toggleGroup>
+                        <ToggleGroup fx:id="timerButtons" />
+                     </toggleGroup></ToggleButton>
                </children>
                <effect>
                   <InnerShadow />
                </effect>
             </AnchorPane>
+            <ToggleButton fx:id="shortBreakButton" layoutX="-44.0" layoutY="14.0" mnemonicParsing="false" onAction="#selectTimerButton" prefHeight="50.0" prefWidth="153.0" styleClass="button_time" stylesheets="@../css/TimerPopOut.css" text="Short Break" toggleGroup="$timerButtons">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <tooltip>
+                  <Tooltip styleClass="tooltip" text="5 mins" />
+               </tooltip>
+               <font>
+                  <Font size="7.0" />
+               </font>
+            </ToggleButton>
          </children>
          <effect>
             <DropShadow />
          </effect>
       </AnchorPane>
+      <ToggleButton fx:id="pomodoroButton" layoutX="-22.0" layoutY="38.0" mnemonicParsing="false" onAction="#selectTimerButton" prefHeight="50.0" prefWidth="153.0" styleClass="button_time" stylesheets="@../css/TimerPopOut.css" text="Pomodoro" toggleGroup="$timerButtons">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <tooltip>
+            <Tooltip styleClass="tooltip" text="25 mins" />
+         </tooltip>
+         <font>
+            <Font size="6.0" />
+         </font>
+      </ToggleButton>
    </children>
 </AnchorPane>

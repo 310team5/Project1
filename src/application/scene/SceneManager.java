@@ -71,6 +71,9 @@ public class SceneManager {
 	      stage.setScene(scene);
 	      stage.setHeight(200);
 	      stage.setWidth(400);
+//	      stage.setHeight(1000);
+//	      stage.setWidth(1000);
+	      stage.setAlwaysOnTop(true);
 	      stage.setResizable(false);
 		  stage.setTitle("Pomodoro"); 
 		 
