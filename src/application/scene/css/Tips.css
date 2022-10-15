@@ -26,10 +26,6 @@
     -fx-opacity: 0.8;
 }
 
-.button_menu:pressed {
-    -fx-opacity: 1;
-}
-
 .button_focus {
     -fx-text-fill: #FFFFFF;
     -fx-background-color: transparent;
