@@ -42,7 +42,7 @@
 }
 
 .button_music:hover {
-	-fx-opacity: 0.8;
+	-fx-opacity: 0.6;
 }
 
 .button_toggle {
@@ -55,3 +55,14 @@
 	-fx-text-fill: #5A59B1;
 }
 
+.text-area {
+	-fx-font-size: 15;
+}
+
+.text-area .content {
+	-fx-background-color: #CBC0EA;
+}
+
+.text-area *.text {
+    -fx-text-alignment: center;
+}

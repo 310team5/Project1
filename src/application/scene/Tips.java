@@ -1,14 +1,15 @@
 package application.scene;
 
 import java.awt.Desktop;
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
 import java.io.IOException;
 import java.net.URI;
 import java.net.URISyntaxException;
 
 import javafx.fxml.FXML;
-import javafx.scene.control.Alert;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
+import javafx.scene.control.*;
 import javafx.scene.image.ImageView;
 import javafx.scene.control.Alert.AlertType;
 
@@ -25,6 +26,8 @@ public class Tips{
 	@FXML private ImageView cafeCard4;
 	@FXML private ImageView cafeCard5;
 	@FXML private Label cafeTitle;
+	@FXML private TextArea tipsText;
+	@FXML private Label tipsTitle;
 
 	private String chillMusicLink = "https://www.youtube.com/watch?v=ziWPOQs-QCw";
 	private String lofiMusicLink = "https://www.youtube.com/watch?v=jfKfPfyJRdk";
@@ -33,8 +36,39 @@ public class Tips{
 	private String ambienceMusicLink = "https://www.youtube.com/watch?v=qsOUv9EzKsg";
 
 	@FXML
-	public void initialize(){
+	public void initialize() throws IOException {
 		hideCafe();
+		hideTips();
+		loadTipsContent();
+	}
+	
+	@FXML
+	public void loadTipsContent() throws IOException {
+		
+		tipsText.appendText("Your study tips for maximum efficency!");
+		tipsText.appendText("\n");
+		tipsText.appendText("\n");
+		tipsText.appendText("\n");
+		
+		String fileDir = "./src/application/scene/TipsAssets/TipsContentText.txt";
+			
+		BufferedReader in;
+		
+		try {
+			in = new BufferedReader(new FileReader(fileDir));
+			String line;
+			
+			while((line = in.readLine()) != null) {
+				tipsText.appendText(line);
+				tipsText.appendText("\n");
+			}
+			
+			in.close();
+			
+		} catch (FileNotFoundException e) {
+			alert("There are no Tips available just yet!");
+		}
+				
 	}
 	
 	public static void alert(String message) {
@@ -46,10 +80,31 @@ public class Tips{
 	
 	@FXML
 	public void setVisbilityCafe() {
-		
+		hideTips();
 		if (!cafeTitle.isVisible()) {
 			showCafe();
 		}
+	}
+	
+	@FXML
+	public void setVisibilityTips() {
+		hideCafe();
+		if (!tipsText.isVisible()) {
+			showTips();
+		}
+		
+	}
+	
+	@FXML
+	public void hideTips() {
+		tipsTitle.setVisible(false);
+		tipsText.setVisible(false);
+	}
+	
+	@FXML 
+	public void showTips() {
+		tipsText.setVisible(true);
+		tipsTitle.setVisible(true);
 	}
 	
 	@FXML
@@ -79,12 +134,8 @@ public class Tips{
 		try {
 			Desktop.getDesktop().browse(new URI(link));
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
 		      alert("Sorry! This playlist is not available currently");
 		} catch (URISyntaxException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
 		      alert("Sorry! This playlist is not available currently");
 		}
 	}
