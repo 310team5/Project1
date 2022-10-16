@@ -57,7 +57,7 @@ public class SceneManager {
 	  /** Pop out a timer scene to the user. */
 	  public static void popOutTimer() {
 		  changeScene("Dashboard");
-		  popOut("TimerPopOut");
+		  popOut("TimerPopOut", 410, 330, "Pomodoro");
 	  }
 	  /**
 	   * Changes the currently displayed scene to the user.
@@ -65,7 +65,7 @@ public class SceneManager {
 	   * @param name The name of the FXML and CSS files without the file extension.
 	   * @return The FXMLLoader to allow access to the controller instance.
 	   */
-	  private static FXMLLoader popOut(String name) {
+	  private static FXMLLoader popOut(String name, int widthSize, int heightSize, String windowName) {
 	    try {
 	      // Load resources.
 	      FXMLLoader loader = new FXMLLoader(SceneManager.class.getResource("fxml/" + name + ".fxml"));
@@ -77,11 +77,11 @@ public class SceneManager {
 	      stage.setScene(scene);
 	      stage.setAlwaysOnTop(true);
 	      stage.setResizable(false);
-		  stage.setTitle("Pomodoro"); 
+		  stage.setTitle(windowName); 
 		  
 		  Rectangle2D primaryScreenBounds = Screen.getPrimary().getVisualBounds();
-		  stage.setX(primaryScreenBounds.getMinX() + primaryScreenBounds.getWidth() - 410);
-		  stage.setY(primaryScreenBounds.getMinY() + primaryScreenBounds.getHeight() - 330);
+		  stage.setX(primaryScreenBounds.getMinX() + primaryScreenBounds.getWidth() - widthSize);
+		  stage.setY(primaryScreenBounds.getMinY() + primaryScreenBounds.getHeight() - heightSize);
 	      stage.show();
 
 	      scene.getStylesheets().clear();
