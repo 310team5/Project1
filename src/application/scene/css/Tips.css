@@ -66,12 +66,10 @@
 .scroll-bar {
     -fx-background-color: #CBC0EA;
 }
-.scroll-bar:vertical .track,
-.scroll-bar:horizontal .track {
+.scroll-bar .track {
     -fx-background-color: #2f2d2e;
 }
 
-.scroll-bar:vertical .thumb,
-.scroll-bar:horizontal .thumb {
+.scroll-bar .thumb {
     -fx-background-color: #CBC0EA;
 }
