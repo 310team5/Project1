@@ -15,7 +15,6 @@ public class Main extends Application {
 	    // Set window options.
 		stage.setResizable(false);
 	    stage.setTitle("My Study"); //just a filler name
-	    stage.setMaximized(true);
 
 	    SceneManager.show(stage);
 	  }
