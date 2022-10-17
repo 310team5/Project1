@@ -38,7 +38,6 @@ public class Tips{
 	@FXML
 	public void initialize() throws IOException {
 		hideCafe();
-		hideTips();
 		loadTipsContent();
 	}
 	
