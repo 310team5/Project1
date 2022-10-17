@@ -65,3 +65,18 @@
 	-fx-font-size: 30px;
 	-fx-font-family: 'Space Mono', monospace;	
 }
+
+.button_studytips {
+	-fx-background-color: #FFFFFF;
+	-fx-text-fill: #5A59B1;
+	-fx-font-size: 20px;
+	-fx-font-family: 'Space Mono', monospace;
+	-fx-border-style: hidden;
+	-fx-background-radius: 30px;
+	-fx-effect: dropshadow( gaussian, #9d9d9d, 10, 0.5, 5px, 5px);
+}
+
+.button_studytips:hover {
+	-fx-background-color: #494794;
+	-fx-text-fill: #FFFFFF;
+}

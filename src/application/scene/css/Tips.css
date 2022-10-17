@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+@import "./MainResources.css";
+.root {
+    -fx-background-color: #CCCCCC;
+}
+
+.tooltip {
+	-fx-font-size: 16px;
+	-fx-font-family: 'Space Mono', monospace;
+	-fx-background-color: #FFD858;	
+	-fx-text-fill: #000000;
+}
+
+.menu {
+    -fx-background-color: #332E43;
+    -fx-border-style: hidden;
+    -fx-background-radius: 0 40 40 0;
+}
+
+.button_menu {
+    -fx-background-color: transparent;
+    -fx-opacity: 0.6;
+}
+
+.button_menu:hover {
+    -fx-opacity: 0.8;
+}
+
+.button_focus {
+    -fx-text-fill: #FFFFFF;
+    -fx-background-color: transparent;
+    -fx-font-size: 32px;
+    -fx-font-family: 'Space Mono', monospace;
+}
+
+.button_music {
+	-fx-background-color: transparent;
+}
+
+.button_music:hover {
+	-fx-opacity: 0.6;
+}
+
+.button_toggle {
+	-fx-background-color: #5A59B1;
+	-fx-text-fill: white;
+}
+
+.button_toggle:hover {
+	-fx-background-color: white;
+	-fx-text-fill: #5A59B1;
+}
+
+.text-area {
+	-fx-font-size: 15;
+}
+
+.text-area .content {
+	-fx-background-color: #CBC0EA;
+}
+
+.text-area *.text {
+    -fx-text-alignment: center;
+}
+
+.scroll-bar {
+    -fx-background-color: #CBC0EA;
+}
+.scroll-bar .track {
+    -fx-background-color: #2f2d2e;
+}
+
+.scroll-bar .thumb {
+    -fx-background-color: #CBC0EA;
+}
