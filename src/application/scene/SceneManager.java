@@ -2,11 +2,13 @@ package application.scene;
 
 import java.io.IOException;
 import javafx.fxml.FXMLLoader;
+import javafx.geometry.Rectangle2D;
 import javafx.scene.Group;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
+import javafx.stage.Screen;
 import javafx.stage.Stage;
 
 public class SceneManager {
@@ -58,7 +60,45 @@ public class SceneManager {
 		  changeScene("Tips");
 	  }
 
+	  /** Pop out a timer scene to the user. */
+	  public static void popOutTimer() {
+		  changeScene("Dashboard");
+		  popOut("TimerPopOut");
+	  }
+	  /**
+	   * Changes the currently displayed scene to the user.
+	   *
+	   * @param name The name of the FXML and CSS files without the file extension.
+	   * @return The FXMLLoader to allow access to the controller instance.
+	   */
+	  private static FXMLLoader popOut(String name) {
+	    try {
+	      // Load resources.
+	      FXMLLoader loader = new FXMLLoader(SceneManager.class.getResource("fxml/" + name + ".fxml"));
+	      Parent root = loader.load();
+	      String css = SceneManager.class.getResource("css/" + name + ".css").toExternalForm();
+	      // Show new scene.
+	      Scene scene = new Scene(root);
+	      Stage stage = new Stage();
+	      stage.setScene(scene);
+	      stage.setAlwaysOnTop(true);
+	      stage.setResizable(false);
+		  stage.setTitle("Pomodoro"); 
+		  
+		  Rectangle2D primaryScreenBounds = Screen.getPrimary().getVisualBounds();
+		  stage.setX(primaryScreenBounds.getMinX() + primaryScreenBounds.getWidth() - 410);
+		  stage.setY(primaryScreenBounds.getMinY() + primaryScreenBounds.getHeight() - 330);
+	      stage.show();
 
+	      scene.getStylesheets().clear();
+	      scene.getStylesheets().add(css);
+
+	      return loader;
+	    } catch (IOException e) {
+	      alert("Could not load FXML or CSS resources.");
+	      return null;
+	    }
+	  }
 
 	  /**
 	   * Changes the currently displayed scene to the user.
@@ -71,7 +111,9 @@ public class SceneManager {
 	      // Load resources.
 	      FXMLLoader loader = new FXMLLoader(SceneManager.class.getResource("fxml/" + name + ".fxml"));
 	      Parent root = loader.load();
+	    
 	      String css = SceneManager.class.getResource("css/" + name + ".css").toExternalForm();
+	      
 	      // Show new scene.
 	      Scene scene = stage.getScene();
 	      scene.setRoot(root);

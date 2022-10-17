@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+@import "./MainResources.css";
+.root {
+    -fx-background-color: #CCCCCC;
+}
+
+.tooltip {
+	-fx-font-size: 10px;
+	-fx-font-family: 'Space Mono', monospace;
+	-fx-background-color: #FFD858;	
+	-fx-text-fill: #000000;
+}
+
+.menu {
+    -fx-background-color: #332E43;
+    -fx-border-style: hidden;
+    -fx-background-radius: 0 40 40 0;
+}
+
+.button_menu {
+    -fx-background-color: transparent;
+    -fx-opacity: 0.6;
+}
+
+.button_menu:hover {
+    -fx-opacity: 0.8;
+}
+
+
+
+.button_focus {
+    -fx-text-fill: #FFFFFF;
+    -fx-background-color: transparent;
+    -fx-font-size: 32px;
+    -fx-font-family: 'Space Mono', monospace;
+}
+
+.button_time {
+    -fx-background-color: #5A59B1;
+    -fx-text-fill: #FFFFFF;
+    -fx-font-size: 14px;
+    -fx-font-family: 'Space Mono', monospace;
+    -fx-background-radius: 5px;
+    -fx-font-weight: 700;
+}
+
+.button_time:hover {
+    -fx-background-color: #494794;
+}
+
+
+.label_countdown {
+    -fx-font-size: 100px;
+}
+
+.button_start {
+    -fx-background-color: white;
+    -fx-text-fill: #5A59B1;
+    -fx-font-size: 16px;
+    -fx-font-family: 'Space Mono', monospace;
+    -fx-border-style: hidden;
+    -fx-background-radius: 5px;
+    -fx-font-weight: 700;
+    -fx-effect: dropshadow( gaussian, rgba(0, 0, 0, 0.25), 10, 0.5, 5, 5);
+}
+
+
+
+.label_title {
+    -fx-text-fill: #000000;
+    -fx-font-size: 100px;
+    -fx-font-family: 'Space Mono', monospace;
+}

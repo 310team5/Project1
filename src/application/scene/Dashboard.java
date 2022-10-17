@@ -21,19 +21,19 @@ public class Dashboard {
 	    SceneManager.switchToNotesScene();
 	  }
 	  
-	  /** Click handler for the notes button. */
+	  /** Click handler for the ToDo button. */
 	  @FXML
 	  private void todo() {
 	    SceneManager.switchToTodoScene();
 	  }
 	  
-	  /** Click handler for the notes button. */
+	  /** Click handler for the drawboard button. */
 	  @FXML
 	  private void drawboard() {
 	    SceneManager.switchToDrawboardScene();
 	  }
 	  
-	  /** Click handler for the notes button. */
+	  /** Click handler for the Timer button. */
 	  @FXML
 	  private void timer() {
 	    SceneManager.switchToTimerScene();
