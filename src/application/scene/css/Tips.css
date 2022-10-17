@@ -62,3 +62,16 @@
 .text-area *.text {
     -fx-text-alignment: center;
 }
+
+.scroll-bar {
+    -fx-background-color: #CBC0EA;
+}
+.scroll-bar:vertical .track,
+.scroll-bar:horizontal .track {
+    -fx-background-color: #2f2d2e;
+}
+
+.scroll-bar:vertical .thumb,
+.scroll-bar:horizontal .thumb {
+    -fx-background-color: #CBC0EA;
+}
