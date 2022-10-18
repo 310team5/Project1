@@ -172,24 +172,40 @@
                            </children>
                         </AnchorPane>
                         <Region prefHeight="61.0" prefWidth="1048.0" />
-                        <Button fx:id="buttonTips" graphicTextGap="20.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#tips" prefHeight="50.0" prefWidth="171.0" style="-fx-border-radius: 30px;" styleClass="button_studytips" text="Study Tips">
-                           <effect>
-                              <DropShadow offsetX="5.0" offsetY="5.0" spread="0.5">
-                                 <color>
-                                    <Color red="0.6140350699424744" green="0.6140350699424744" blue="0.6140350699424744" />
-                                 </color>
-                              </DropShadow>
-                           </effect>
-                           <cursor>
-                              <Cursor fx:constant="HAND" />
-                           </cursor>
-                           <font>
-                              <Font size="5.0" />
-                           </font>
-                           <VBox.margin>
-                              <Insets left="400.0" />
-                           </VBox.margin>
-                        </Button>
+                        <AnchorPane prefHeight="50.0" prefWidth="1049.0">
+                           <children>
+                              <Button fx:id="buttonTips" graphicTextGap="20.0" layoutX="133.0" layoutY="3.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#tips" prefHeight="50.0" prefWidth="236.0" style="-fx-border-radius: 30px;" styleClass="button_studytips" text="Study Tips">
+                                 <effect>
+                                    <DropShadow offsetX="5.0" offsetY="5.0" spread="0.5">
+                                       <color>
+                                          <Color red="0.6140350699424744" green="0.6140350699424744" blue="0.6140350699424744" />
+                                       </color>
+                                    </DropShadow>
+                                 </effect>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                                 <font>
+                                    <Font size="5.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="openLecture" graphicTextGap="20.0" layoutX="525.0" layoutY="3.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#lecturePopUp" prefHeight="50.0" prefWidth="245.0" style="-fx-border-radius: 30px;" styleClass="button_studytips" text="Open Lecture">
+                                 <effect>
+                                    <DropShadow offsetX="5.0" offsetY="5.0" spread="0.5">
+                                       <color>
+                                          <Color red="0.6140350699424744" green="0.6140350699424744" blue="0.6140350699424744" />
+                                       </color>
+                                    </DropShadow>
+                                 </effect>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                                 <font>
+                                    <Font size="5.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </AnchorPane>
                         <Region maxHeight="-Infinity" prefHeight="51.0" prefWidth="1048.0" />
                         <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="47.0" prefWidth="1030.0" styleClass="label_subtitle" text="Welcome to MY_STUDY! " />
                         <Region maxHeight="-Infinity" prefHeight="66.0" prefWidth="1028.0" VBox.vgrow="ALWAYS" />

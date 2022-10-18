@@ -1,1 +1,1 @@
-Find your lecture notes timestamped in this folder.
+Find your lecture notes with timestamp in this folder.
