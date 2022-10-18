@@ -2,8 +2,6 @@
 @import "./MainResources.css";
 * {
 	-scene-background-color:#CCCCCC;
-	-dark-font: #000000;
-	-light-font: #FFFFFF;
 	-light-background: #FFFFFF;
 	-tooltip-base: #FFD858;
 	-main-button-color: #5A59B1;
@@ -19,7 +17,7 @@
 	-fx-font-size: 10px;
 	-fx-font-family: 'Space Mono', monospace;
 	-fx-background-color: -tooltip-base;	
-	-fx-text-fill: -dark-font;
+	-fx-text-fill: black;
 }
 
 .menu {
@@ -78,7 +76,7 @@
 
 
 .label_title {
-    -fx-text-fill: -dark-font;
+    -fx-text-fill: black;
     -fx-font-size: 100px;
     -fx-font-family: 'Space Mono', monospace;
 }
