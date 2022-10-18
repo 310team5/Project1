@@ -5,7 +5,9 @@ import javafx.scene.control.*;
 
 import java.io.*;
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.List;
+import java.util.Locale;
 
 public class Todo {
     @FXML
@@ -32,31 +34,44 @@ public class Todo {
     private ChoiceBox<String> choiceBox_status;
     @FXML
     private Button button_todo;
+    @FXML
+    private ChoiceBox<String> choiceBox_type;
     
     private static final String NOT_STARTED_TEXT = "TODO";
     private static final String IN_PROGRESS_TEXT = "DOING";
     private static final String COMPLETED_TEXT = "DONE";
+    
+    private static final String STUDY_TEXT = "Study Session";
+    private static final String EXAM_TEXT = "Exam";
+    private static final String ASSIGNMENT_TEXT = "Assignment";
+    private static final String MEETING_TEXT = "Meeting";
+    private static final String OTHER_TEXT = "Other";
 
     public void initialize() {
 
-        textField_eventName.setPromptText("TODO Events");
+        textField_eventName.setPromptText("Add a new task");
 
         datePicker.setValue(LocalDate.now());
 
         choiceBox_status.getItems().addAll(NOT_STARTED_TEXT , IN_PROGRESS_TEXT, COMPLETED_TEXT);
+        choiceBox_type.getItems().addAll(STUDY_TEXT,EXAM_TEXT,ASSIGNMENT_TEXT,MEETING_TEXT,OTHER_TEXT);
         choiceBox_status.setValue(NOT_STARTED_TEXT );
+        choiceBox_type.setAccessibleText("Task type");
 
         getHistory(listView_TODO, NOT_STARTED_TEXT );
         getHistory(listView_DOING, IN_PROGRESS_TEXT);
         getHistory(listView_DONE, COMPLETED_TEXT);
-
 
     }
 
     @FXML
     private void addEvent() {
         String status = choiceBox_status.getValue();
-        String eventMessage = datePicker.getValue() + " " + textField_eventName.getText();
+        String type = choiceBox_type.getValue();
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy",Locale.getDefault());
+        String formattedDate = (datePicker.getValue()).format(formatter);
+        
+        String eventMessage = formattedDate + " " + type + ": " + textField_eventName.getText();
 
         if (textField_eventName.getText().isEmpty()) {
             noContentAlert();
