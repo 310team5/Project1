@@ -95,6 +95,7 @@ public class Timer{
 	@FXML
 	private void calendar() {
 		SceneManager.switchToCalendarScene();
+	}
 
 	/** Click handler for the popOut button. */
 	@FXML
