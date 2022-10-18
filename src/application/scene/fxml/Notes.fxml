@@ -7,6 +7,7 @@
 <?import javafx.scene.control.ListView?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Tooltip?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -46,13 +47,16 @@
                            </font>
                         </Text>
                         <ChoiceBox fx:id="choiceBox_lecture" layoutX="939.0" layoutY="21.0" prefWidth="150.0" />
-                        <TextField fx:id="textField_lectureName" layoutX="163.0" layoutY="265.0" prefHeight="33.0" prefWidth="196.0" />
+                        <TextField fx:id="textField_lectureName" layoutX="163.0" layoutY="265.0" prefHeight="33.0" prefWidth="196.0">
+                           <tooltip>
+                              <Tooltip text="Enter topic name here to view here later. Leaving blank saves notes with current date as filename." />
+                           </tooltip></TextField>
                         <Text fill="WHITE" layoutX="34.0" layoutY="293.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text_listTitle" text="Topic:" wrappingWidth="121.75628662109375">
                            <font>
                               <Font size="21.0" />
                            </font>
                         </Text>
-                        <Text fill="WHITE" layoutX="670.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text_listTitle" text="Change Topic" wrappingWidth="262.75628662109375">
+                        <Text fill="WHITE" layoutX="595.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text_listTitle" text="View Lecture Notes" wrappingWidth="337.75628662109375">
                            <font>
                               <Font size="21.0" />
                            </font>
