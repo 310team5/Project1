@@ -119,15 +119,15 @@
                            <tooltip>
                               <Tooltip styleClass="tooltip" text="Task name" />
                            </tooltip></TextField>
-                                <DatePicker fx:id="datePicker" layoutX="792.0" layoutY="28.0" prefHeight="38.0" prefWidth="87.0" promptText="To do date" style="-fx-background-radius: 5 5 5 5;">
+                                <DatePicker fx:id="datePicker" layoutX="786.0" layoutY="28.0" prefHeight="38.0" prefWidth="123.0" promptText="To do date" style="-fx-background-radius: 5 5 5 5;">
                            <cursor>
                               <Cursor fx:constant="HAND" />
                            </cursor></DatePicker>
-                                <ChoiceBox fx:id="choiceBox_status" layoutX="890.0" layoutY="28.0" prefHeight="38.0" prefWidth="60.0" style="-fx-background-radius: 5 5 5 5;">
+                                <ChoiceBox fx:id="choiceBox_status" layoutX="924.0" layoutY="28.0" prefHeight="38.0" prefWidth="61.0" style="-fx-background-radius: 5 5 5 5;">
                            <cursor>
                               <Cursor fx:constant="HAND" />
                            </cursor></ChoiceBox>
-                                <Button fx:id="button_addEvent" layoutX="965.0" layoutY="26.0" mnemonicParsing="false" onAction="#addEvent" prefHeight="46.0" prefWidth="141.0" style="-fx-background-radius: 10 10 10 10;" styleClass="button_addEvent" text=" Add" textFill="WHITE">
+                                <Button fx:id="button_addEvent" layoutX="994.0" layoutY="26.0" mnemonicParsing="false" onAction="#addEvent" prefHeight="46.0" prefWidth="112.0" style="-fx-background-radius: 10 10 10 10;" styleClass="button_addEvent" text=" Add" textFill="WHITE">
                                     <graphic>
                                         <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
                                             <image>
