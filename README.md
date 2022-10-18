@@ -1,7 +1,7 @@
 # My Study
 A student productivity desktop application, with apps such as a to-do list, pomodoro timer and drawboard all accessible from a central dashboard.
 ## Creators
-Created by the University of Auckland SoftEng310 group 5, the Council, for project 1. 
+Contributed to by the University of Auckland SoftEng310 2022 group 5 and group 2.
 ## Features
 Key features:
 - Central dashboard
