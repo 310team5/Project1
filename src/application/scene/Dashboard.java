@@ -21,6 +21,12 @@ public class Dashboard {
 	    SceneManager.switchToNotesScene();
 	  }
 	  
+	  /** Click handler for lecture popup button. */
+	    @FXML
+	    void lecturePopUp() {
+	    	SceneManager.popOutLecture();
+	    }
+	  
 	  /** Click handler for the ToDo button. */
 	  @FXML
 	  private void todo() {
