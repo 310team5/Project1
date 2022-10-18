@@ -76,7 +76,7 @@ public class Todo {
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM",Locale.getDefault());
         String formattedDate = (datePicker.getValue()).format(formatter);
         
-        String eventMessage = formattedDate + " • " + type + " • " + textField_eventName.getText();
+        String eventMessage = formattedDate + " - " + type + " - " + textField_eventName.getText();
 
         if (textField_eventName.getText().isEmpty() || choiceBox_type.getValue() == null) {
             noContentAlert();
