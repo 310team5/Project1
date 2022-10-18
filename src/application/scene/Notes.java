@@ -121,7 +121,9 @@ public class Notes {
 			view();
 		}
 	}
+	private void clear
 	
+	listView_LECTURE_NOTES.getItems()
 //    @FXML
 //    private Button button_viewNotes;
 //    @FXML
@@ -161,8 +163,9 @@ public class Notes {
     void view() {
     	String topic = choiceBox_lecture.getValue();
     	textField_lectureName.setText(topic);
+    	
  
-    	String path = "./src/application/scene/LectureNotesForTopic/"+topic;
+    	String path = "./src/application/scene/LectureNotesForTopic/"+topic+".txt";
     	 try (BufferedReader br = new BufferedReader(new FileReader(path))) {
      
                 // Declaring a new string
@@ -199,8 +202,9 @@ public class Notes {
 
     	for (int i = 0; i < listOfFiles.length; i++) {
     	  if (listOfFiles[i].isFile()) {
-    	    
-    	    choiceBox_lecture.getItems().add(listOfFiles[i].getName());
+    	    if (!listOfFiles[i].getName().contains("LectureNotesThisFolder.txt")) {
+    	    	choiceBox_lecture.getItems().add(listOfFiles[i].getName());
+    	    }
     	    
     	  }
     	}
@@ -228,6 +232,7 @@ public class Notes {
     	if (!fileName.equals("")) {
     		//add option to view topic later in choicebox
     		fileName = fileName.replace(" ", "_");
+
     		appendTolectureChoicebox(fileName);
     		topic=true;
     		file = new File("./src/application/scene/LectureNotesForTopic/" + fileName + ".txt");

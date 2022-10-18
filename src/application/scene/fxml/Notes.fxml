@@ -23,7 +23,7 @@
                         <AnchorPane layoutX="20.0" layoutY="134.0" maxWidth="1125.0" prefHeight="633.0" prefWidth="1125.0" style="-fx-background-color: #332E43; -fx-background-radius: 20 20 20 20;" AnchorPane.bottomAnchor="43.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="134.0">
                             <children>
                                 <ListView fx:id="listView_LECTURE_NOTES" layoutX="387.0" layoutY="66.0" maxWidth="738.0" prefHeight="538.0" prefWidth="701.0" styleClass="listView_TODO" AnchorPane.bottomAnchor="29.0" AnchorPane.leftAnchor="387.0" AnchorPane.topAnchor="66.0" />
-                                <Text fill="WHITE" layoutX="446.0" layoutY="45.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text_listTitle" text="Current Lecture Notes" wrappingWidth="310.75628662109375" />
+                                <Text fill="WHITE" layoutX="387.0" layoutY="45.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text_listTitle" text="Current Lecture Notes" wrappingWidth="410.75628662109375" />
                         <Text fill="WHITE" layoutX="130.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text_listTitle" text="Add Note" wrappingWidth="157.75628662109375" />
                         <TextArea fx:id="textView_USERS_COMMENTS" layoutX="36.0" layoutY="66.0" prefHeight="191.0" prefWidth="322.0" />
                         <Button fx:id="button_SAVE_NOTE" layoutX="34.0" layoutY="312.0" maxHeight="60.0" maxWidth="325.0" mnemonicParsing="false" onAction="#addNoteFromUser" prefHeight="60.0" prefWidth="325.0" style="-fx-background-color: #6ec6ff; -fx-background-radius: 10 10 10 10;" text="Save Current Note">
