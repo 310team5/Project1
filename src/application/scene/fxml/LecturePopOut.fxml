@@ -36,11 +36,11 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.media.MediaView?>
 
-<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
+<VBox prefHeight="557.0" prefWidth="860.0" stylesheets="@../css/LecturePopOut.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.scene.LectureView">
   <children>
     <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
       <children>
-            <MediaView fitHeight="480.0" fitWidth="854.0" layoutX="6.0" />
+            <MediaView fx:id="lecturePlayer" fitHeight="480.0" fitWidth="854.0" layoutX="6.0" />
       </children>
     </AnchorPane>
   </children>

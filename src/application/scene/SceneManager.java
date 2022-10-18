@@ -59,6 +59,10 @@ public class SceneManager {
 		  changeScene("Dashboard");
 		  popOut("TimerPopOut", 410, 330, "Pomodoro");
 	  }
+	  /** Pop out a lecture scene to the user. */
+	  public static void popOutLecture() {
+		  popOut("LecturePopOut", 860, 557, "Lecture");
+	  }
 	  /**
 	   * Changes the currently displayed scene to the user.
 	   *
@@ -68,6 +72,7 @@ public class SceneManager {
 	  private static FXMLLoader popOut(String name, int widthSize, int heightSize, String windowName) {
 	    try {
 	      // Load resources.
+	      System.out.println(SceneManager.class.getResource("fxml/" + name + ".fxml"));
 	      FXMLLoader loader = new FXMLLoader(SceneManager.class.getResource("fxml/" + name + ".fxml"));
 	      Parent root = loader.load();
 	      String css = SceneManager.class.getResource("css/" + name + ".css").toExternalForm();
@@ -89,7 +94,7 @@ public class SceneManager {
 
 	      return loader;
 	    } catch (IOException e) {
-	      alert("Could not load FXML or CSS resources.");
+	      System.out.println("Could not load FXML or CSS resources." + e);
 	      return null;
 	    }
 	  }
