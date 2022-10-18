@@ -22,7 +22,7 @@
 }
 
 .menu {
-    -fx-background-color: #332E43;
+    -fx-background-color: -dark-grey-menu-base;
     -fx-border-style: hidden;
     -fx-background-radius: 0 40 40 0;
 }
