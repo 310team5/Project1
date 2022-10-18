@@ -3,8 +3,6 @@
 
 * {
 	-scene-background-color:#CCCCCC;
-	-dark-font: #000000;
-	-light-font: #FFFFFF;
 	-tooltip-base: #FFD858;
 	-dark-grey-menu-base: #332E43;
 	-theme-focus-color: #3F3E80;
@@ -20,7 +18,7 @@
 	-fx-font-size: 16px;
 	-fx-font-family: 'Space Mono', monospace;
 	-fx-background-color: -tooltip-base;	
-	-fx-text-fill: -dark-font;
+	-fx-text-fill: black;
 }
 
 .menu {
@@ -46,7 +44,7 @@
 
 .text_field_title {
 	-fx-background-color: -theme-focus-color;
-	-fx-text-fill: -light-font;
+	-fx-text-fill: white;
 	-fx-font-size: 20px;
 	-fx-font-family: 'Space Mono', monospace;
 	-fx-opacity: 0.8;
@@ -63,7 +61,7 @@
 }
 
 .button_tool {
-	-fx-text-fill: -light-font;
+	-fx-text-fill: white;
 	-fx-background-color: transparent;
 	-fx-font-size: 20px;
 	-fx-font-family: 'Space Mono', monospace;
@@ -96,7 +94,7 @@
 }
 
 .button_focus {
-    -fx-text-fill: -light-font;
+    -fx-text-fill: white;
     -fx-background-color: transparent;
     -fx-font-size: 32px;
     -fx-font-family: 'Space Mono', monospace;
