@@ -23,7 +23,6 @@
                         <AnchorPane layoutX="20.0" layoutY="134.0" maxWidth="1125.0" prefHeight="633.0" prefWidth="1125.0" style="-fx-background-color: #332E43; -fx-background-radius: 20 20 20 20;" AnchorPane.bottomAnchor="43.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="134.0">
                             <children>
                                 <ListView fx:id="listView_LECTURE_NOTES" layoutX="387.0" layoutY="66.0" maxWidth="738.0" prefHeight="538.0" prefWidth="701.0" styleClass="listView_TODO" AnchorPane.bottomAnchor="29.0" AnchorPane.leftAnchor="387.0" AnchorPane.topAnchor="66.0" />
-                                <Text fill="WHITE" layoutX="387.0" layoutY="45.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text_listTitle" text="Current Lecture Notes" wrappingWidth="410.75628662109375" />
                         <Text fill="WHITE" layoutX="130.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text_listTitle" text="Add Note" wrappingWidth="157.75628662109375" />
                         <TextArea fx:id="textView_USERS_COMMENTS" layoutX="36.0" layoutY="66.0" prefHeight="191.0" prefWidth="322.0" />
                         <Button fx:id="button_SAVE_NOTE" layoutX="34.0" layoutY="312.0" maxHeight="60.0" maxWidth="325.0" mnemonicParsing="false" onAction="#addNoteFromUser" prefHeight="60.0" prefWidth="325.0" style="-fx-background-color: #6ec6ff; -fx-background-radius: 10 10 10 10;" text="Save Current Note">
@@ -36,7 +35,7 @@
                               <Font size="21.0" />
                            </font>
                         </Button>
-                        <Button fx:id="button_DELETE_ALL" layoutX="35.0" layoutY="544.0" maxHeight="60.0" maxWidth="325.0" mnemonicParsing="false" onAction="#clearList" prefHeight="60.0" prefWidth="325.0" style="-fx-background-color: #ff4242; -fx-background-radius: 10 10 10 10;" text="Clear Lecture Notes" textFill="WHITE">
+                        <Button fx:id="button_DELETE_ALL" layoutX="35.0" layoutY="544.0" maxHeight="60.0" maxWidth="325.0" mnemonicParsing="false" onAction="#clearListButtonPressed" prefHeight="60.0" prefWidth="325.0" style="-fx-background-color: #ff4242; -fx-background-radius: 10 10 10 10;" text="Clear Lecture Notes" textFill="WHITE">
                            <font>
                               <Font size="21.0" />
                            </font>
@@ -48,12 +47,12 @@
                         </Text>
                         <ChoiceBox fx:id="choiceBox_lecture" layoutX="939.0" layoutY="21.0" prefWidth="150.0" />
                         <TextField fx:id="textField_lectureName" layoutX="163.0" layoutY="265.0" prefHeight="33.0" prefWidth="196.0" />
-                        <Button fx:id="button_viewNotes" layoutX="808.0" layoutY="18.0" maxHeight="60.0" maxWidth="325.0" mnemonicParsing="false" onAction="#viewNotesFromFile" prefHeight="30.0" prefWidth="121.0" style="-fx-background-color: #6ec6ff; -fx-background-radius: 10 10 10 10;" text="View Notes:">
-                           <font>
-                              <Font size="14.0" />
-                           </font>
-                        </Button>
                         <Text fill="WHITE" layoutX="34.0" layoutY="293.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text_listTitle" text="Topic:" wrappingWidth="121.75628662109375">
+                           <font>
+                              <Font size="21.0" />
+                           </font>
+                        </Text>
+                        <Text fill="WHITE" layoutX="670.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text_listTitle" text="Change Topic" wrappingWidth="262.75628662109375">
                            <font>
                               <Font size="21.0" />
                            </font>

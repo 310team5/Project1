@@ -9,6 +9,7 @@ import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Optional;
 
+import javafx.beans.value.ObservableValue;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
@@ -40,14 +41,12 @@ public class Notes {
     @FXML
     private Button button_todo;
 
-    
     @FXML
     private ListView<String> listView_LECTURE_NOTES;
 
     @FXML
     private TextArea textView_USERS_COMMENTS;
     
-
     
     @FXML
     private Text fileNameStored;
@@ -60,19 +59,29 @@ public class Notes {
     
     
     @FXML
-    private ChoiceBox<String> choiceBox_lecture;
+    private ChoiceBox<String> choiceBox_lecture = new ChoiceBox<String>();
     
+
     
 
     public void initialize() {
     	setUpChoiceBox();
+    	//add listener to choicebox to alert user theyre changing lecture topic
+    	choiceBox_lecture.getSelectionModel()
+        .selectedItemProperty()
+        .addListener( (ObservableValue<? extends String> observable, String oldValue, String newValue) -> makeViewAlert() );
     }
     
     @FXML
-    void clearList(ActionEvent event) {
-    	listView_LECTURE_NOTES.getItems().clear();
+    void clearListButtonPressed(ActionEvent event) {
+    	clearList();
     }
     
+    @FXML
+    void clearList() {
+    	listView_LECTURE_NOTES.getItems().clear();
+    }
+   
     
     @FXML
     void todo(ActionEvent event) {
@@ -99,16 +108,20 @@ public class Notes {
     }
     
     
-	/** Delete handler for the save drawing button. */
+	/** View handler for viewing topic notes */
 	@FXML
 	private void viewNotesFromFile(ActionEvent event) {
-		
+		makeViewAlert();
+	}
+	
+	@FXML
+    void makeViewAlert() {
 		Alert alert = new Alert(AlertType.CONFIRMATION);
 		
 		// Customising dialog
 		alert.setTitle("View Notes");
 		alert.setHeaderText("Confirmation to view Notes");
-		alert.setContentText("Your current unsaved notes will be replaced\nWould you like to Continue?\n");
+		alert.setContentText("Your current unsaved notes will be replaced.\nWould you like to Continue?\n");
 
 		// Changing the text of the alert buttons
 		ButtonType yesBtn = new ButtonType("Replace current notes", ButtonData.OK_DONE);
@@ -119,52 +132,17 @@ public class Notes {
 		Optional<ButtonType> result = alert.showAndWait();
 		
 		if (result.isPresent() && result.get() == yesBtn) {
-			clearList(event);
+			clearList();
 			view();
 		}
-	}
-
-//    @FXML
-//    private Button button_viewNotes;
-//    @FXML
-//    private TextField textField_lectureName;
-//    
-//    @FXML
-//    private ChoiceBox<String> choiceBox_lecture;
-    //currentTopic
-    
-	/*
-	 * String path = "C:\\Users\\HP\\Desktop\\gfg.txt";
- 
-        // Try block to check for exceptions
-        try (BufferedReader br
-             = new BufferedReader(new FileReader(path))) {
- 
-            // Declaring a new string
-            String str;
- 
-            // It holds true till threre is content in file
-            while ((str = br.readLine()) != null) {
- 
-                // Printing the file data
-                System.out.println(br);
-            }
-        }
- 
-        // Catch block to handle the exceptions
-        catch (IOException e) {
- 
-            // Display pop up message if exceptionn occurs
-            System.out.println(
-                "Error while reading a file.");
-	 */
+    	
+    }
+	
 	
     @FXML
     void view() {
     	String topic = choiceBox_lecture.getValue();
     	textField_lectureName.setText(topic);
-    	
- 
     	String path = "./src/application/scene/LectureNotesForTopic/"+topic+".txt";
     	 try (BufferedReader br = new BufferedReader(new FileReader(path))) {
      
@@ -178,7 +156,7 @@ public class Notes {
                 			date = str.substring(str.indexOf("(") + 1, str.indexOf(")"));
                 		}
                 		else {
-                			addNote("Made("+date+"): "+str);
+                			addNote("Note Made ("+date+"):   "+str);
                 		}
                     // Printing the file data
                     
@@ -190,7 +168,6 @@ public class Notes {
              // Display pop up message if exceptionn occurs
         	 e.printStackTrace(System.out);
          }
-    	 addNote("---");
     	
     }
     
@@ -212,7 +189,9 @@ public class Notes {
     }
 
     private void appendTolectureChoicebox(String fileName) {
-    	choiceBox_lecture.getItems().add(fileName);
+    	if (!choiceBox_lecture.getItems().contains(fileName)) {
+    			choiceBox_lecture.getItems().add(fileName);
+    	}
     }
     
     
@@ -254,7 +233,7 @@ public class Notes {
             
 			for (String element : listView_LECTURE_NOTES.getItems()) {
 				//dont save notes that are already in the file
-				if (!(element.contains("Made("))) {
+				if (!(element.contains("Made ("))) {
 					attributeWriter.write(element);
 					attributeWriter.write(System.getProperty( "line.separator" ));
 				}
