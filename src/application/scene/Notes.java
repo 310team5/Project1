@@ -57,7 +57,7 @@ public class Notes {
     @FXML
     private TextField textField_lectureName;
     
-    private String currentTopic;
+    
     
     @FXML
     private ChoiceBox<String> choiceBox_lecture;
@@ -72,6 +72,7 @@ public class Notes {
     void clearList(ActionEvent event) {
     	listView_LECTURE_NOTES.getItems().clear();
     }
+    
     
     @FXML
     void todo(ActionEvent event) {
@@ -118,12 +119,11 @@ public class Notes {
 		Optional<ButtonType> result = alert.showAndWait();
 		
 		if (result.isPresent() && result.get() == yesBtn) {
+			clearList(event);
 			view();
 		}
 	}
-	private void clear
-	
-	listView_LECTURE_NOTES.getItems()
+
 //    @FXML
 //    private Button button_viewNotes;
 //    @FXML
@@ -171,11 +171,11 @@ public class Notes {
                 // Declaring a new string
                 String str;
                 String date = "";
-                // It holds true till threre is content in file
+                // It holds true till there is content in file
                 while ((str = br.readLine()) != null) {
                 		//this is date made
-                		if (str.contains("++Made(")) {
-                			date=str;
+                		if (str.contains("++dateMade(")) {
+                			date = str.substring(str.indexOf("(") + 1, str.indexOf(")"));
                 		}
                 		else {
                 			addNote("Made("+date+"): "+str);
@@ -184,13 +184,13 @@ public class Notes {
                     
                 }
             }
-         catch (IOException e) {
+    	 
+         catch (Exception e) {
         	 
              // Display pop up message if exceptionn occurs
-             System.out.println(
-                 "Error while reading a file.");
+        	 e.printStackTrace(System.out);
          }
-    	System.out.println("viewnotes pressed");
+    	 addNote("---");
     	
     }
     
@@ -203,7 +203,8 @@ public class Notes {
     	for (int i = 0; i < listOfFiles.length; i++) {
     	  if (listOfFiles[i].isFile()) {
     	    if (!listOfFiles[i].getName().contains("LectureNotesThisFolder.txt")) {
-    	    	choiceBox_lecture.getItems().add(listOfFiles[i].getName());
+    	    	String[] split = listOfFiles[i].getName().split(".txt");
+    	    	choiceBox_lecture.getItems().add(split[0]);
     	    }
     	    
     	  }
@@ -230,11 +231,11 @@ public class Notes {
     	
     	//create files, either named topic or current date
     	if (!fileName.equals("")) {
+    		topic=true;
     		//add option to view topic later in choicebox
     		fileName = fileName.replace(" ", "_");
-
     		appendTolectureChoicebox(fileName);
-    		topic=true;
+    		
     		file = new File("./src/application/scene/LectureNotesForTopic/" + fileName + ".txt");
     	}
     	else {
@@ -247,17 +248,18 @@ public class Notes {
             FileWriter attributeWriter = new FileWriter(file, true);
             if (topic) {
             	String madeDate= new SimpleDateFormat("yyyy.MM.dd").format(new java.util.Date());
-            	attributeWriter.write("++Made("+madeDate+"): ");
+            	attributeWriter.write("++dateMade("+madeDate+")");
 				attributeWriter.write(System.getProperty( "line.separator" ));
             }
             
 			for (String element : listView_LECTURE_NOTES.getItems()) {
 				//dont save notes that are already in the file
-				if (topic && !(element.contains("Date("))) {
-					System.out.println("line not saved");
+				if (!(element.contains("Made("))) {
+					attributeWriter.write(element);
+					attributeWriter.write(System.getProperty( "line.separator" ));
 				}
-				attributeWriter.write(element);
-				attributeWriter.write(System.getProperty( "line.separator" ));
+
+				
 				
 			}
 			attributeWriter.flush();  
