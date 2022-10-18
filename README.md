@@ -20,7 +20,7 @@ Nice to have features:
 This project was built in Eclipse using Java.
 For best performance and support, use the Eclipse Java IDE.
 You'll also need to download [JavaFX](https://openjfx.io/openjfx-docs/), and the e(fx)clipse plugin, downloadable from the inbuilt Eclipse marketplace.
-Lastly, download the extra .jar dependencies from [here](https://app.mediafire.com/nz54j5hnq1u5n)
+Lastly, download the extra .jar dependencies from [here](https://www.mediafire.com/folder/nz54j5hnq1u5n/Dependencies)
 
 Project Setup:
 - Once you've opened up the project in Eclipse, go to the Project's Properties -> Java Build Path -> Module -> Add Library -> User Library
