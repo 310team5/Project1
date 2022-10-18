@@ -1,18 +1,30 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
 @import "./MainResources.css";
+
+* {
+	-scene-background-color:#CCCCCC;
+	-dark-font: #000000;
+	-light-font: #FFFFFF;
+	-tooltip-base: #FFD858;
+	-dark-grey-menu-base: #332E43;
+	-theme-focus-color: #3F3E80;
+	-light-grey: #ADABB4;
+	-dark-grey: #565263;
+}
+
 .root {
-	-fx-background-color: #CCCCCC;
+	-fx-background-color: -scene-background-color;
 }
 
 .tooltip {
 	-fx-font-size: 16px;
 	-fx-font-family: 'Space Mono', monospace;
-	-fx-background-color: #FFD858;	
-	-fx-text-fill: #000000;
+	-fx-background-color: -tooltip-base;	
+	-fx-text-fill: -dark-font;
 }
 
 .menu {
-    -fx-background-color: #332E43;
+    -fx-background-color: -dark-grey-menu-base;
     -fx-border-style: hidden;
     -fx-background-radius: 0 40 40 0;
 }
@@ -21,20 +33,20 @@
 	-fx-pref-height: 40px;
 	-fx-pref-width: 40px;
 	-fx-background-radius: 3;
-	-fx-background-color: #565263;
+	-fx-background-color: -dark-grey;
 }
 
 .slider_tool .thumb {
 	-fx-pref-height: 20px;
 	-fx-pref-width: 42px;
-	-fx-background-color: #ADABB4;
+	-fx-background-color: -light-grey;
 	-fx-background-radius: 3;
 	-fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 10, 0.5, 0.0, 0.0);
 }
 
 .text_field_title {
-	-fx-background-color: #3F3E80;
-	-fx-text-fill: #FFFFFF;
+	-fx-background-color: -theme-focus-color;
+	-fx-text-fill: -light-font;
 	-fx-font-size: 20px;
 	-fx-font-family: 'Space Mono', monospace;
 	-fx-opacity: 0.8;
@@ -45,13 +57,13 @@
 }
 
 .text_field_title:pressed {
-	-fx-background-color: #3F3E80;
+	-fx-background-color: -theme-focus-color;
 	-fx-opacity: 1.0;
 	-fx-effect: none;
 }
 
 .button_tool {
-	-fx-text-fill: #FFFFFF;
+	-fx-text-fill: -light-font;
 	-fx-background-color: transparent;
 	-fx-font-size: 20px;
 	-fx-font-family: 'Space Mono', monospace;
@@ -63,12 +75,12 @@
 }
 
 .button_tool:pressed {
-	-fx-background-color: #3F3E80;
+	-fx-background-color: -theme-focus-color;
 	-fx-opacity: 1.0;
 }
 
 .button_tool:selected {
-  	-fx-background-color: #3F3E80;
+  	-fx-background-color: -theme-focus-color;
   	-fx-opacity: 1.0
 }
 
@@ -83,10 +95,8 @@
     -fx-font-size: 0.1px;
 }
 
-
-
 .button_focus {
-    -fx-text-fill: #FFFFFF;
+    -fx-text-fill: -light-font;
     -fx-background-color: transparent;
     -fx-font-size: 32px;
     -fx-font-family: 'Space Mono', monospace;
