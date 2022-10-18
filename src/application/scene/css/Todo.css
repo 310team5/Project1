@@ -63,7 +63,7 @@
 }
 
 .textField_eventName {
-    -fx-prompt-text-fill: black;
+    -fx-prompt-text-fill: -dark-font;
     -fx-border-radius: 4px;
     -fx-font-size: 20px;
     -fx-font-family: 'Space Mono', monospace;

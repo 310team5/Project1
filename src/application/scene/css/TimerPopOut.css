@@ -4,6 +4,7 @@
 	-scene-background-color:#CCCCCC;
 	-dark-font: #000000;
 	-light-font: #FFFFFF;
+	-light-background: #FFFFFF;
 	-tooltip-base: #FFD858;
 	-main-button-color: #5A59B1;
 	-main-button-hover-color: #494794;
@@ -64,7 +65,7 @@
 }
 
 .button_start {
-    -fx-background-color: white;
+    -fx-background-color: -light-background;
     -fx-text-fill: -main-button-color;
     -fx-font-size: 16px;
     -fx-font-family: 'Space Mono', monospace;

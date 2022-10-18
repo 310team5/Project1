@@ -1,11 +1,13 @@
 @import "./MainResources.css";
 * {
 	-light-font: #FFFFFF;
+	-dark-font: #000000;
 	-button-dark-add-event: #332E43;
+	-scene-background-color: #FFFFFF;
 }
 
 .root {
-    -fx-background-color: white;
+    -fx-background-color: -scene-background-color;
 }
 
 
@@ -30,7 +32,7 @@
 }
 
 .textField_eventName {
-    -fx-prompt-text-fill: black;
+    -fx-prompt-text-fill: -dark-font;
     -fx-border-radius: 4px;
     -fx-font-size: 20px;
     -fx-font-family: 'Space Mono', monospace;
