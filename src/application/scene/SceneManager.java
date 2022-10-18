@@ -2,11 +2,13 @@ package application.scene;
 
 import java.io.IOException;
 import javafx.fxml.FXMLLoader;
+import javafx.geometry.Rectangle2D;
 import javafx.scene.Group;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
+import javafx.stage.Screen;
 import javafx.stage.Stage;
 
 public class SceneManager {
@@ -53,13 +55,63 @@ public class SceneManager {
 		  changeScene("Timer");
 	  }
 	  
+
 	  /** Show the calendar scene to the user. */
 	  public static void switchToCalendarScene() {
 		  changeScene("Calendar");
 	  }
 
 
+	  /** Show the tip scene to the user. */
+	  public static void switchToTipsScene() {
+		  changeScene("Tips");
+	  }
 
+
+	  /** Pop out a timer scene to the user. */
+	  public static void popOutTimer() {
+		  changeScene("Dashboard");
+		  popOut("TimerPopOut", 410, 330, "Pomodoro");
+	  }
+	  /** Pop out a lecture scene to the user. */
+	  public static void popOutLecture() {
+		  popOut("LecturePopOut", 860, 537, "Lecture");
+	  }
+	  /**
+	   * Changes the currently displayed scene to the user.
+	   *
+	   * @param name The name of the FXML and CSS files without the file extension.
+	   * @return The FXMLLoader to allow access to the controller instance.
+	   */
+	  private static FXMLLoader popOut(String name, int widthSize, int heightSize, String windowName) {
+	    try {
+	      // Load resources.
+	      System.out.println(SceneManager.class.getResource("fxml/" + name + ".fxml"));
+	      FXMLLoader loader = new FXMLLoader(SceneManager.class.getResource("fxml/" + name + ".fxml"));
+	      Parent root = loader.load();
+	      String css = SceneManager.class.getResource("css/" + name + ".css").toExternalForm();
+	      // Show new scene.
+	      Scene scene = new Scene(root);
+	      Stage stage = new Stage();
+	      stage.setScene(scene);
+	      stage.setAlwaysOnTop(true);
+	      stage.setResizable(false);
+		  stage.setTitle(windowName); 
+		  
+		  Rectangle2D primaryScreenBounds = Screen.getPrimary().getVisualBounds();
+		  stage.setX(primaryScreenBounds.getMinX() + primaryScreenBounds.getWidth() - widthSize);
+		  stage.setY(primaryScreenBounds.getMinY() + primaryScreenBounds.getHeight() - heightSize);
+	      stage.show();
+
+	      scene.getStylesheets().clear();
+	      scene.getStylesheets().add(css);
+
+	      return loader;
+	    } catch (IOException e) {
+	      System.out.println("Could not load FXML or CSS resources." + e);
+	      return null;
+	    }
+	  }
 
 	  /**
 	   * Changes the currently displayed scene to the user.
@@ -72,7 +124,9 @@ public class SceneManager {
 	      // Load resources.
 	      FXMLLoader loader = new FXMLLoader(SceneManager.class.getResource("fxml/" + name + ".fxml"));
 	      Parent root = loader.load();
+	    
 	      String css = SceneManager.class.getResource("css/" + name + ".css").toExternalForm();
+	      
 	      // Show new scene.
 	      Scene scene = stage.getScene();
 	      scene.setRoot(root);
