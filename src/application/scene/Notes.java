@@ -40,6 +40,9 @@ public class Notes {
     
     @FXML
     private Button button_todo;
+    
+    @FXML 
+    private Button buttonCalendar;
 
     @FXML
     private ListView<String> listView_LECTURE_NOTES;
@@ -107,6 +110,13 @@ public class Notes {
     	saveToFile(null);
     }
     
+
+    @FXML
+    void calendar(ActionEvent event) {
+    	SceneManager.switchToCalendarScene();
+    	saveToFile(null);
+    }
+
     
 	/** View handler for viewing topic notes */
 	@FXML

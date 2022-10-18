@@ -261,6 +261,12 @@ public class Todo {
     private void todo() {
     	SceneManager.switchToTodoScene();
     }
+    
+    @FXML
+    private void calendar() {
+    	SceneManager.switchToCalendarScene();
+    }
+
 
     /**
      * Click handler for the drawboard button.

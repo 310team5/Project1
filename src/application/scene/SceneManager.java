@@ -55,10 +55,18 @@ public class SceneManager {
 		  changeScene("Timer");
 	  }
 	  
+
+	  /** Show the calendar scene to the user. */
+	  public static void switchToCalendarScene() {
+		  changeScene("Calendar");
+	  }
+
+
 	  /** Show the tip scene to the user. */
 	  public static void switchToTipsScene() {
 		  changeScene("Tips");
 	  }
+
 
 	  /** Pop out a timer scene to the user. */
 	  public static void popOutTimer() {

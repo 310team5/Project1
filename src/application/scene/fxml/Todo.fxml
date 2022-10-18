@@ -291,6 +291,35 @@
                         <Tooltip styleClass="tooltip" text="Timer" />
                      </tooltip>
                         </Button>
+                  <Button fx:id="buttonCalendar" layoutX="34.0" layoutY="556.0" mnemonicParsing="false" onAction="#calendar" stylesheets="@../css/Drawboard.css">
+                     <graphic>
+                        <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../assets/icon_calendar_white.png" />
+                           </image>
+                           <viewport>
+                              <Rectangle2D />
+                           </viewport>
+                           <styleClass>
+                              <String fx:value="button_menu" />
+                              <String fx:value="button_focus" />
+                           </styleClass>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </ImageView>
+                     </graphic>
+                     <styleClass>
+                        <String fx:value="button_focus" />
+                        <String fx:value="button_menu" />
+                     </styleClass>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <tooltip>
+                        <Tooltip styleClass="tooltip" text="Timer" />
+                     </tooltip>
+                  </Button>
                     </children>
                 </AnchorPane>
             </left>
