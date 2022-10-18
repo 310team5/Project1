@@ -1,14 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
 @import "./MainResources.css";
+* {
+	-scene-background-color:#CCCCCC;
+	-dark-font: #000000;
+	-light-font: #FFFFFF;
+	-tooltip-base: #FFD858;
+	-main-button-color: #5A59B1;
+	-main-button-hover-color: #494794;
+	-dark-grey-menu-base: #332E43;
+}
+
 .root {
-    -fx-background-color: #CCCCCC;
+    -fx-background-color: -scene-background-color;
 }
 
 .tooltip {
 	-fx-font-size: 10px;
 	-fx-font-family: 'Space Mono', monospace;
-	-fx-background-color: #FFD858;	
-	-fx-text-fill: #000000;
+	-fx-background-color: -tooltip-base;	
+	-fx-text-fill: -dark-font;
 }
 
 .menu {
@@ -29,15 +39,15 @@
 
 
 .button_focus {
-    -fx-text-fill: #FFFFFF;
+    -fx-text-fill: -light-font;
     -fx-background-color: transparent;
     -fx-font-size: 32px;
     -fx-font-family: 'Space Mono', monospace;
 }
 
 .button_time {
-    -fx-background-color: #5A59B1;
-    -fx-text-fill: #FFFFFF;
+    -fx-background-color: -main-button-color;
+    -fx-text-fill: -light-font;
     -fx-font-size: 14px;
     -fx-font-family: 'Space Mono', monospace;
     -fx-background-radius: 5px;
@@ -45,7 +55,7 @@
 }
 
 .button_time:hover {
-    -fx-background-color: #494794;
+    -fx-background-color: -main-button-hover-color;
 }
 
 
@@ -55,7 +65,7 @@
 
 .button_start {
     -fx-background-color: white;
-    -fx-text-fill: #5A59B1;
+    -fx-text-fill: -main-button-color;
     -fx-font-size: 16px;
     -fx-font-family: 'Space Mono', monospace;
     -fx-border-style: hidden;
@@ -67,7 +77,7 @@
 
 
 .label_title {
-    -fx-text-fill: #000000;
+    -fx-text-fill: -dark-font;
     -fx-font-size: 100px;
     -fx-font-family: 'Space Mono', monospace;
 }
