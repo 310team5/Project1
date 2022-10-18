@@ -2,8 +2,6 @@
 @import "./MainResources.css";
 * {
 	-scene-background-color:#CCCCCC;
-	-dark-font: #000000;
-	-lighter-font: #FFFFFF;
 	-tooltip-base: #FFD858;
 	-dark-grey-menu-base: #332E43;
 	-main-button-color: #5A59B1;
@@ -19,12 +17,12 @@
 	-fx-font-size: 16px;
 	-fx-font-family: 'Space Mono', monospace;
 	-fx-background-color: -tooltip-base;	
-	-fx-text-fill: -dark-font;
+	-fx-text-fill: black;
 }
 
 .menu {
 	-fx-background-color: -dark-grey-menu-base;
-	-fx-text-fill: -lighter-font;
+	-fx-text-fill: white;
 	-fx-border-style: hidden;
 	-fx-background-radius: 0 40 40 0;
 }
@@ -67,13 +65,13 @@
 }
 
 .label_title {
-	-fx-text-fill: -dark-font;
+	-fx-text-fill: black;
 	-fx-font-size: 100px;
 	-fx-font-family: 'Space Mono', monospace;
 }
 
 .label_subtitle {
-	-fx-text-fill: -dark-font;
+	-fx-text-fill: black;
 	-fx-font-size: 30px;
 	-fx-font-family: 'Space Mono', monospace;	
 }
