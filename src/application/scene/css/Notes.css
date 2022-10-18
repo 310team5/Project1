@@ -1,7 +1,5 @@
 @import "./MainResources.css";
 * {
-	-light-font: #FFFFFF;
-	-dark-font: #000000;
 	-button-dark-add-event: #332E43;
 	-scene-background-color: #FFFFFF;
 }
@@ -12,7 +10,7 @@
 
 
 .button_focus {
-    -fx-text-fill: -light-font;
+    -fx-text-fill: white;
     -fx-background-color: transparent;
     -fx-font-size: 32px;
     -fx-font-family: 'Space Mono', monospace;
@@ -20,7 +18,7 @@
 
 
 .button_tool {
-    -fx-text-fill: -light-font;
+    -fx-text-fill: white;
     -fx-background-color: transparent;
     -fx-font-size: 20px;
     -fx-font-family: 'Space Mono', monospace;
@@ -32,7 +30,7 @@
 }
 
 .textField_eventName {
-    -fx-prompt-text-fill: -dark-font;
+    -fx-prompt-text-fill: black;
     -fx-border-radius: 4px;
     -fx-font-size: 20px;
     -fx-font-family: 'Space Mono', monospace;
