@@ -26,7 +26,7 @@
                                 <Text fill="WHITE" layoutX="446.0" layoutY="45.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text_listTitle" text="Current Lecture Notes" wrappingWidth="310.75628662109375" />
                         <Text fill="WHITE" layoutX="130.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text_listTitle" text="Add Note" wrappingWidth="157.75628662109375" />
                         <TextArea fx:id="textView_USERS_COMMENTS" layoutX="36.0" layoutY="66.0" prefHeight="191.0" prefWidth="322.0" />
-                        <Button fx:id="button_SAVE_NOTE" layoutX="34.0" layoutY="312.0" maxHeight="60.0" maxWidth="325.0" mnemonicParsing="false" onAction="#addNoteToList" prefHeight="60.0" prefWidth="325.0" style="-fx-background-color: #6ec6ff; -fx-background-radius: 10 10 10 10;" text="Save Current Note">
+                        <Button fx:id="button_SAVE_NOTE" layoutX="34.0" layoutY="312.0" maxHeight="60.0" maxWidth="325.0" mnemonicParsing="false" onAction="#addNoteFromUser" prefHeight="60.0" prefWidth="325.0" style="-fx-background-color: #6ec6ff; -fx-background-radius: 10 10 10 10;" text="Save Current Note">
                            <font>
                               <Font size="21.0" />
                            </font>
@@ -48,12 +48,12 @@
                         </Text>
                         <ChoiceBox fx:id="choiceBox_lecture" layoutX="939.0" layoutY="21.0" prefWidth="150.0" />
                         <TextField fx:id="textField_lectureName" layoutX="163.0" layoutY="265.0" prefHeight="33.0" prefWidth="196.0" />
-                        <Button fx:id="button_viewNotes" layoutX="808.0" layoutY="18.0" maxHeight="60.0" maxWidth="325.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="121.0" style="-fx-background-color: #6ec6ff; -fx-background-radius: 10 10 10 10;" text="View Notes:">
+                        <Button fx:id="button_viewNotes" layoutX="808.0" layoutY="18.0" maxHeight="60.0" maxWidth="325.0" mnemonicParsing="false" onAction="#viewNotesFromFile" prefHeight="30.0" prefWidth="121.0" style="-fx-background-color: #6ec6ff; -fx-background-radius: 10 10 10 10;" text="View Notes:">
                            <font>
                               <Font size="14.0" />
                            </font>
                         </Button>
-                        <Text fill="WHITE" layoutX="35.0" layoutY="293.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text_listTitle" text="Topic:" wrappingWidth="190.75628662109375">
+                        <Text fill="WHITE" layoutX="34.0" layoutY="293.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text_listTitle" text="Topic:" wrappingWidth="121.75628662109375">
                            <font>
                               <Font size="21.0" />
                            </font>
