@@ -84,7 +84,7 @@
                               <DropShadow height="35.0" radius="17.0" spread="0.1" width="35.0" />
                            </effect>
                                 </Button>
-                                <Button fx:id="button_clearDONE" layoutX="1057.0" layoutY="60.0" mnemonicParsing="false" onAction="#clearDONE" style="-fx-background-color: #ffa4a2; -fx-background-radius: 10 10 10 10;">
+                                <Button fx:id="button_clearALL" layoutX="1057.0" layoutY="60.0" mnemonicParsing="false" onAction="#clearALL" style="-fx-background-color: #ffa4a2; -fx-background-radius: 10 10 10 10;">
                                     <graphic>
                                         <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
                                             <image>

@@ -8,7 +8,10 @@ import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
 import java.util.Locale;
-
+/**
+ * Controller for the To do list page.
+ *
+ */
 public class Todo {
     @FXML
     private Button button_dashboard;
@@ -39,8 +42,7 @@ public class Todo {
     
     private static final String NOT_STARTED_TEXT = "TODO";
     private static final String IN_PROGRESS_TEXT = "DOING";
-    private static final String COMPLETED_TEXT = "DONE";
-    
+    private static final String COMPLETED_TEXT = "DONE";   
     private static final String STUDY_TEXT = "Study Session";
     private static final String EXAM_TEXT = "Exam";
     private static final String ASSIGNMENT_TEXT = "Assignment";
@@ -64,6 +66,9 @@ public class Todo {
 
     }
 
+    /**
+     * Adds the users task, event type, and due date to the specified list.
+     */
     @FXML
     private void addEvent() {
         String status = choiceBox_status.getValue();
@@ -93,6 +98,9 @@ public class Todo {
     }
 
 
+    /**
+     * Moves the selected task to the doing list.
+     */
     @FXML
     private void moveToDOING() {
         String currentItem = listView_TODO.getSelectionModel().getSelectedItem();
@@ -111,6 +119,9 @@ public class Todo {
 
     }
 
+    /**
+     * Moves the selected task to the done list.
+     */
     @FXML
     private void moveToDONE() {
         String currentItem = listView_DOING.getSelectionModel().getSelectedItem();
@@ -128,9 +139,11 @@ public class Todo {
 
     }
     
-    //Clears entire to do list
+    /**
+     * Clears all lists
+     */
     @FXML
-    private void clearDONE() {
+    private void clearALL() {
         Alert alert_clearDONEConfirmation = new Alert(Alert.AlertType.CONFIRMATION, "Do you really want to clear your to-do list?", ButtonType.YES, ButtonType.NO);
         ButtonType result = alert_clearDONEConfirmation.showAndWait().orElse(ButtonType.NO);
 
@@ -145,7 +158,12 @@ public class Todo {
 		rewriteHistory(listView_DONE, COMPLETED_TEXT );
 
     }
-
+    /**
+     * Adds the selected event to the selected list, in the file and onscreen.
+     * @param listView
+     * @param status
+     * @param eventMessage
+     */
     private void addToList(ListView<String> listView, String status, String eventMessage) {
         try {
 
@@ -161,7 +179,11 @@ public class Todo {
 
     }
 
-
+    /**
+     * Reads the saved files to retrieve todo lists written in the past
+     * @param listName
+     * @param status
+     */
     private void getHistory(ListView<String> listName, String status) {
         try {
             String file = "./src/application/scene/ToDoLists/" + status + ".txt";
@@ -175,7 +197,12 @@ public class Todo {
         } catch (IOException ex) {
         }
     }
-
+    
+    /**
+     * Clears the selected list files
+     * @param listName
+     * @param status
+     */
     private void rewriteHistory(ListView<String> listName, String status) {
         try {
             File file = new File("./src/application/scene/ToDoLists/" + status + ".txt");
@@ -194,7 +221,9 @@ public class Todo {
         }
     }
 
-
+    /**
+     * Alert when a user input for a new event is invalid.
+     */
     public void noContentAlert() {
         Alert alert_noContentWarning = new Alert(Alert.AlertType.WARNING);
         // set content text
