@@ -1,0 +1,39 @@
+1. Set a Schedule. 
+First thing you can do is create a list of things you need to do.
+This can be done using our TODO feature of the application, where you create a task and categorize it.
+
+2. Study at your own pace and get some rest. 
+Do you digest content quickly or do you need time to let the material sink in?
+Find the right pace that suits you rather than trying to match someone else's speed.
+Also, exhaustion helps no one perform their best. Your body needs rest. 
+You can use our Timer feature to help you study in intervals and get rest in between for efficient study sessions.
+Getting enough sleep is crucial for memory function as well.
+
+3. Relax
+Research shows that stress makes it harder to learn and to retain information. 
+
+4. Pick a good place to study
+Find your self a place that is comfortable without being so relaxing that you end up falling asleep.
+Surrounding yourself with peace and quiet helps you focus.
+
+5. Choose your music wisely.
+Noise-canceling headphones can also help limit distractions
+It's better to listen to quiet music and loud tunes.
+ Some people do best with instrumental music playing in the background.
+For this, we have a music playlist recommended for you on the right side of the Study Tips page.
+We have lofi instrumentals and white noise ambient sound to create a peaceful atmosphere.
+We also have a playlist with uplifting tunes for when you relax.
+
+6. Pick a study method that works for you
+Everyone has their own study method that works best for them. 
+Some people learn by doing, while others learn by listening.
+We have multiple features for these different types of learners.
+You can takes notes in our Notes page, or if that doesn't work for you,
+you can use always our Drawboard page to draw and help you organize your thoughts.
+
+7. Create flashcards
+Flashcards are an efficient way of studying.
+
+8. Take notes in class
+This can also be done by using our Notes page.
+

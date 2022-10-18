@@ -1,11 +1,16 @@
 @import "./MainResources.css";
+* {
+	-button-dark-add-event: #332E43;
+	-scene-background-color: #FFFFFF;
+}
+
 .root {
-    -fx-background-color: white;
+    -fx-background-color: -scene-background-color;
 }
 
 
 .button_focus {
-    -fx-text-fill: #FFFFFF;
+    -fx-text-fill: white;
     -fx-background-color: transparent;
     -fx-font-size: 32px;
     -fx-font-family: 'Space Mono', monospace;
@@ -13,7 +18,7 @@
 
 
 .button_tool {
-    -fx-text-fill: #FFFFFF;
+    -fx-text-fill: white;
     -fx-background-color: transparent;
     -fx-font-size: 20px;
     -fx-font-family: 'Space Mono', monospace;
@@ -34,7 +39,7 @@
 
 
 .button_addEvent {
-    -fx-background-color: #332E43;
+    -fx-background-color: -button-dark-add-event;
     -fx-font-size: 20px;
     -fx-font-family: 'Space Mono', monospace;
 }

@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="810.0" prefWidth="1315.0" stylesheets="@../css/Tips.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.scene.Tips">
+   <children>
+      <AnchorPane prefHeight="810.0" prefWidth="150.0" styleClass="menu" stylesheets="@../css/Tips.css">
+         <children>
+            <ImageView fitHeight="100.0" fitWidth="100.0" layoutX="27.0" layoutY="34.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/logo_short.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="button_dashboard" layoutX="34.0" layoutY="174.0" mnemonicParsing="false" onAction="#dashboard" stylesheets="@../css/Tips.css">
+               <styleClass>
+                  <String fx:value="button_focus" />
+                  <String fx:value="button_menu" />
+               </styleClass>
+               <graphic>
+                  <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/icon_dashboard_white.png" />
+                     </image>
+                     <viewport>
+                        <Rectangle2D />
+                     </viewport>
+                     <styleClass>
+                        <String fx:value="button_menu" />
+                        <String fx:value="button_focus" />
+                     </styleClass>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <tooltip>
+                  <Tooltip styleClass="tooltip" text="Dashboard" />
+               </tooltip>
+            </Button>
+            <Button layoutX="34.0" layoutY="254.0" mnemonicParsing="false" onAction="#notes" stylesheets="@../css/Tips.css">
+               <styleClass>
+                  <String fx:value="button_focus" />
+                  <String fx:value="button_menu" />
+               </styleClass>
+               <graphic>
+                  <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/icon_notes_white.png" />
+                     </image>
+                     <viewport>
+                        <Rectangle2D />
+                     </viewport>
+                     <styleClass>
+                        <String fx:value="button_menu" />
+                        <String fx:value="button_focus" />
+                     </styleClass>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <tooltip>
+                  <Tooltip styleClass="tooltip" text="Notes" />
+               </tooltip>
+            </Button>
+            <Button layoutX="34.0" layoutY="479.0" mnemonicParsing="false" style="-fx-opacity: 1;" styleClass="button_focus" stylesheets="@../css/Tips.css">
+               <graphic>
+                  <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/icon_timer_white.png" />
+                     </image>
+                     <viewport>
+                        <Rectangle2D />
+                     </viewport>
+                  </ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <tooltip>
+                  <Tooltip styleClass="tooltip" text="Timer" />
+               </tooltip>
+            </Button>
+            <Button layoutX="34.0" layoutY="398.0" mnemonicParsing="false" onAction="#drawboard" stylesheets="@../css/Tips.css">
+               <styleClass>
+                  <String fx:value="button_focus" />
+                  <String fx:value="button_menu" />
+               </styleClass>
+               <graphic>
+                  <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/icon_drawboard_white.png" />
+                     </image>
+                     <viewport>
+                        <Rectangle2D />
+                     </viewport>
+                     <styleClass>
+                        <String fx:value="button_menu" />
+                        <String fx:value="button_focus" />
+                     </styleClass>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <tooltip>
+                  <Tooltip styleClass="tooltip" text="Drawboard" />
+               </tooltip>
+            </Button>
+            <Button layoutX="34.0" layoutY="327.0" mnemonicParsing="false" onAction="#todo" stylesheets="@../css/Tips.css">
+               <styleClass>
+                  <String fx:value="button_focus" />
+                  <String fx:value="button_menu" />
+               </styleClass>
+               <graphic>
+                  <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/icon_todo_white.png" />
+                     </image>
+                     <viewport>
+                        <Rectangle2D />
+                     </viewport>
+                     <styleClass>
+                        <String fx:value="button_menu" />
+                        <String fx:value="button_focus" />
+                     </styleClass>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <tooltip>
+                  <Tooltip styleClass="tooltip" text="TODO" />
+               </tooltip>
+            </Button>
+         </children>
+      </AnchorPane>
+      <Button fx:id="cafeBtn" layoutX="173.0" layoutY="19.0" mnemonicParsing="false" onAction="#setVisbilityCafe" styleClass="button_toggle" text="View cafes">
+         <font>
+            <Font name="Lao Sangam MN" size="25.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Button>
+      <Button layoutX="368.0" layoutY="19.0" mnemonicParsing="false" onAction="#setVisibilityTips" styleClass="button_toggle" text="Tips">
+         <font>
+            <Font name="Lao Sangam MN" size="25.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Button>
+      <Label layoutX="979.0" layoutY="3.0" prefHeight="58.0" prefWidth="296.0" text="Boost your productivity ">
+         <font>
+            <Font name="System Bold Italic" size="25.0" />
+         </font></Label>
+      <Button fx:id="lofiBtn" layoutX="966.0" layoutY="80.0" mnemonicParsing="false" onAction="#openLinkLofi" styleClass="button_music">
+         <graphic>
+            <ImageView fitHeight="154.0" fitWidth="300.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../TipsAssets/music%20card%205.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="upliftingBtn" layoutX="966.0" layoutY="221.0" mnemonicParsing="false" onAction="#openLinkUplifting" styleClass="button_music">
+         <graphic>
+            <ImageView fitHeight="154.0" fitWidth="300.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../TipsAssets/music%20card%201.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="podcastBtn" layoutX="966.0" layoutY="362.0" mnemonicParsing="false" onAction="#openLinkPodcast" styleClass="button_music">
+         <graphic>
+            <ImageView fitHeight="154.0" fitWidth="300.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../TipsAssets/music%20card%203.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="ambienceBtn" layoutX="966.0" layoutY="503.0" mnemonicParsing="false" onAction="#openLinkAmbience" styleClass="button_music">
+         <graphic>
+            <ImageView fitHeight="154.0" fitWidth="300.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../TipsAssets/music%20card%202.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="chillBtn" layoutX="966.0" layoutY="644.0" mnemonicParsing="false" onAction="#openLinkChill" styleClass="button_music">
+         <graphic>
+            <ImageView fitHeight="154.0" fitWidth="300.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../TipsAssets/music%20card%204.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <ImageView fx:id="cafeCard1" fitHeight="290.0" fitWidth="270.0" layoutX="185.0" layoutY="173.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../TipsAssets/cafe%20card%201.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="cafeCard3" fitHeight="290.0" fitWidth="270.0" layoutX="695.0" layoutY="173.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../TipsAssets/cafe%20card%203.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="cafeCard2" fitHeight="290.0" fitWidth="270.0" layoutX="440.0" layoutY="173.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../TipsAssets/cafe%20card%202.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="cafeCard4" fitHeight="290.0" fitWidth="270.0" layoutX="185.0" layoutY="493.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../TipsAssets/cafe%20card%204.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="cafeCard5" fitHeight="290.0" fitWidth="270.0" layoutX="440.0" layoutY="493.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../TipsAssets/cafe%20card%205.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="cafeTitle" layoutX="278.0" layoutY="103.0" text="View the best cafes near you!">
+         <font>
+            <Font name="System Bold" size="42.0" />
+         </font>
+      </Label>
+      <Label layoutX="1030.0" layoutY="57.0" text="recommended playlists">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <TextArea fx:id="tipsText" layoutX="173.0" layoutY="169.0" prefHeight="612.0" prefWidth="766.0" styleClass="text-area">
+         <effect>
+            <InnerShadow />
+         </effect>
+      </TextArea>
+      <Label fx:id="tipsTitle" layoutX="282.0" layoutY="108.0" text="Become the Best version of you">
+         <font>
+            <Font name="System Bold" size="38.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
