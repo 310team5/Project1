@@ -4,18 +4,13 @@
 <?import javafx.geometry.Rectangle2D?>
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.ToggleButton?>
-<?import javafx.scene.control.ToggleGroup?>
 <?import javafx.scene.control.Tooltip?>
-<?import javafx.scene.effect.DropShadow?>
-<?import javafx.scene.effect.InnerShadow?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.text.Font?>
-<?import javafx.scene.text.Text?>
+<?import javafx.scene.layout.VBox?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="810.0" prefWidth="1315.0" stylesheets="@../css/Timer.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.scene.Timer">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="810.0" prefWidth="1315.0" stylesheets="@../css/Timer.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.scene.CalendarSection">
    <children>
       <AnchorPane prefHeight="810.0" prefWidth="150.0" styleClass="menu" stylesheets="@../css/Timer.css">
          <children>
@@ -84,7 +79,7 @@
             </Button>
             <Button layoutX="34.0" layoutY="479.0" mnemonicParsing="false" style="-fx-opacity: 1;" styleClass="button_focus" stylesheets="@../css/Timer.css">
                <graphic>
-                  <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" styleClass="button_menu">
                      <image>
                         <Image url="@../assets/icon_timer_white.png" />
                      </image>
@@ -160,17 +155,13 @@
             </Button>
             <Button fx:id="buttonCalendar" layoutX="34.0" layoutY="557.0" mnemonicParsing="false" onAction="#calendar" stylesheets="@../css/Drawboard.css">
                <graphic>
-                  <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" styleClass="button_focus">
                      <image>
                         <Image url="@../assets/icon_calendar_white.png" />
                      </image>
                      <viewport>
                         <Rectangle2D />
                      </viewport>
-                     <styleClass>
-                        <String fx:value="button_menu" />
-                        <String fx:value="button_focus" />
-                     </styleClass>
                      <cursor>
                         <Cursor fx:constant="HAND" />
                      </cursor>
@@ -189,89 +180,6 @@
             </Button>
          </children>
       </AnchorPane>
-      <AnchorPane layoutX="178.0" layoutY="23.0" prefHeight="773.0" prefWidth="1110.0" style="-fx-background-color: #3F3E80; -fx-background-radius: 10;">
-         <children>
-            <AnchorPane layoutX="152.0" layoutY="142.0" prefHeight="490.0" prefWidth="807.0" style="-fx-background-color: #5A59B1; -fx-background-radius: 30;">
-               <children>
-                  <Text fx:id="countdownText" fill="WHITE" layoutX="228.0" layoutY="276.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="label_countdown" text="00:00">
-                     <font>
-                        <Font size="15.0" />
-                     </font>
-                  </Text>
-                  <Button fx:id="startButton" alignment="CENTER" layoutX="274.0" layoutY="325.0" mnemonicParsing="false" onAction="#controlTimer" prefHeight="84.0" prefWidth="256.0" styleClass="button_start" stylesheets="@../css/Timer.css" text="START">
-                     <font>
-                        <Font size="15.0" />
-                     </font>
-                     <cursor>
-                        <Cursor fx:constant="HAND" />
-                     </cursor>
-                     <tooltip>
-                        <Tooltip styleClass="tooltip" text="Start the timer!" />
-                     </tooltip>
-                  </Button>
-                  <ToggleButton fx:id="pomodoroButton" layoutX="173.0" layoutY="91.0" mnemonicParsing="false" onAction="#selectTimerButton" prefHeight="50.0" prefWidth="153.0" styleClass="button_time" stylesheets="@../css/Timer.css" text="Pomodoro">
-                     <toggleGroup>
-                        <ToggleGroup fx:id="timerButtons" />
-                     </toggleGroup>
-                     <cursor>
-                        <Cursor fx:constant="HAND" />
-                     </cursor>
-                     <tooltip>
-                        <Tooltip styleClass="tooltip" text="25 mins" />
-                     </tooltip>
-                  </ToggleButton>
-                  <ToggleButton fx:id="shortBreakButton" layoutX="326.0" layoutY="91.0" mnemonicParsing="false" onAction="#selectTimerButton" prefHeight="50.0" prefWidth="153.0" styleClass="button_time" stylesheets="@../css/Timer.css" text="Short Break" toggleGroup="$timerButtons">
-                     <cursor>
-                        <Cursor fx:constant="HAND" />
-                     </cursor>
-                     <tooltip>
-                        <Tooltip styleClass="tooltip" text="5 mins" />
-                     </tooltip></ToggleButton>
-                  <ToggleButton fx:id="longBreakButton" layoutX="478.0" layoutY="91.0" mnemonicParsing="false" onAction="#selectTimerButton" prefHeight="50.0" prefWidth="153.0" styleClass="button_time" stylesheets="@../css/Timer.css" text="Long Break" toggleGroup="$timerButtons">
-                     <cursor>
-                        <Cursor fx:constant="HAND" />
-                     </cursor>
-                     <tooltip>
-                        <Tooltip styleClass="tooltip" text="15 mins" />
-                     </tooltip></ToggleButton>
-                  <Button fx:id="popOut" layoutX="689.0" layoutY="391.0" mnemonicParsing="false" onAction="#popOut" stylesheets="@../css/Timer.css">
-                     <styleClass>
-                        <String fx:value="button_focus" />
-                        <String fx:value="button_menu" />
-                     </styleClass>
-                     <cursor>
-                        <Cursor fx:constant="HAND" />
-                     </cursor>
-                     <tooltip>
-                        <Tooltip styleClass="tooltip" text="Pop Out timer" />
-                     </tooltip>
-                     <graphic>
-                        <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../assets/icon_popout_black.png" />
-                           </image>
-                           <viewport>
-                              <Rectangle2D />
-                           </viewport>
-                           <cursor>
-                              <Cursor fx:constant="HAND" />
-                           </cursor>
-                           <styleClass>
-                              <String fx:value="button_menu" />
-                              <String fx:value="button_focus" />
-                           </styleClass>
-                        </ImageView>
-                     </graphic>
-                  </Button>
-               </children>
-               <effect>
-                  <InnerShadow />
-               </effect>
-            </AnchorPane>
-         </children>
-         <effect>
-            <DropShadow />
-         </effect>
-      </AnchorPane>
+      <VBox fx:id="calendarBox" layoutX="150.0" layoutY="14.0" prefHeight="798.0" prefWidth="1156.0" />
    </children>
 </AnchorPane>

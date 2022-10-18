@@ -26,7 +26,9 @@ Project Setup:
 - Once you've opened up the project in Eclipse, go to the Project's Properties -> Java Build Path -> Module -> Add Library -> User Library
 - Click on the "User Libraries..." button, and create a new user library called "JavaFX"
 - Select "Add External JARs...", and select all of the .jar files in the JavaFX library folder, as well as the extra dependencies.
+
 - Go to the project's Run Configurations -> Arguments, and add "--module-path "\path\to\javafx-sdk-18.0.2\lib" --add-modules javafx.base,javafx.controls,javafx.fxml,javafx.graphics,javafx.media,javafx.web
+
 
 Note: Your JavaFX version may be different, make sure to check the library folder and edit the version in the arguments accordingly
 

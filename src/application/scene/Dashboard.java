@@ -9,12 +9,16 @@ public class Dashboard {
 	  @FXML private Button buttonTodo;
 	  @FXML private Button buttonDrawboard;
 	  @FXML private Button buttonTimer;
+	  @FXML private Button buttonCalendar;
+	  
 	  @FXML private Button buttonMainNotes;
 	  @FXML private Button buttonMainTodo;
 	  @FXML private Button buttonMainDrawboard;
 	  @FXML private Button buttonMainTimer;
+	  @FXML private Button buttonMainCalendar;
 	  @FXML private Button buttonTips;
 	  
+
 	  /** Click handler for the notes button. */
 	  @FXML
 	  private void notes() {
@@ -45,6 +49,12 @@ public class Dashboard {
 	    SceneManager.switchToTimerScene();
 	  }
 	  
+
+	  @FXML
+	  private void calendar() {
+	    SceneManager.switchToCalendarScene();
+	  }
+
 	  /** Click handler for the tips button. */
 	  @FXML
 	  private void tips() {

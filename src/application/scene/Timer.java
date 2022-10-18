@@ -91,12 +91,18 @@ public class Timer{
 	private void drawboard() {
 		SceneManager.switchToDrawboardScene();
 	}
-	
+
+	@FXML
+	private void calendar() {
+		SceneManager.switchToCalendarScene();
+	}
+
 	/** Click handler for the popOut button. */
 	@FXML
 	private void popOut() {
 		SceneManager.popOutTimer();
 		
+
 	}
 
 	/** Click handler for the timer toggle buttons */

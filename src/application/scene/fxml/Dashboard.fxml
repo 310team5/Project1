@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
+<?import javafx.geometry.Point3D?>
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
@@ -106,6 +107,24 @@
                               <Tooltip styleClass="tooltip" text="Timer" />
                            </tooltip>
                         </Button>
+                        <Button fx:id="buttonMainCalendar" graphicTextGap="20.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#calendar" prefHeight="60.0" styleClass="button_menu" text="Calendar">
+                           <graphic>
+                              <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../assets/icon_calendar_white.png" />
+                                 </image>
+                                 <rotationAxis>
+                                    <Point3D />
+                                 </rotationAxis>
+                              </ImageView>
+                           </graphic>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <tooltip>
+                              <Tooltip styleClass="tooltip" text="Timer" />
+                           </tooltip>
+                        </Button>
                         <Region minWidth="0.0" prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS" />
                         <ImageView fitHeight="200.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                            <VBox.margin>
@@ -128,6 +147,28 @@
                         <AnchorPane minHeight="-Infinity" prefHeight="120.0" prefWidth="1040.0">
                            <children>
                               <Label layoutX="220.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="120.0" prefWidth="808.0" styleClass="label_title" text="DASHBOARD" AnchorPane.leftAnchor="220.0" AnchorPane.topAnchor="0.0" />
+                              <Button fx:id="buttonMainCalendar" graphicTextGap="20.0" layoutX="904.0" layoutY="15.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#calendar" prefHeight="105.0" prefWidth="117.0" style="-fx-border-radius: 30px;" styleClass="button_main">
+                                 <effect>
+                                    <DropShadow offsetX="5.0" offsetY="5.0" spread="0.5">
+                                       <color>
+                                          <Color red="0.6140350699424744" green="0.6140350699424744" blue="0.6140350699424744" />
+                                       </color>
+                                    </DropShadow>
+                                 </effect>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                                 <tooltip>
+                                    <Tooltip styleClass="tooltip" text="Go to Calendar" />
+                                 </tooltip>
+                                 <graphic>
+                                    <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../assets/icon_calendar_white.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
                            </children>
                         </AnchorPane>
                         <Region prefHeight="61.0" prefWidth="1048.0" />
