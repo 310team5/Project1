@@ -8,7 +8,7 @@
 	-dark-grey-menu-base: #332E43;
 	-main-button-color: #5A59B1;
 	-main-button-hover-color: #494794;
-	-main-button-pressed-color: #3F3E80;
+	-theme-focus-color: #3F3E80;
 }
 
 .root {
@@ -61,7 +61,7 @@
 }
 
 .button_main:pressed {
-	-fx-background-color: -main-button-pressed-color;
+	-fx-background-color: -theme-focus-color;
 	-fx-effect: none;
 }
 
