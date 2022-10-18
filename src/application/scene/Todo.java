@@ -68,12 +68,12 @@ public class Todo {
     private void addEvent() {
         String status = choiceBox_status.getValue();
         String type = choiceBox_type.getValue();
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy",Locale.getDefault());
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM",Locale.getDefault());
         String formattedDate = (datePicker.getValue()).format(formatter);
         
-        String eventMessage = formattedDate + " " + type + ": " + textField_eventName.getText();
+        String eventMessage = formattedDate + " • " + type + " • " + textField_eventName.getText();
 
-        if (textField_eventName.getText().isEmpty()) {
+        if (textField_eventName.getText().isEmpty() || choiceBox_type.getValue() == null) {
             noContentAlert();
         } else {
             switch (status) {
@@ -127,14 +127,17 @@ public class Todo {
         }
 
     }
-
+    
+    //Clears entire list
     @FXML
     private void clearDONE() {
-        Alert alert_clearDONEConfirmation = new Alert(Alert.AlertType.CONFIRMATION, "Do you really want to remove all Events in this area", ButtonType.YES, ButtonType.NO);
+        Alert alert_clearDONEConfirmation = new Alert(Alert.AlertType.CONFIRMATION, "Do you really want to clear your to-do list?", ButtonType.YES, ButtonType.NO);
         ButtonType result = alert_clearDONEConfirmation.showAndWait().orElse(ButtonType.NO);
 
         if (ButtonType.YES.equals(result)) {
             listView_DONE.getItems().clear();
+            listView_DOING.getItems().clear();
+            listView_TODO.getItems().clear();
         }
 
         try {
@@ -199,7 +202,7 @@ public class Todo {
     public void noContentAlert() {
         Alert alert_noContentWarning = new Alert(Alert.AlertType.WARNING);
         // set content text
-        alert_noContentWarning.setContentText("Please Fill Event Name");
+        alert_noContentWarning.setContentText("Please Fill Event Name and Event Type");
 
         // show the dialog
         alert_noContentWarning.show();
