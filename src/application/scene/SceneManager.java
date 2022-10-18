@@ -61,7 +61,7 @@ public class SceneManager {
 	  }
 	  /** Pop out a lecture scene to the user. */
 	  public static void popOutLecture() {
-		  popOut("LecturePopOut", 860, 557, "Lecture");
+		  popOut("LecturePopOut", 860, 537, "Lecture");
 	  }
 	  /**
 	   * Changes the currently displayed scene to the user.

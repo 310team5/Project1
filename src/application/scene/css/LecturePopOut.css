@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+@import "./MainResources.css";
+.root {
+    -fx-background-color: #5A59B1;
+}
+
+.button_media {
+    -fx-background-color: white;
+    -fx-text-fill: #5A59B1;
+    -fx-font-size: 16px;
+    -fx-font-family: 'Space Mono', monospace;
+    -fx-border-style: hidden;
+    -fx-background-radius: 5px;
+    -fx-font-weight: 700;
+    -fx-effect: dropshadow( gaussian, rgba(0, 0, 0, 0.25), 10, 0.5, 5, 5);
+}
