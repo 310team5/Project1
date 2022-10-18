@@ -1,23 +1,39 @@
 @import "./MainResources.css";
+* {
+	-scene-background-color:#CCCCCC;
+	-dark-font: #000000;
+	-light-font: #FFFFFF;
+	-light-background: #FFFFFF;
+	-tooltip-base: #FFD858;
+	-dark-grey-menu-base: #332E43;
+	-main-button-color: #5A59B1;
+	-primary-todo-listview-color: #ede7f6;
+	-primary-doing-listview-color: #6f79a8;
+	-primary-done-listview-color: #003d33;
+	-secondary-todo-listview-color: #FFFFFF;
+	-secondary-doing-listview-color: #9fa8da;
+	-secondary-done-listview-color: #00695C;
+}
+
 .root {
-    -fx-background-color: #CCCCCC;
+    -fx-background-color: -scene-background-color;
 }
 
 .tooltip {
 	-fx-font-size: 16px;
 	-fx-font-family: 'Space Mono', monospace;
-	-fx-background-color: #FFD858;	
-	-fx-text-fill: #000000;
+	-fx-background-color: -tooltip-base;	
+	-fx-text-fill: -dark-font;
 }
 
 .navigation_bar {
-    -fx-background-color: #332E43;
-    -fx-text-fill: #CCCCCC;
+    -fx-background-color: -dark-grey-menu-base;
+    -fx-text-fill: -scene-background-color;
     -fx-border-style: hidden;
 }
 
 .button_focus {
-    -fx-text-fill: #FFFFFF;
+    -fx-text-fill: -light-font;
     -fx-background-color: transparent;
     -fx-font-size: 32px;
     -fx-font-family: 'Space Mono', monospace;
@@ -25,7 +41,7 @@
 
 
 .button_tool {
-    -fx-text-fill: #FFFFFF;
+    -fx-text-fill: -light-font;
     -fx-background-color: transparent;
     -fx-font-size: 20px;
     -fx-font-family: 'Space Mono', monospace;
@@ -37,17 +53,17 @@
 }
 
 .button_tool:pressed {
-    -fx-background-color: #5A59B1;
+    -fx-background-color: -main-button-color;
     -fx-opacity: 1.0;
 }
 
 .button_tool:selected {
-    -fx-background-color: #5A59B1;
+    -fx-background-color: -main-button-color;
     -fx-opacity: 1.0
 }
 
 .textField_eventName {
-    -fx-prompt-text-fill: black;
+    -fx-prompt-text-fill: -dark-font;
     -fx-border-radius: 4px;
     -fx-font-size: 20px;
     -fx-font-family: 'Space Mono', monospace;
@@ -56,7 +72,7 @@
 
 
 .button_addEvent {
-    -fx-background-color: #332E43;
+    -fx-background-color: -dark-grey-menu-base;
     -fx-font-size: 20px;
     -fx-font-family: 'Space Mono', monospace;
 }
@@ -68,19 +84,19 @@
 }
 
 .listView_TODO {
-    -fx-background-color: #ede7f6;
+    -fx-background-color: -primary-todo-listview-color;
     -fx-background-radius: 10 10 10 10;
 }
 
 
 .listView_DOING {
-    -fx-background-color: #6f79a8;
+    -fx-background-color: -primary-doing-listview-color;
     -fx-background-radius: 10 10 10 10;
 }
 
 .listView_DONE {
-    -fx-text-fill: white;
-    -fx-background-color: #003d33;
+    -fx-text-fill: -light-font;
+    -fx-background-color: -primary-done-listview-color;
     -fx-background-radius: 10 10 10 10;
 }
 
@@ -89,29 +105,29 @@
 }
 
 .listView_TODO .list-cell:odd {
-    -fx-background-color: #ffffff;
+    -fx-background-color: -secondary-todo-listview-color;
 }
 
 .listView_TODO .list-cell:even {
-    -fx-background-color: #ede7f6;
+    -fx-background-color: -primary-todo-listview-color;
 }
 
 .listView_DOING .list-cell:odd {
-    -fx-background-color: #9fa8da;
+    -fx-background-color: -secondary-doing-listview-color;
 }
 
 .listView_DOING .list-cell:even {
-    -fx-background-color: #6f79a8;
+    -fx-background-color: -primary-doing-listview-color;
 }
 
 .listView_DONE .list-cell:odd {
     -fx-text-fill: white;
-    -fx-background-color: #00695c;
+    -fx-background-color: -secondary-done-listview-color;
 }
 
 .listView_DONE .list-cell:even {
     -fx-text-fill: white;
-    -fx-background-color: #003d33;
+    -fx-background-color: -primary-done-listview-color;
 }
 
 .listView_TODO .list-cell:filled:selected:focused, .list-cell:filled:selected {

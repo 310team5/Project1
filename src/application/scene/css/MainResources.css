@@ -7,14 +7,22 @@ menu background color    					#332E43
 nonwhite fx-background-color				#CCCCCC (Use White for scenes with user input)
 */
 
+* {
+    -theme-purple: #5A59B1;
+    -light-text: #FFFFFF;
+    -theme-dark: #332E43;
+    -FX-background: #CCCCCC;
+    -scene-background: #FFFFFF;
+}
+
 .navigation_bar {
-	-fx-background-color: #5A59B1;
-	-fx-text-fill: #FFFFFF;
+	-fx-background-color: -theme-purple;
+	-fx-text-fill: -light-text;
 	-fx-border-style: hidden;
 }
 
 .menu {
-    -fx-background-color: #332E43;
+    -fx-background-color: -theme-dark;
     -fx-border-style: hidden;
     -fx-background-radius: 0 40 40 0;
 }
