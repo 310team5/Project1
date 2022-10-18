@@ -1,5 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 <?import java.lang.String?>
 <?import javafx.geometry.Rectangle2D?>
 <?import javafx.scene.Cursor?>
@@ -17,7 +25,7 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="810.0" prefWidth="1315.0" stylesheets="@../css/Todo.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.scene.Todo">
+<AnchorPane prefHeight="810.0" prefWidth="1315.0" stylesheets="@../css/Todo.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.scene.Todo">
     <children>
         <BorderPane maxWidth="1065" prefHeight="810.0" prefWidth="1065.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
             <center>
@@ -76,7 +84,7 @@
                               <DropShadow height="35.0" radius="17.0" spread="0.1" width="35.0" />
                            </effect>
                                 </Button>
-                                <Button fx:id="button_clearDONE" layoutX="1057.0" layoutY="60.0" mnemonicParsing="false" onAction="#clearDONE" style="-fx-background-color: #ffa4a2; -fx-background-radius: 10 10 10 10;">
+                                <Button fx:id="button_clearALL" layoutX="1057.0" layoutY="60.0" mnemonicParsing="false" onAction="#clearALL" style="-fx-background-color: #ffa4a2; -fx-background-radius: 10 10 10 10;">
                                     <graphic>
                                         <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
                                             <image>
@@ -104,22 +112,22 @@
                         </AnchorPane>
                         <AnchorPane layoutX="50.0" layoutY="14.0" minHeight="-Infinity" prefHeight="94.0" prefWidth="1034.0" style="-fx-background-color: #5d576e; -fx-background-radius: 20 20 20 20;" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="14.0">
                             <children>
-                                <TextField fx:id="textField_eventName" layoutX="47.0" layoutY="28.0" prefHeight="38.0" prefWidth="530.0" style="-fx-background-color: #e0e0e0; -fx-background-radius: 5 5 5 5;" styleClass="textField_eventName">
+                                <TextField fx:id="textField_eventName" layoutX="47.0" layoutY="28.0" prefHeight="44.0" prefWidth="563.0" style="-fx-background-color: #e0e0e0; -fx-background-radius: 5 5 5 5;" styleClass="textField_eventName">
                            <cursor>
                               <Cursor fx:constant="TEXT" />
                            </cursor>
                            <tooltip>
                               <Tooltip styleClass="tooltip" text="Task name" />
                            </tooltip></TextField>
-                                <DatePicker fx:id="datePicker" layoutX="633.0" layoutY="28.0" prefHeight="38.0" prefWidth="150.0" style="-fx-background-radius: 5 5 5 5;">
+                                <DatePicker fx:id="datePicker" layoutX="786.0" layoutY="28.0" prefHeight="38.0" prefWidth="123.0" promptText="To do date" style="-fx-background-radius: 5 5 5 5;">
                            <cursor>
                               <Cursor fx:constant="HAND" />
                            </cursor></DatePicker>
-                                <ChoiceBox fx:id="choiceBox_status" layoutX="810.0" layoutY="28.0" prefHeight="38.0" prefWidth="116.0" style="-fx-background-radius: 5 5 5 5;">
+                                <ChoiceBox fx:id="choiceBox_status" layoutX="924.0" layoutY="28.0" prefHeight="38.0" prefWidth="61.0" style="-fx-background-radius: 5 5 5 5;">
                            <cursor>
                               <Cursor fx:constant="HAND" />
                            </cursor></ChoiceBox>
-                                <Button fx:id="button_addEvent" layoutX="965.0" layoutY="26.0" mnemonicParsing="false" onAction="#addEvent" prefHeight="46.0" prefWidth="141.0" style="-fx-background-radius: 10 10 10 10;" styleClass="button_addEvent" text=" Add" textFill="WHITE">
+                                <Button fx:id="button_addEvent" layoutX="994.0" layoutY="26.0" mnemonicParsing="false" onAction="#addEvent" prefHeight="46.0" prefWidth="112.0" style="-fx-background-radius: 10 10 10 10;" styleClass="button_addEvent" text=" Add" textFill="WHITE">
                                     <graphic>
                                         <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
                                             <image>
@@ -137,6 +145,11 @@
                               <Tooltip styleClass="tooltip" text="Add Task" />
                            </tooltip>
                                 </Button>
+                        <ChoiceBox fx:id="choiceBox_type" layoutX="626.0" layoutY="28.0" prefHeight="38.0" prefWidth="148.0" style="-fx-background-radius: 5 5 5 5;">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </ChoiceBox>
                             </children>
                         </AnchorPane>
                     </children>
