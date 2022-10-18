@@ -9,11 +9,6 @@
 	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/JavaFX"/>
 	<classpathentry kind="con" path="org.eclipse.fx.ide.jdt.core.JAVAFX_CONTAINER"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
-	<classpathentry kind="lib" path="C:/Users/kj999/Downloads/Dependencies/controlsfx-11.1.1.jar"/>
-	<classpathentry kind="lib" path="C:/Users/kj999/Downloads/Dependencies/ikonli-core-12.2.0.jar"/>
-	<classpathentry kind="lib" path="C:/Users/kj999/Downloads/Dependencies/ikonli-fontawesome-pack-12.2.0.jar"/>
-	<classpathentry kind="lib" path="C:/Users/kj999/Downloads/Dependencies/ikonli-javafx-12.3.1.jar"/>
-	<classpathentry kind="lib" path="C:/Users/kj999/Downloads/Dependencies/view-11.12.3.jar"/>
-	<classpathentry kind="lib" path="C:/Users/kj999/Downloads/Dependencies/view-11.12.3-sources.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/Depend"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

@@ -21,12 +21,13 @@ public class CalendarSection{
 	private VBox calendarBox;
 
 	
-	@SuppressWarnings("rawtypes")
 	@FXML
 	public void initialize(){
 		
 		CalendarView calendarView = new CalendarView();
+		Calendar holidays = new Calendar("Holidays");
 		CalendarSource source = new CalendarSource("My Calendars");
+		source.getCalendars().add(holidays);
 		calendarView.getCalendarSources().add(source);
 		calendarView.setRequestedTime(LocalTime.now());
 		
