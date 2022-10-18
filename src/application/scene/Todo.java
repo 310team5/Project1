@@ -128,7 +128,7 @@ public class Todo {
 
     }
     
-    //Clears entire list
+    //Clears entire to do list
     @FXML
     private void clearDONE() {
         Alert alert_clearDONEConfirmation = new Alert(Alert.AlertType.CONFIRMATION, "Do you really want to clear your to-do list?", ButtonType.YES, ButtonType.NO);
@@ -140,13 +140,9 @@ public class Todo {
             listView_TODO.getItems().clear();
         }
 
-        try {
-            File file = new File("./src/application/scene/ToDoLists/DONE.txt");
-            FileWriter clearWriter = new FileWriter(file);
-            clearWriter.write("");
-            clearWriter.close();
-        } catch (IOException e) {
-        }
+        rewriteHistory(listView_TODO, NOT_STARTED_TEXT );
+		rewriteHistory(listView_DOING, IN_PROGRESS_TEXT);
+		rewriteHistory(listView_DONE, COMPLETED_TEXT );
 
     }
 
