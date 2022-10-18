@@ -3,7 +3,7 @@
 * {
 	-scene-background-color:#CCCCCC;
 	-dark-font: #000000;
-	-light-font: #FFFFFF;
+	-lighter-font: #FFFFFF;
 	-tooltip-base: #FFD858;
 	-dark-grey-menu-base: #332E43;
 	-main-button-color: #5A59B1;
@@ -24,13 +24,14 @@
 
 .menu {
 	-fx-background-color: -dark-grey-menu-base;
-	-fx-text-fill: -light-font;
+	-fx-text-fill: -lighter-font;
 	-fx-border-style: hidden;
 	-fx-background-radius: 0 40 40 0;
 }
 
+/* THIS IS AN ISSUE */
 .button_menu {
-	-fx-text-fill: -light-font;
+	-fx-text-fill: white;
 	-fx-background-color: transparent;
 	-fx-font-size: 32px;
 	-fx-font-family: 'Space Mono', monospace;
@@ -40,7 +41,7 @@
 
 
 .button_focus {
-	-fx-text-fill: -light-font;  
+	-fx-text-fill: white;  
 	-fx-background-color: transparent;
 	-fx-font-size: 32px;
 	-fx-font-family: 'Space Mono', monospace;
@@ -48,7 +49,7 @@
 
 .button_main {
 	-fx-background-color: -main-button-color;
-	-fx-text-fill: -light-font;
+	-fx-text-fill: white;
 	-fx-font-size: 40px;
 	-fx-font-family: 'Space Mono', monospace;
 	-fx-border-style: hidden;

@@ -40,7 +40,7 @@
 
 
 .button_focus {
-    -fx-text-fill: -light-font;
+    -fx-text-fill: white;
     -fx-background-color: transparent;
     -fx-font-size: 32px;
     -fx-font-family: 'Space Mono', monospace;
@@ -48,7 +48,7 @@
 
 .button_time {
     -fx-background-color: -main-button-color;
-    -fx-text-fill: -light-font;
+    -fx-text-fill: white;
     -fx-font-size: 14px;
     -fx-font-family: 'Space Mono', monospace;
     -fx-background-radius: 5px;
